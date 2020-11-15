@@ -11,8 +11,8 @@ module.exports = {
   description: 'Get your daily points', 
   callback: async (message, args, text, client, prefix, instance) => {
   let timeout = 86400000 // 24 hours in milliseconds, change if you'd like.
-    let amount = 500
-    // random amount: Math.floor(Math.random() * 1000) + 1;
+  let amounts = 500
+
 
 
     let daily = await db.fetch(`daily_${message.author.id}`);
@@ -26,11 +26,17 @@ module.exports = {
         message.reply(Embed);
         return
     } else {
+      let bank = await db.fetch(`points_${message.author.id}`)
+      let banker = (bank* 0.02)
+      let amounter = (banker + amounts)
+      let amount = amounter.toFixed(0)
+
+
     let embed = new Discord.MessageEmbed()
     .setAuthor(`Daily`, message.author.displayAvatarURL)
     .setColor("GREEN")
     .setDescription(`**Daily Reward**`)
-    .addField(`Collected`, amount)
+    .addField(`Collected`, amount + '\n\n(500 + 2% intrest)')
 
     message.channel.send(embed)
     db.add(`points_${message.author.id}`, amount)

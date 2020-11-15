@@ -21,14 +21,14 @@ module.exports = {
       points.length = 20;
       let content = "";
         var i = 0;
-        let indexnum = 0;
+        
 
 
 
       let userid = await client.users.cache.get(points[i].ID.split("_")[1])
 
       let user = userid.tag
-
+let indexnum = 0;
       let num = ++indexnum
 
         content0 += `${num}. ${user} - ${points[i].data}\n`

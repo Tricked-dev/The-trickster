@@ -18,18 +18,37 @@ module.exports = {
      db.set(`started_${message.author.id}`, '1')
      return
     }
+    let bank = await db.fetch(`points_${message.author.id}`)
+
+
 
     let news = await db.fetch(`claim_${message.author.id}`)
     let pp = Date.now()
     let points = (pp - news)
-    let amount = (points / 120000).toFixed(0)
-        const Embed = new Discord.MessageEmbed()
+    
+    if(bank > 10000){
+      let amount = (points / 60000).toFixed(0)
+    const Embed = new Discord.MessageEmbed()
         .setTitle('Points!')
         .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
         .setColor('GREEN')
         message.reply(Embed);
     db.set(`claim_${message.author.id}`, Date.now())
     db.add(`points_${message.author.id}`, amount)
+    } else {
+      let amount = (points / 120000).toFixed(0)
+    const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount)
+    }
+   
+
+
+
           
 
   }

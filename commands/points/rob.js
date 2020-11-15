@@ -60,7 +60,7 @@ let rob = await db.fetch(`rob_${message.author.id}`);
 				Math.random() * (coin.length - 1) + 1
             );
     if(index == '2') {
-        message.channel.send('Your robbery failed and instead you lost 30 point good job!')
+        message.channel.send(`Your robbery failed and instead you lost ${num} point good job!`)
         db.subtract(`points_${message.author.id}`, num)
         db.add(`points_${user.id}`, num)
         db.set(`rob_${message.author.id}`, Date.now())

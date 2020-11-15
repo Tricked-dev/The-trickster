@@ -17,7 +17,7 @@ if(index == '50'){
 async function point() {
     let member = message.author
     let min = Math.ceil(1);
-    let max = Math.floor(30); 
+    let max = Math.floor(250); 
     const indexs = Math.floor(
                 
         Math.floor(Math.random() * (max - min) + min)
@@ -33,7 +33,7 @@ const Embed = new Discord.MessageEmbed()
         .setDescription(`**${member} has gained ${indexs} points while typing and has ${bank} Points!**`)
         .setColor('PURPLE')
 	  message.reply(Embed);
-    console.log(`Trickedbot > ${member} has gained ${indexs} points from typing`)
+    console.log(`Trickedbot > ${member.username} has gained ${indexs} points from typing`)
     }
 point()
 }

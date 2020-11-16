@@ -8,7 +8,7 @@ module.exports = {
 	syntaxError: '',
 	expectedArgs: '',
 	description: 'invite trickedbot to your server',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: (message) => {
 		const Embed = new Discord.MessageEmbed()
 			.setColor(0x00ae86)
 			.setTimestamp()

@@ -7,7 +7,6 @@ client.on("guildCreate", guild => {
     if(!channel) return;
     const embed = new MessageEmbed()
         .setTitle('New Server Joined!')
-        .setThumbnail(`${guild.iconURL({ format: 'png' })}`)
         .addField(`Server Name:`, `${guild.name}`)
         .addField(`Server ID:`, `${guild.id}`)
         .addField(`Members:`, `${guild.memberCount}`)

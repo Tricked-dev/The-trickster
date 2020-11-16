@@ -30,7 +30,8 @@ let rob = await db.fetch(`rob_${message.author.id}`);
         return message.channel.send('Sorry, you forgot to mention somebody.')
     }
     let targetuser = await db.fetch(`points_${user.id}`) // fetch mentioned users balance
-    let num = (targetuser * 0.20)
+    let nums = (targetuser * 0.20)
+    let num = nums.toFixed(0)
     let author = await db.fetch(`points_${message.author.id}`) // fetch authors balance
     if(`${targetuser}` === `${author}`) {
         const Embed = new Discord.MessageEmbed() // talking
@@ -75,6 +76,11 @@ let rob = await db.fetch(`rob_${message.author.id}`);
     .setColor("GREEN")
     .setTimestamp()
     message.channel.send(embed)
+    let quest = db.get(`${message.author.id}_quests`)
+    if(quest == 'rob'){
+       db.set(`${message.author.id}_quests`, `1`) 
+    }
+
 
 
     db.subtract(`points_${user.id}`, random)

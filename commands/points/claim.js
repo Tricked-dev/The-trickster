@@ -14,9 +14,9 @@ module.exports = {
     let newrs = await db.fetch(`started_${message.author.id}`)
     if (newrs !== '1') {
       message.channel.send(`points will now start flooding next time you do !claim`)
-     db.set(`claim_${message.author.id}`, Date.now())
-     db.set(`started_${message.author.id}`, '1')
-     return
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.set(`started_${message.author.id}`, '1')
+    return
     }
     let bank = await db.fetch(`points_${message.author.id}`)
 
@@ -26,8 +26,10 @@ module.exports = {
     let pp = Date.now()
     let points = (pp - news)
     
-    if(bank > 10000){
-      let amount = (points / 60000).toFixed(0)
+    
+  if(bank > '100000') {
+    console.log('1')
+      let amount = (points / 20000).toFixed(0)
     const Embed = new Discord.MessageEmbed()
         .setTitle('Points!')
         .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
@@ -35,8 +37,47 @@ module.exports = {
         message.reply(Embed);
     db.set(`claim_${message.author.id}`, Date.now())
     db.add(`points_${message.author.id}`, amount)
-    } else {
-      let amount = (points / 120000).toFixed(0)
+      
+  
+  } else if(bank > '50000') {
+     console.log('2')  
+    let amount = (points / 30000).toFixed(0)
+    const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount)
+
+
+  } else if(bank > '20000') {
+     console.log('3')  
+    let amount = (points / 40000).toFixed(0)
+    const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount)
+
+
+  }else if(bank > '10000'){
+     console.log('4')
+    let amount = (points / 60000).toFixed(0)
+    const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount)
+  
+    
+  } else {
+     console.log('5')  
+    let amount = (points / 120000).toFixed(0)
     const Embed = new Discord.MessageEmbed()
         .setTitle('Points!')
         .setDescription(`**${amount} points were given to you by !claim enjoy!**`)

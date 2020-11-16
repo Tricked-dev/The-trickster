@@ -15,10 +15,9 @@ module.exports = {
 			message.channel.send(input);
 			return;
 		}
-
-		const Embed = new Discord.MessageEmbed()
-			.setColor('#03fc49')
-			.setTitle(`Error, you are not allowed to do this`);
-		message.reply(Embed);
-	},
-};
+			message.delete();
+			message.channel.send(message.author.tag + ': ' + input);
+	
+		
+	}
+}

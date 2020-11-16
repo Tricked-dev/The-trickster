@@ -76,7 +76,14 @@ let replies = ["Gambling is a BILLION dollar industry. In America, gambling has 
         message.reply(Embed);
       db.add('gamble', amount)
 		let gamble = db.get('gamble')
-		console.log('Trickedbot > Points lost / win due !gamble  ' + gamble)
+    console.log('Trickedbot > Points lost / win due !gamble  ' + gamble)
+            
+    if (amount > 999) {
+       let quest = db.get(`${message.author.id}_quests`)
+    if(quest == 'gamble'){
+       db.set(`${message.author.id}_quests`, `1`) 
+    }
+  }
 
 
 }

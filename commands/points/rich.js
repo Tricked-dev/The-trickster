@@ -12,14 +12,12 @@ module.exports = {
   callback: async (message, args, text, client, prefix, instance) => {
  let all = db.all().filter(d => d.ID.startsWith("points_")).sort((a, b) => b.data - a.data)
     let content = "";
-    let indexnum = 0;
     
     all.forEach(a => {
         
         let who = message.guild.members.cache.get(a.ID.split("_")[1])
-        let num = ++indexnum
         if (who) {
-            content += `${num}. ${who.user.username} - ${a.data}\n`;
+            content += `${who.user.username} - ${a.data}\n`;
         } 
     })
     let embed = new Discord.MessageEmbed()

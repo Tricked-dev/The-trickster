@@ -8,5 +8,9 @@ module.exports = {
 	syntaxError: '',
 	expectedArgs: '',
 	description: 'L',
-	callback: (message, args, text, client, prefix, instance) => {},
+	callback: (message, args, text, client, prefix, instance) => {
+
+
+		// put you code here
+	},
 };

@@ -3,19 +3,13 @@ const client = new Discord.Client();
 const { MessageEmbed } = require('discord.js'); 
 const db = require('quick.db')
 module.exports = {
-  aliases: ['give', 'share'],
+  aliases: ['give', 'point'],
   minArgs: 2,
   maxArgs: -1,
   syntaxError: "!share",
   expectedArgs: "Please mention someone to share points to", 
   description: 'Give points', 
   callback: async (message, args, text, client, prefix, instance) => {
-   /*
-   
-   Start of non admin
-   
-   */
-    if (message.author.id != 336465356304678913) { // checking if someone isnt me
     let user = message.mentions.members.first()  // looking whos the lucky person
     let mamber = message.author
     if(`${mamber.id}` === `${user.id}`) {
@@ -78,48 +72,14 @@ const Embed = new Discord.MessageEmbed()
         .setDescription(`**You gave ${user} ${amount} points and they now have ${news} points**`)
         .setColor('BLUE')
         message.reply(Embed);
-        return 
-		}
-    
-      /*
-
-start of admin
-
-  */
-
-    let user = message.mentions.members.first() || message.guild.members.get(args[0]); // checkig the mention
-    let member = message.mentions.members.first() // idk this was needed 
-    let reason = args.slice(1).join(' '); // looking for the amount
-  if(!member) { // jebaited
-    const Embed = new Discord.MessageEmbed()
-				.setColor('#03fc49')
-        .setTitle('Points!')
-        .setDescription(`**You gave noone! ${reason} points! :scream: **`) //not pog
-        .setColor('BLUE')
-      message.reply(Embed);
-      return;
+        if (amount > 999) {
+       let quest = db.get(`${message.author.id}_quests`)
+    if(quest == 'share'){
+       db.set(`${message.author.id}_quests`, `1`) 
+    }
   }
-
-  if (isNaN(`${reason}`)) { // checking if number
-    const Embed = new Discord.MessageEmbed()
-    .setColor('#03fc49')
-        .setTitle('Points!')
-        .setDescription(`**Thats not a number!**`) // if no number
-        .setColor('BLUE')
-        message.reply(Embed);
-        return
+  return 
   }
- await  db.add(`points_${user.id}`, `${reason}`)     // giving the points
-  let bank = await db.fetch(`points_${user.id}`) // making it fancy
-  if (bank === null) bank = 0;      
-  const Embed = new Discord.MessageEmbed()
-      
-        .setColor('#03fc49')
-        .setTitle('Points!')
-        .setDescription(`**You gave ${member} ${reason} Points they now have ${bank} points!**`) // worked
-        .setColor('RED')
-      message.reply(Embed);
-       
     
     }
-      }
+      

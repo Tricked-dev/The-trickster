@@ -17,13 +17,21 @@ module.exports = {
         
      
      
-let bank = await db.fetch(`points_${member.id}`)
+let banks = await db.fetch(`points_${member.id}`)
 
      let np = await db.fetch(`pass_${member.id}`)
 
+	 if (banks === null) {
+		 db.add(`points_${member.id}`, '1')
+	 }
+	 let banker = banks.toLocaleString()
+
+let bank = banker.replace(",", " ");
+
 if(args[0]) {
-	  if (bank === null) bank = 0;
-const Embed = new Discord.MessageEmbed()
+	 
+
+	  const Embed = new Discord.MessageEmbed()
         .setColor('#03fc49')
         .setTitle('Points!')
         .setDescription(`**${member} has ${bank} Points!**`)

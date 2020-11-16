@@ -23,17 +23,18 @@ module.exports = {
         return
   }
   
-  if (amount < 100){ // checking if the bank doesng go below 0
+  if (amount < 500){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
         .setTitle('Points!')
-        .setDescription(`**You cant gamble less than 100 points. addict**`)
+        .setDescription(`**You cant gamble less than 500 points. addict**`)
         .setColor('BLUE')
         message.reply(Embed);
         return }
   
     check = (bank - amount)
    
+    
   if (check < 0){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')

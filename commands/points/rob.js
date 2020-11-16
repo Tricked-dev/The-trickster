@@ -25,7 +25,7 @@ let rob = await db.fetch(`rob_${message.author.id}`);
         return
     } else {
    
-            let user = message.mentions.members.first()
+            let user = message.mentions.members.first() || message.guild.members.get(args[0])
     if (!user) {
         return message.channel.send('Sorry, you forgot to mention somebody.')
     }

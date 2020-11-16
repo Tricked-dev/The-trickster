@@ -12,13 +12,13 @@ module.exports = {
 		let sudo = args.slice(0).join(' ');
 		
 		if (message.member.hasPermission('MANAGE_MESSAGES')|| message.author.id == 336465356304678913) {
+			
 		
 		const Embed = new Discord.MessageEmbed()
 			.setColor('#03fc49')
 			.setTitle(`${sudo}`);
 			message.reply(Embed);
 			message.delete();
-
 		} else {
 			const Embed = new Discord.MessageEmbed()
 				.setColor('#03fc49')

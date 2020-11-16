@@ -22,8 +22,8 @@ return
     message.channel.send('you got the quest share share 1k points with a user to finish this quest')
     return
 }else if(quest == '1'){
-    message.channel.send(`you completed your quest and earned 250 points`)
-    db.add(`points_${message.author.id}`, `250`)
+    message.channel.send(`you completed your quest and earned 1000 points`)
+    db.add(`points_${message.author.id}`, `1000`)
     db.delete(`${message.author.id}_quests`)
     return
 }else {
@@ -33,10 +33,11 @@ return
     const index = Math.floor(
 				Math.floor(Math.random() * (maxs - mins) + mins)
             );
+            
 
 console.log(index)
 
-if(index == '4'){
+if(index == '1'){
         db.set(`${message.author.id}_quests`, `rob`) 
         message.channel.send('you have to rob someoene to complete this quest')
 }else if(index == '2'){

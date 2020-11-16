@@ -34,7 +34,7 @@ module.exports = {
 				{ name: 'Weeb', value: '```weeb | neko | w```', inline: true },
 				{ name: 'Role commands', value: '```createrole | deleterole | delrole | getrole | getroleid | maxed-role | roleall | rolemap```', inline: true },
 				{ name: 'fun', value: '```8BALL | avatar | bully | cat | cool | dog | facepalm | fortnite | gay | hitler | hug | jail | jokeoverhead | joh | kill | kiss | meme | search | shitass | triggered |```', inline: false },
-				{ name: 'Points', value: '```bal | share | scam | rob | daily | hourly | gamble | monthly```', inline: false },
+				{ name: 'Points', value: '```bal | share | bcminer | rob | daily | hourly | gamble | monthly | quest```', inline: false },
 				{ name: 'config', value: '```commands | command | prefix | requiredrole```', inline: false },
 				{
 					

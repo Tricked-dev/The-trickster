@@ -31,11 +31,11 @@ module.exports = {
 }
 let amount = args[1] // coin amount
  
-if (amount < 0 ){ // checking if the bank doesng go below 0
+if (amount > '99' ){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
         .setTitle('Points!')
-        .setDescription(`**Please gamble a min of 100points**`)
+        .setDescription(`**Cant share less than 100points for reasons**`)
         .setColor('BLUE')
         message.reply(Embed);
         return } 
@@ -72,7 +72,7 @@ const Embed = new Discord.MessageEmbed()
         .setDescription(`**You gave ${user} ${amount} points and they now have ${news} points**`)
         .setColor('BLUE')
         message.reply(Embed);
-        if (amount > 999) {
+        if (980 > amount) {
        let quest = db.get(`${message.author.id}_quests`)
     if(quest == 'share'){
        db.set(`${message.author.id}_quests`, `1`) 

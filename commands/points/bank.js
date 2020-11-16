@@ -17,10 +17,13 @@ module.exports = {
         
      
      
+
+
+	 let np = await db.fetch(`pass_${member.id}`)
+	 
+
+	 
 let banks = await db.fetch(`points_${member.id}`)
-
-     let np = await db.fetch(`pass_${member.id}`)
-
 	 if (banks === null) {
 		 db.add(`points_${member.id}`, '1')
 	 }

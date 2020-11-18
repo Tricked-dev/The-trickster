@@ -1,4 +1,3 @@
-// also nodemon to start the fucking bot
 const Discord = require('discord.js');
 const WOKCommands = require('wokcommands');
 const config = require('./config.json');
@@ -12,7 +11,4 @@ client.on('ready', () => {
 			'Incorrect syntax! Please use {PREFIX}{COMMAND} {ARGUMENTS}'
 		);
 });
-//test
-
-
 client.login(config.token);

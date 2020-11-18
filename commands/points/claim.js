@@ -27,41 +27,100 @@ module.exports = {
     let points = (pp - news)
     
     
-  if(bank > '100000') {
+  if(bank > '200000') {
     console.log('1')
-      let amount = (points / 20000).toFixed(0)
-    const Embed = new Discord.MessageEmbed()
+    if(db.has(`${message.author.id}_items`, 'the investors gadget')){
+      let amount = (points / 10000).toFixed(0)
+         const Embed = new Discord.MessageEmbed()
         .setTitle('Points!')
         .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
         .setColor('GREEN')
         message.reply(Embed);
     db.set(`claim_${message.author.id}`, Date.now())
     db.add(`points_${message.author.id}`, amount)
+    
+    } else {
+      let amount = (points / 20000).toFixed(0)
+         const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount) }
+
+
+    } else if(bank > '100000') {
+    console.log('1')
+    if(db.has(`${message.author.id}_items`, 'the investors gadget')){
+      let amount = (points / 10000).toFixed(0)
+         const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount)
+    
+    } else {
+      let amount = (points / 20000).toFixed(0)
+         const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount)
+    }
+    
+ 
       
   
   } else if(bank > '50000') {
-     console.log('2')  
-    let amount = (points / 30000).toFixed(0)
-    const Embed = new Discord.MessageEmbed()
+    console.log('1')
+    if(db.has(`${message.author.id}_items`, 'the investors gadget')){
+      let amount = (points / 20000).toFixed(0)
+         const Embed = new Discord.MessageEmbed()
         .setTitle('Points!')
         .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
         .setColor('GREEN')
         message.reply(Embed);
     db.set(`claim_${message.author.id}`, Date.now())
     db.add(`points_${message.author.id}`, amount)
-
+    
+    } else {
+      let amount = (points / 40000).toFixed(0)
+         const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount)
+    }
 
   } else if(bank > '20000') {
-     console.log('3')  
-    let amount = (points / 40000).toFixed(0)
-    const Embed = new Discord.MessageEmbed()
+    console.log('1')
+    if(db.has(`${message.author.id}_items`, 'the investors gadget')){
+      let amount = (points / 25000).toFixed(0)
+         const Embed = new Discord.MessageEmbed()
         .setTitle('Points!')
         .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
         .setColor('GREEN')
         message.reply(Embed);
     db.set(`claim_${message.author.id}`, Date.now())
     db.add(`points_${message.author.id}`, amount)
-
+    
+    } else {
+      let amount = (points / 50000).toFixed(0)
+         const Embed = new Discord.MessageEmbed()
+        .setTitle('Points!')
+        .setDescription(`**${amount} points were given to you by !claim enjoy!**`)
+        .setColor('GREEN')
+        message.reply(Embed);
+    db.set(`claim_${message.author.id}`, Date.now())
+    db.add(`points_${message.author.id}`, amount)
+    }
 
   }else if(bank > '10000'){
      console.log('4')

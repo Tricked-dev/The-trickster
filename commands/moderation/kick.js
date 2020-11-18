@@ -29,7 +29,6 @@ module.exports = {
       message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
     }
     kick();
-    message.react(`${tick}`)
     return;
    }
     

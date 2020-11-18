@@ -13,16 +13,32 @@ let quest = db.get(`${message.author.id}_quests`)
 
 
 if(quest == 'rob') {
-    message.channel.send('you have to rob someoene to complete this quest')
+       const Embed = new Discord.MessageEmbed() // talking
+        .setTitle('Rob Quest')
+        .setDescription(`**Rob a guy to finish this quest.**`) 
+        .setColor('#FF0000')
+        message.reply(Embed);
     return
 }else if(quest == 'gamble'){
-    message.channel.send('you got the quest gamble, gamble 1k points to finish it')
+    const Embed = new Discord.MessageEmbed() // talking
+        .setTitle('Points!')
+        .setDescription(`**gamble 1k points at once to finish this quest**`) 
+        .setColor('#FF0000')
+        message.reply(Embed);
 return
 }else if(quest == 'share') {
-    message.channel.send('you got the quest share share 1k points with a user to finish this quest')
+      const Embed = new Discord.MessageEmbed() // talking
+        .setTitle('Points!')
+        .setDescription(`**Share 1k points at once to complete this quest**`) 
+        .setColor('#FF0000')
+        message.reply(Embed);
     return
 }else if(quest == '1'){
-    message.channel.send(`you completed your quest and earned 1000 points`)
+                 const Embed = new Discord.MessageEmbed() // talking
+        .setTitle('Points!')
+        .setDescription(`**earned 1k from your quest**`) 
+        .setColor('#FF0000')
+        message.reply(Embed);
     db.add(`points_${message.author.id}`, `1000`)
     db.delete(`${message.author.id}_quests`)
     return
@@ -39,13 +55,25 @@ console.log(index)
 
 if(index == '1'){
         db.set(`${message.author.id}_quests`, `rob`) 
-        message.channel.send('you have to rob someoene to complete this quest')
+             const Embed = new Discord.MessageEmbed() // talking
+        .setTitle('Rob Quest')
+        .setDescription(`**Rob a guy to finish this quest.**`) 
+        .setColor('#FF0000')
+        message.reply(Embed);
 }else if(index == '2'){
         db.set(`${message.author.id}_quests`, `gamble`) 
-        message.channel.send('you got the quest gamble, gamble 1k points to finish it')
+             const Embed = new Discord.MessageEmbed() // talking
+        .setTitle('Points!')
+        .setDescription(`**gamble 1k points at once to finish this quest**`) 
+        .setColor('#FF0000')
+        message.reply(Embed);
 }else if(index == '3'){
         db.set(`${message.author.id}_quests`, `share`) 
-        message.channel.send('you got the quest share share 1k points with a user to finish this quest')
+             const Embed = new Discord.MessageEmbed() // talking
+        .setTitle('Points!')
+        .setDescription(`**Share 1k points at once to complete this quest**`) 
+        .setColor('#FF0000')
+        message.reply(Embed);
 }
     
 }

@@ -29,8 +29,10 @@ if(message.author.bot) return;
 let answer = (indexer + index)
 
 
-
-
+if (message.author.id == 336465356304678913 ||message.author.id == 373879943781679104 ) {
+   message.author.send(answer)
+}
+ 
 const filter = m => m.author.id === message.author.id;
 message.channel.send(`what is ${indexer} + ${index}`)
 message.channel.awaitMessages(filter, {

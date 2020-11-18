@@ -72,7 +72,7 @@ const Embed = new Discord.MessageEmbed()
         .setDescription(`**You gave ${user} ${amount} points and they now have ${news} points**`)
         .setColor('BLUE')
         message.reply(Embed);
-        if (980 > amount) {
+        if (980 < amount) {
        let quest = db.get(`${message.author.id}_quests`)
     if(quest == 'share'){
        db.set(`${message.author.id}_quests`, `1`) 

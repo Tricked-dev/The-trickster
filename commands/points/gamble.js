@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const { MessageEmbed } = require('discord.js'); 
 const db = require('quick.db')
 module.exports = {
-  aliases: ['job'],
+  aliases: [''],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
@@ -23,7 +23,7 @@ module.exports = {
         return
   }
   
-  if (amount < 500){ // checking if the bank doesng go below 0
+  if (amount < 100){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
         .setTitle('Points!')

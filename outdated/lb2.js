@@ -8,11 +8,11 @@ module.exports = {
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'Shows the leaderboard of points', 
+  description: 'Shows the leaderboard of Points', 
   callback: async (message, args, text, client, prefix, instance) => {
-let msgs = db.all().filter(data => data.ID.startsWith(`points_`)).sort((a, b) => b.data - a.data)
+let msgs = db.all().filter(data => data.ID.startsWith(`Points_`)).sort((a, b) => b.data - a.data)
 console.log(msgs)        
-msgs.length = 20;
+msgs.length = 10;
         var content = "";
         var i = 0;
         let indexnum = 0;

@@ -19,7 +19,7 @@ module.exports = {
         message.reply(Embed);
         return
     }
-db.set(`points_${user}`, '1') 
-db.delete(`points_${user}`)
+db.set(`Points_${user}`, '1') 
+db.delete(`Points_${user}`)
 
   }}

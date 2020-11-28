@@ -3,13 +3,14 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
 module.exports = {
-    aliases: ['daily'],
+  category: 'Points',
+  aliases: ['daily'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
   description: 'Get your daily points', 
-  callback: async (message, args, text, client, prefix, instance) => {
+  callback: async (message, args, text, client, prefix, instance, statcord) => {
   let timeout = 86400000 // 24 hours in milliseconds, change if you'd like.
   let amounts = 500
 
@@ -20,7 +21,7 @@ module.exports = {
     if (daily !== null && timeout - (Date.now() - daily) > 0) {
         let time = ms(timeout - (Date.now() - daily));
               const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`You already collected ur daily reward\n\nyou can come back and collect it in **${time.hours}h ${time.minutes}m ${time.seconds}s**!`) 
         .setColor('#FF0000')
         message.reply(Embed);
@@ -44,5 +45,7 @@ module.exports = {
 
 
   }
-  }
+
+  let command = 'daily'
+}
 }

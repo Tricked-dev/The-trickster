@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const { MessageEmbed } = require('discord.js'); 
 const db = require('quick.db')
 module.exports = {
+  category: 'Points',
   aliases: ['give', 'point'],
   minArgs: 2,
   maxArgs: -1,
@@ -14,7 +15,7 @@ module.exports = {
     let mamber = message.author
     if(`${mamber.id}` === `${user.id}`) {
         const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**Sharing with yourself smh**`) 
         .setColor('BLUE')
         message.reply(Embed);
@@ -23,7 +24,7 @@ module.exports = {
     if(!user) { // what happens if theres noone mentioned
    const Embed = new Discord.MessageEmbed() // talking
     .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**This is not a user!**`) 
         .setColor('BLUE')
         message.reply(Embed);
@@ -34,7 +35,7 @@ let amount = args[1] // coin amount
 if (amount > '99' ){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**Cant share less than 100points for reasons**`)
         .setColor('BLUE')
         message.reply(Embed);
@@ -43,7 +44,7 @@ if (amount > '99' ){ // checking if the bank doesng go below 0
 if (isNaN(`${amount}`)) { // checking if its a amount of points
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**Thats not a number!**`)
         .setColor('BLUE')
         message.reply(Embed);
@@ -58,7 +59,7 @@ let check = (bank - amount) // comparing the numbers
  if (check < 0){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**You can not give more points than you have, you only have ${bank} points.**`)
         .setColor('BLUE')
         message.reply(Embed);
@@ -68,7 +69,7 @@ await  db.subtract(`points_${message.author.id}`, `${amount}`) // removing from 
 let news = await db.fetch(`points_${user.id}`)
 const Embed = new Discord.MessageEmbed()
         .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**You gave ${user} ${amount} points and they now have ${news} points**`)
         .setColor('BLUE')
         message.reply(Embed);

@@ -18,7 +18,7 @@ const chartCallback = (ChartJS) => {
 }
 
 module.exports =  {
-
+category: 'Other',
       name: 'covid',
       group: 'misc',
       memberName: 'covid',

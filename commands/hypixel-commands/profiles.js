@@ -4,6 +4,8 @@ const client = new Discord.Client();
 const key = '8ca23b84-794b-4485-bbf4-9d09f727eabe'
 
 module.exports = {
+	cooldown: '1m',
+	category: 'Hypixel Skyblock',
 	aliases: ['profilename'],
 	minArgs: 0,
 	maxArgs: -1,

@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const fetch = require('node-fetch');
 
 module.exports = {
+	category: 'Moderation',
 	aliases: ['serverinfo'],
 	minArgs: 0,
 	maxArgs: -1,

@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const { MessageEmbed } = require('discord.js'); 
 const db = require('quick.db')
 module.exports = {
+  category: 'Points',
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
@@ -16,7 +17,7 @@ module.exports = {
         if (isNaN(`${amount}`)) { // checking if number
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**Thats not a number!**`) // if no number
         .setColor('BLUE')
         message.reply(Embed);
@@ -26,7 +27,7 @@ module.exports = {
   if (amount < 100){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**You cant gamble less than 500 points. addict**`)
         .setColor('BLUE')
         message.reply(Embed);
@@ -38,7 +39,7 @@ module.exports = {
   if (check < 0){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**You cant gamble more than what you have you have ${bank} points.**`)
         .setColor('BLUE')
         message.reply(Embed);
@@ -53,9 +54,9 @@ module.exports = {
          db.subtract(`points_${message.author.id}`, `${amount}`)
               db.subtract('gamble', amount)
 		          let gamble = db.get('gamble')
-	          	console.log('Trickedbot > Points lost / win due !gamble  ' + gamble)
+	          	console.log('Trickedbot > points lost / win due !gamble  ' + gamble)
           const Embed = new Discord.MessageEmbed()
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**${amount} points were lost in the gamble F**\nfun fact: ${gamble} points has been won / lost due !gamble `)
         .setColor('#FF0000')
         message.reply(Embed);
@@ -71,13 +72,13 @@ let replies = ["Gambling is a BILLION dollar industry. In America, gambling has 
             const Embed = new Discord.MessageEmbed()
          
             .setColor('#03fc49')
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**${amount} points were placed in your wallet**\n\n fun fact: ${replies[result]}`)
         .setColor('BLUE')
         message.reply(Embed);
       db.add('gamble', amount)
 		let gamble = db.get('gamble')
-    console.log('Trickedbot > Points lost / win due !gamble  ' + gamble)
+    console.log('Trickedbot > points lost / win due !gamble  ' + gamble)
             
     if (amount > 999) {
        let quest = db.get(`${message.author.id}_quests`)

@@ -3,12 +3,13 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
 module.exports = {
-    aliases: ['sp'],
+	category: 'Points',
+	aliases: ['sp'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'get your hourly points', 
+  description: 'get your hourly Points', 
   callback: async (message, args, text, client, prefix, instance) => {
  const Embeds = new Discord.MessageEmbed()
 			.setColor('#000000')

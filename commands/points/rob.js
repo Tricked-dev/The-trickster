@@ -4,6 +4,7 @@ const { MessageEmbed } = require('discord.js');
 const db = require('quick.db')
 const ms = require("parse-ms");
 module.exports = {
+  category: 'Points',
   aliases: ['scam', 'steal', 'pointd'],
   minArgs: 1,
   maxArgs: -1,
@@ -18,14 +19,14 @@ let rob = await db.fetch(`rob_${message.author.id}`);
      if (rob !== null && timeout - (Date.now() - rob) > 0) {
         let time = ms(timeout - (Date.now() - rob));
               const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`You already robbed someone\n\nyou can come back and scam someone in **${time.hours}h ${time.minutes}m ${time.seconds}s**!`) 
         .setColor('#FF0000')
         message.reply(Embed);
         return
     } else {
    
-            let user = message.mentions.members.first() || message.guild.members.get(args[0])
+            var user = message.mentions.members.first() || message.guild.members.cache.find(member => member.user.username === args.join(" ")) || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(member => member.displayName === args.join(" "))
     if (!user) {
         return message.channel.send('Sorry, you forgot to mention somebody.')
     }
@@ -35,7 +36,7 @@ let rob = await db.fetch(`rob_${message.author.id}`);
     let author = await db.fetch(`points_${message.author.id}`) // fetch authors balance
     if(`${targetuser}` === `${author}`) {
         const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**Robbing yourself pothatic**`) 
         .setColor('BLUE')
         message.reply(Embed);

@@ -4,5 +4,6 @@
   "mongoPath": "mongodb+srv://trickedbot:MmDO0tos4uHG3qd8@cluster0.juzum.mongodb.net/tricked-bot?retryWrites=true&w=majority",
   "key": "8ca23b84-794b-4485-bbf4-9d09f727eabe",
   "redisPath": "redis path here",
-  "ownerID": "336465356304678913"
+  "ownerID": "336465356304678913",
+  "keys": "statcord.com-jW1rdGg2dZK4yHSR0HNk"
 }

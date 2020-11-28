@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 module.exports = {
+	category: 'Moderation',
 	aliases: ['typeon', 'typeoff'],
 	minArgs: 1,
 	maxArgs: -1,

@@ -4,6 +4,8 @@ const fetch = require('node-fetch');
 const key = '8ca23b84-794b-4485-bbf4-9d09f727eabe'
 
 module.exports = {
+	cooldown: '10s',
+	category: 'Hypixel Skyblock',
 	aliases: ['namehistory'],
 	minArgs: 1,
 	maxArgs: -1,

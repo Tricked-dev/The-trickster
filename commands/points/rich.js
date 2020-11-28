@@ -3,14 +3,20 @@ const client = new Discord.Client();
 const { MessageEmbed } = require('discord.js'); 
 const db = require('quick.db')
 module.exports = {
-  aliases: ['leaderboard', 'rich', 'lb', 'lb3', 'lb2rs'],
+  cooldown: '10s',
+    category: 'Points',
+    aliases: ['leaderboard', 'rich', 'lb', 'lb3', 'lb2rs'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'Shows the leaderboard of points', 
+  description: 'Shows the leaderboard of Points', 
   callback: async (message, args, text, client, prefix, instance) => {
- let all = db.all().filter(d => d.ID.startsWith("points_")).sort((a, b) => b.data - a.data)
+ 
+    let all = db.all().filter(d => d.ID.startsWith("points_")).sort((a, b) => b.data - a.data)
+    all = all.slice(0, 10)
+
+    
     let content = "";
     
     all.forEach(a => {

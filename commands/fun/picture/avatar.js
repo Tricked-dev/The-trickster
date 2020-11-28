@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 module.exports = {
+	category: 'Fun',
 	aliases: ['av'],
 	minArgs: 0,
 	maxArgs: -1,

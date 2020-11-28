@@ -2,6 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
 module.exports = {
+	category: 'Moderation',
 	aliases: [`user`],
 	minArgs: 0,
 	maxArgs: -1,

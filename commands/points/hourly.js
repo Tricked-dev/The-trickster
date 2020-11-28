@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
 module.exports = {
-    aliases: ['hourly'],
+  category: 'Points',  
+  aliases: ['hourly'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
@@ -19,7 +20,7 @@ module.exports = {
     if (hourly !== null && timeout - (Date.now() - hourly) > 0) {
         let time = ms(timeout - (Date.now() - hourly));
               const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`You already collected ur hourly reward\n\nyou can come back and collect it in **${time.hours}h ${time.minutes}m ${time.seconds}s**!`) 
         .setColor('#FF0000')
         message.reply(Embed);

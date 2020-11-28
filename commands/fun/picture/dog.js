@@ -2,6 +2,7 @@
 const client = new Discord.Client()
 const fetch = require("node-fetch");
 module.exports = {
+   category: 'Fun',
   aliases: ['doggy', 'doggo', 'pet'],
   minArgs: 0,
   maxArgs: -1,

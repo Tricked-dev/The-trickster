@@ -4,10 +4,10 @@ const fetch = require('node-fetch');
 const talkedRecently = new Set();
 
 module.exports = {
+	cooldown: '10s',
 	aliases: ['neko', 'w', 'waifu'],
 	minArgs: 1,
 	maxArgs: -1,
-	cooldown: 5,
 	syntaxError:
 		'Please select what you want: `neko kitsuma hug pat waifu cry slap punch`',
 	expectedArgs: '',

@@ -3,6 +3,7 @@ const Discord = require('discord.js')
 const db = require('quick.db')
 
 module.exports = {
+     category: 'Fun',
     name: 'snipe',
     description: 'Snipe a deleted message',
     usage: 'snipe',

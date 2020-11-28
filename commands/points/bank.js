@@ -5,7 +5,9 @@ const path = require('path')
 const { MessageEmbed } = require('discord.js'); 
 const db = require('quick.db')
 module.exports = {
-    aliases: ['bal', 'points', 'balance'],
+	cooldown: '2s',
+	category: 'Points',
+	aliases: ['bal', 'Points', 'balance'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "mention someone to scout the bank otherwise it will show yours",
@@ -23,13 +25,10 @@ module.exports = {
 	 
 
 	 
-let banks = await db.fetch(`points_${member.id}`)
-	 if (banks === null) {
+let bank = await db.fetch(`points_${member.id}`)
+	 if (bank === null) {
 		 db.add(`points_${member.id}`, '1')
 	 }
-	 let banker = banks.toLocaleString()
-
-let bank = banker.replace(",", " ");
 
 if(args[0]) {
 	 
@@ -64,7 +63,7 @@ if(args[0]) {
 
     ctx.font = '24px sans-serif';
 	ctx.fillStyle = '#ffffff';
-	ctx.fillText(`${member.username} Has ${bank} points!`, canvas.width / 3.1, canvas.height / 1.1);
+	ctx.fillText(`${member.username} Has ${bank} Points!`, canvas.width / 3.1, canvas.height / 1.1);
 	
 	if(np) {
 	ctx.font = '24px sans-serif';

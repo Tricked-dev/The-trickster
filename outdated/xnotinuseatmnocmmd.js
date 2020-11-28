@@ -34,24 +34,24 @@ let amount = args[1]
         message.reply(Embed);
         return
   }
-let bank = await db.fetch(`points_${message.author.id}`)
+let bank = await db.fetch(`Points_${message.author.id}`)
 let check = (bank - amount)
 
  if (check < 0){
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
         .setTitle('Points!')
-        .setDescription(`**You can not give more points than you have, you only have ${bank} points.**`)
+        .setDescription(`**You can not give more Points than you have, you only have ${bank} Points.**`)
         .setColor('BLUE')
         message.reply(Embed);
         return } 
-await  db.add(`points_${user.id}`, `${amount}`)
-await  db.subtract(`points_${message.author.id}`, `${amount}`)
-let news = await db.fetch(`points_${user.id}`)
+await  db.add(`Points_${user.id}`, `${amount}`)
+await  db.subtract(`Points_${message.author.id}`, `${amount}`)
+let news = await db.fetch(`Points_${user.id}`)
 const Embed = new Discord.MessageEmbed()
         .setColor('#03fc49')
         .setTitle('Points!')
-        .setDescription(`**You gave ${user} ${amount} points and they now have ${news} points**`)
+        .setDescription(`**You gave ${user} ${amount} Points and they now have ${news} Points**`)
         .setColor('BLUE')
         message.reply(Embed);
         return 

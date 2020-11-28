@@ -6,6 +6,7 @@ const key = '8ca23b84-794b-4485-bbf4-9d09f727eabe'
 
 
 module.exports = {
+	category: 'Hypixel Skyblock',
 	aliases: ['sbank'],
 	minArgs: 2,
 	maxArgs: -1,

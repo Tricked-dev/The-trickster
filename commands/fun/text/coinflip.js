@@ -3,7 +3,8 @@ const client = new Discord.Client();
 const { MessageEmbed } = require('discord.js'); 
 const db = require('quick.db')
 module.exports = {
-aliases: ['cf'],
+   category: 'Fun',
+  aliases: ['cf'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "please mention somoene to trigger",

@@ -15,23 +15,23 @@ module.exports = {
    async execute(message, args, text, client, prefix, instance) {
    
 
-      let points = db.all().filter(data => data.ID.startsWith(`points_`)).sort((a, b) => b.data - a.data)
-      let lead = db.all().filter(d => d.ID.startsWith('points_'))
+      let Points = db.all().filter(data => data.ID.startsWith(`Points_`)).sort((a, b) => b.data - a.data)
+      let lead = db.all().filter(d => d.ID.startsWith('Points_'))
       lead.length = 20;
-      points.length = 20;
+      Points.length = 20;
       let content = "";
         var i = 0;
         
 
 
 
-      let userid = await client.users.cache.get(points[i].ID.split("_")[1])
+      let userid = await client.users.cache.get(Points[i].ID.split("_")[1])
 
       let user = userid.tag
 let indexnum = 0;
       let num = ++indexnum
 
-        content0 += `${num}. ${user} - ${points[i].data}\n`
+        content0 += `${num}. ${user} - ${Points[i].data}\n`
     
       
 

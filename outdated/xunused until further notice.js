@@ -17,9 +17,9 @@ callback: async (message, args, client, prefix, instance) => {
  
  let member = message.mentions.members.first() || message.author
 
-let bank = await db.fetch(`points_${member.id}`)
+let bank = await db.fetch(`Points_${member.id}`)
 if(!bank) {
-  await  db.add(`points_${member.id}`, `20`)
+  await  db.add(`Points_${member.id}`, `20`)
 }
   if (bank === null) bank = 0;
 const Embed = new Discord.MessageEmbed()

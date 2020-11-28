@@ -4,6 +4,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 
 module.exports = {
+   category: 'Fun',
   aliases: ['worsethanhitler'],
   minArgs: 1,
   maxArgs: -1,

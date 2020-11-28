@@ -4,12 +4,14 @@ const { MessageEmbed } = require('discord.js');
 const ms = require("parse-ms");
 const db = require('quick.db')
 module.exports = {
+  cooldown: '2s',
+  category: 'Points',
   aliases: ['btcminer', 'btminer'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'Shows the leaderboard of points', 
+  description: 'Shows the leaderboard of Points', 
   callback: async (message, args, text, client, prefix, instance) => {
 if(message.author.bot) return;
 
@@ -41,7 +43,7 @@ message.channel.awaitMessages(filter, {
 	errors: ['time'] 
 }).then(async(collected) => {
 	if (collected.first().content.toLowerCase() == `${answer}`) { 
-        message.reply("Great work you mined those bitcoins ill give you 150 points") 
+        message.reply("Great work you mined those bitcoins ill give you 150 Points") 
         db.add(`points_${message.author.id}`, '150')
     }
     }).catch(() => {

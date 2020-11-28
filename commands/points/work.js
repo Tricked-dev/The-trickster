@@ -2,7 +2,8 @@ const db = require('quick.db')
 const Discord = require('discord.js')
 const ms = require("parse-ms");
 module.exports = {
-  aliases: [''],
+  category: 'Points',
+    aliases: [''],
   minArgs: 1,
   maxArgs: -1,
   syntaxError: "please use ```!work <prostitute/constructor/programmer/scammer/monkey>```",
@@ -18,7 +19,7 @@ module.exports = {
     if (work !== null && timeout - (Date.now() - work) > 0) {
         let time = ms(timeout - (Date.now() - work));
               const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`You have already worked\n\nyou can come back and work again in **${time.hours}h ${time.minutes}m ${time.seconds}s**!`) 
         .setColor('#FF0000')
         message.reply(Embed);

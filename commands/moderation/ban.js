@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 
 module.exports = {
+  category: 'Moderation',
   aliases: [''],
   minArgs: 2,
   maxArgs: -1,
@@ -30,7 +31,6 @@ if (message.member.hasPermission("BAN_MEMBERS") || message.author.id == 33646535
       message.reply(`${member.user.tag} has been removed from the server by ${message.author.tag} because: ${reason}`);
     }
     ban();
-    message.react(`${tick}`)
     return    
 
    }

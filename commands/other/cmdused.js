@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const db = require('quick.db')
 
 module.exports = {
+	category: 'Other',
 	aliases: ['commandsused'],
 	minArgs: 0,
 	maxArgs: -1,
@@ -15,10 +16,7 @@ module.exports = {
 let command = db.get('commands')
 
 
-commandd = command.toLocaleString()
 
-commands = commandd.replace(",", " ");
-
-       message.channel.send(commands + ' commands have been used')
+       message.channel.send(command + ' commands have been used')
     }
 }

@@ -3,10 +3,11 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 
 module.exports = {
+   category: 'Fun',
   aliases: ['ask', 'question', 'trickedbot'],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "!8ball <qustion>",
+  syntaxError: "!8ball <qustion> /s",
   expectedArgs: "<question>", 
   description: 'Ask maybe he will know',
 

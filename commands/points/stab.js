@@ -4,7 +4,8 @@ const { MessageEmbed } = require('discord.js');
 const db = require('quick.db')
 const ms = require("parse-ms");
 module.exports = {
-  aliases: [''],
+  category: 'Points',
+    aliases: [''],
   minArgs: 1,
   maxArgs: -1,
   syntaxError: "please mention someone to rob",
@@ -18,7 +19,7 @@ let rob = await db.fetch(`rob_${message.author.id}`);
      if (rob !== null && timeout - (Date.now() - rob) > 0) {
         let time = ms(timeout - (Date.now() - rob));
               const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`You already robbed someone\n\nyou can come back and scam someone in **${time.hours}h ${time.minutes}m ${time.seconds}s**!`) 
         .setColor('#FF0000')
         message.reply(Embed);
@@ -35,7 +36,7 @@ let rob = await db.fetch(`rob_${message.author.id}`);
     let author = await db.fetch(`points_${message.author.id}`) // fetch authors balance
     if(`${targetuser}` === `${author}`) {
         const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('Points!')
+        .setTitle('points!')
         .setDescription(`**Robbing yourself pothatic**`) 
         .setColor('BLUE')
         message.reply(Embed);
@@ -51,16 +52,13 @@ let rob = await db.fetch(`rob_${message.author.id}`);
     }
 
 
-     const coin = [
-    `0`,      
-    `1`,
-    `2`,
-		];
-  
-    const index = Math.floor(
-				Math.random() * (coin.length - 1) + 1
-            );
-    if(index == '2') {
+    
+
+
+
+
+
+    if(Math.floor(Math.random() * (100 - 1) + 1) > 60 ) {
         message.channel.send(`Your robbery failed and instead you lost ${num} point good job!`)
         db.subtract(`points_${message.author.id}`, num)
         db.add(`points_${user.id}`, num)

@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const fetch = require('node-fetch');
 
 module.exports = {
+	category: 'Hypixel Skyblock',
 	aliases: [''],
 	minArgs: 1,
 	maxArgs: 1,

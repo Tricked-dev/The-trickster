@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 module.exports = (client) => {
+	client.user.setPresence({ activity: { name: '' }, status: 'offline' })
 	async function startup() {
 		const activities_list = [
 			'With My Self',

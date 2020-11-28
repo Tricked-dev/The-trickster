@@ -1,14 +1,14 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { MessageEmbed } = require('discord.js'); 
-const db = require('quick.db')
 module.exports = {
-  aliases: [''],
+   category: 'Fun',
+    aliases: [''],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'Gamble your points away', 
+  description: 'Gamble your Points away', 
   callback: async (message, args, text, client, prefix, instance) => {
     let amount = args[0]
 
@@ -36,7 +36,7 @@ console.log(indexs)
     if(indexs == '2') {
           const Embed = new Discord.MessageEmbed()
         .setTitle('Points!')
-        .setDescription(`**${amount} points were lost in the gamble F**\nfun fact its a 50/50 chance to loose your coins`)
+        .setDescription(`**${amount} Points were lost in the gamble F**\nfun fact its a 50/50 chance to loose your coins`)
         .setColor('#FF0000')
         message.reply(Embed);
         
@@ -61,7 +61,7 @@ console.log(indexs)
          
             .setColor('#03fc49')
         .setTitle('Points!')
-        .setDescription(`**${amount} points were placed in your wallet**\n\n fun fact: It has been estimated that around 80 percent of the US population has gambled in their lifetime. Gambling can be done in various different ways and therefore is easy for people to access.`)
+        .setDescription(`**${amount} Points were placed in your wallet**\n\n fun fact: It has been estimated that around 80 percent of the US population has gambled in their lifetime. Gambling can be done in various different ways and therefore is easy for people to access.`)
         .setColor('BLUE')
         message.reply(Embed);
       

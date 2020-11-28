@@ -3,6 +3,7 @@
 const client = new Discord.Client()
 
 module.exports = {
+  category: 'Moderation',
   aliases: [''],
   minArgs: 2,
   maxArgs: -1,

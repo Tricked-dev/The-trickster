@@ -3,19 +3,20 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
 module.exports = {
-    aliases: ['month'],
+  category: 'Points',  
+  aliases: ['month'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'Get your monthly points', 
+  description: 'Get your monthly Points', 
   callback: async (message, args, text, client, prefix, instance) => {
   let timeout = 2592000000 // 24 hours in milliseconds, change if you'd like.
   let amounts = 5000
 
 
 
-    let monthly = await db.fetch(`monthly_${message.author.id}`);
+    let monthly = await db.fetch(`monthly_${message.author.id}s`);
 
     if (monthly !== null && timeout - (Date.now() - monthly) > 0) {
         let time = ms(timeout - (Date.now() - monthly));
@@ -40,7 +41,7 @@ module.exports = {
 
     message.channel.send(embed)
     db.add(`points_${message.author.id}`, amount)
-    db.set(`monthly_${message.author.id}`, Date.now())
+    db.set(`monthly_${message.author.id}s`, Date.now())
 
 
   }

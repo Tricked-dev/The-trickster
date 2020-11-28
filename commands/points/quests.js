@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 const ms = require("parse-ms");
 module.exports = {
-    aliases: ['quest'],
+    category: 'Points',
+        aliases: ['quest'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
@@ -22,14 +23,14 @@ if(quest == 'rob') {
 }else if(quest == 'gamble'){
     const Embed = new Discord.MessageEmbed() // talking
         .setTitle('Points!')
-        .setDescription(`**gamble 1k points at once to finish this quest**`) 
+        .setDescription(`**gamble 1k Points at once to finish this quest**`) 
         .setColor('#FF0000')
         message.reply(Embed);
 return
 }else if(quest == 'share') {
       const Embed = new Discord.MessageEmbed() // talking
         .setTitle('Points!')
-        .setDescription(`**Share 1k points at once to complete this quest**`) 
+        .setDescription(`**Share 1k Points at once to complete this quest**`) 
         .setColor('#FF0000')
         message.reply(Embed);
     return
@@ -62,14 +63,14 @@ if(index == '1'){
         db.set(`${message.author.id}_quests`, `gamble`) 
              const Embed = new Discord.MessageEmbed() // talking
         .setTitle('Points!')
-        .setDescription(`**gamble 1k points at once to finish this quest**`) 
+        .setDescription(`**gamble 1k Points at once to finish this quest**`) 
         .setColor('#FF0000')
         message.reply(Embed);
 }else if(index == '3'){
         db.set(`${message.author.id}_quests`, `share`) 
              const Embed = new Discord.MessageEmbed() // talking
         .setTitle('Points!')
-        .setDescription(`**Share 1k points at once to complete this quest**`) 
+        .setDescription(`**Share 1k Points at once to complete this quest**`) 
         .setColor('#FF0000')
         message.reply(Embed);
 }
@@ -98,14 +99,14 @@ if(index == '1'){
         db.set(`${message.author.id}_quests`, `gamble`) 
              const Embed = new Discord.MessageEmbed() // talking
         .setTitle('Points!')
-        .setDescription(`**gamble 1k points at once to finish this quest**`) 
+        .setDescription(`**gamble 1k Points at once to finish this quest**`) 
         .setColor('#FF0000')
         message.reply(Embed);
 }else if(index == '3'){
         db.set(`${message.author.id}_quests`, `share`) 
              const Embed = new Discord.MessageEmbed() // talking
         .setTitle('Points!')
-        .setDescription(`**Share 1k points at once to complete this quest**`) 
+        .setDescription(`**Share 1k Points at once to complete this quest**`) 
         .setColor('#FF0000')
         message.reply(Embed);
 }

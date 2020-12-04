@@ -1,18 +1,21 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const { MessageEmbed } = require('discord.js'); 
-const db = require('quick.db')
-module.exports = {
+ const Discord = require("discord.js");
+ const Enmap = require("enmap");
+ const { MessageEmbed } = require('discord.js'); 
+ const ms = require("parse-ms");
+ module.exports = {
+  cooldown: '2s',
   category: 'Points',
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'Gamble your points away', 
-  callback: async (message, args, text, client, prefix, instance) => {
-    let amount = args[0]
-    let bank = await db.fetch(`points_${message.author.id}`)
+  description: 'Gamble your life savings like every man would', 
+  callback: async (message, args, text, client) => {
+    let amounts = args[0]
+    let amount = Number(amounts)
+    let member = message.author
+    let bank = await client.userProfiles.get(member.id, 'points');
     let mamber = message.author
         if (isNaN(`${amount}`)) { // checking if number
     const Embed = new Discord.MessageEmbed()
@@ -28,7 +31,7 @@ module.exports = {
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
         .setTitle('points!')
-        .setDescription(`**You cant gamble less than 500 points. addict**`)
+        .setDescription(`**You cant gamble less than 100 points. addict**`)
         .setColor('BLUE')
         message.reply(Embed);
         return }
@@ -51,13 +54,10 @@ module.exports = {
         Math.floor(Math.random() * (max - min) + min)
             );
     if(indexs == '2') {
-         db.subtract(`points_${message.author.id}`, `${amount}`)
-              db.subtract('gamble', amount)
-		          let gamble = db.get('gamble')
-	          	console.log('Trickedbot > points lost / win due !gamble  ' + gamble)
+         client.userProfiles.set(member.id, bank - amount, 'points');     
           const Embed = new Discord.MessageEmbed()
         .setTitle('points!')
-        .setDescription(`**${amount} points were lost in the gamble F**\nfun fact: ${gamble} points has been won / lost due !gamble `)
+        .setDescription(`**${amount} points were lost in the gamble F**`)
         .setColor('#FF0000')
         message.reply(Embed);
         return;
@@ -68,7 +68,7 @@ let replies = ["Gambling is a BILLION dollar industry. In America, gambling has 
 
 
 
-              db.add(`points_${message.author.id}`, amount)
+            client.userProfiles.set(member.id, bank + amount, 'points');
             const Embed = new Discord.MessageEmbed()
          
             .setColor('#03fc49')
@@ -76,14 +76,11 @@ let replies = ["Gambling is a BILLION dollar industry. In America, gambling has 
         .setDescription(`**${amount} points were placed in your wallet**\n\n fun fact: ${replies[result]}`)
         .setColor('BLUE')
         message.reply(Embed);
-      db.add('gamble', amount)
-		let gamble = db.get('gamble')
-    console.log('Trickedbot > points lost / win due !gamble  ' + gamble)
             
     if (amount > 999) {
-       let quest = db.get(`${message.author.id}_quests`)
+       let quest =  client.userProfiles.get(member.id, 'quest'); 
     if(quest == 'gamble'){
-       db.set(`${message.author.id}_quests`, `1`) 
+       client.userProfiles.set(member.id, 1, 'quest');
     }
   }
 

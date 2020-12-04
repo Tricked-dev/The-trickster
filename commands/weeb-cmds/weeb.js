@@ -5,6 +5,7 @@ const talkedRecently = new Set();
 
 module.exports = {
 	cooldown: '10s',
+	category: 'anime',
 	aliases: ['neko', 'w', 'waifu'],
 	minArgs: 1,
 	maxArgs: -1,

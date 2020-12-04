@@ -1,20 +1,23 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const { MessageEmbed } = require('discord.js'); 
-const db = require('quick.db')
-const ms = require("parse-ms");
-module.exports = {
+ const Discord = require("discord.js");
+ const Enmap = require("enmap");
+ const { MessageEmbed } = require('discord.js'); 
+ const ms = require("parse-ms");
+ module.exports = {
+  cooldown: '2s',
   category: 'Points',
-  aliases: ['scam', 'steal', 'pointd'],
-  minArgs: 1,
+  aliases: [''],
+  minArgs: 0,
   maxArgs: -1,
-  syntaxError: "please mention someone to rob",
-  expectedArgs: "please mention someone to rob", 
-  description: 'Rob someone', 
-  callback: async (message, args, text, client, prefix, instance) => {
+  syntaxError: "",
+  expectedArgs: "", 
+  description: 'Your points, now mine', 
+  callback: async (message, args, text, client) => {
 
   let timeout = 300000 // 24 hours in milliseconds, change if you'd like.
-let rob = await db.fetch(`rob_${message.author.id}`);
+    let attack = message.mentions.members.first()
+    let member = message.author
+
+    let rob = await client.userProfiles.get(member.id, 'rob');
 
      if (rob !== null && timeout - (Date.now() - rob) > 0) {
         let time = ms(timeout - (Date.now() - rob));
@@ -26,33 +29,28 @@ let rob = await db.fetch(`rob_${message.author.id}`);
         return
     } else {
    
-            var user = message.mentions.members.first() || message.guild.members.cache.find(member => member.user.username === args.join(" ")) || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(member => member.displayName === args.join(" "))
-    if (!user) {
-        return message.channel.send('Sorry, you forgot to mention somebody.')
-    }
-    let targetuser = await db.fetch(`points_${user.id}`) // fetch mentioned users balance
-    let nums = (targetuser * 0.20)
-    let num = nums.toFixed(0)
-    let author = await db.fetch(`points_${message.author.id}`) // fetch authors balance
+
+    let targetuser = await client.userProfiles.get(attack.id, 'points'); // fetch mentioned users balance
+    let num = (targetuser * 0.20)
+    let author = await client.userProfiles.get(member.id, 'points'); // fetch authors balance
     if(`${targetuser}` === `${author}`) {
         const Embed = new Discord.MessageEmbed() // talking
         .setTitle('points!')
-        .setDescription(`**Robbing yourself pothatic**`) 
+        .setDescription(`**Robbing yourself pathetic**`) 
         .setColor('BLUE')
         message.reply(Embed);
         return
     }
 
     if (author < num) { // if the authors balance is less than 250, return this.
-        return message.channel.send(`:x: You need atleast ${num}$ to rob that user`)
+        return message.channel.send(`:x: You need atleast ${num.toFixed(0)}$ to rob that user`)
     }
 
     if (targetuser < 50) { // if mentioned user has 0 or less, it will return this.
-        return message.channel.send(`:x: ${user.user.username} does not have anything to rob.`)
+        return message.channel.send(`:x: ${attack.user.username} does not have anything to rob.`)
     }
 
-
-     const coin = [
+    const coin = [
     `0`,      
     `1`,
     `2`,
@@ -62,32 +60,30 @@ let rob = await db.fetch(`rob_${message.author.id}`);
 				Math.random() * (coin.length - 1) + 1
             );
     if(index == '2') {
-        message.channel.send(`Your robbery failed and instead you lost ${num} point good job!`)
-        db.subtract(`points_${message.author.id}`, num)
-        db.add(`points_${user.id}`, num)
-        db.set(`rob_${message.author.id}`, Date.now())
+        message.channel.send(`Your robbery failed and instead you lost ${num.toFixed(0)} point good job!`)
+        client.userProfiles.math(attack.id,  '-', num, 'points');
+        client.userProfiles.math(member.id,  '+', num, 'points');
+        client.userProfiles.set(attack.id, Data.now(), 'rob');
         return;
     }
     let cn = (`${targetuser}` / '3')
-    let random = Math.floor(Math.random() * `${cn}`) + 1; // random number 200-1, you can change 200 to whatever you'd like
+    let random = Math.floor(Math.random() * `${cn}`) + 1;
 
 
     const embed = new Discord.MessageEmbed()
-    .setDescription(`${message.author} you robbed ${user} and got away with ${random}!`)
+    .setDescription(`${message.author} you robbed ${attack} and got away with ${random}!`)
     .setColor("GREEN")
     .setTimestamp()
     message.channel.send(embed)
-    let quest = db.get(`${message.author.id}_quests`)
+       let quest =  client.userProfiles.get(author.id, 'quest'); 
     if(quest == 'rob'){
-       db.set(`${message.author.id}_quests`, `1`) 
+       client.userProfiles.set(member.id, 1, 'quest');
     }
 
 
-
-    db.subtract(`points_${user.id}`, random)
-    db.add(`points_${message.author.id}`, random)
-    db.set(`rob_${message.author.id}`, Date.now())
-
+    client.userProfiles.math(member.id, '+', random, 'points');
+    client.userProfiles.math(attack.id, '-', random, 'points');
+    client.userProfiles.set(member.id, Data.now(), 'rob');
 
 }
   }

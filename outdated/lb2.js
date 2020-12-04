@@ -7,6 +7,7 @@ module.exports = {
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
+  permissions: 'ADMINISTRATOR',
   expectedArgs: "", 
   description: 'Shows the leaderboard of Points', 
   callback: async (message, args, text, client, prefix, instance) => {

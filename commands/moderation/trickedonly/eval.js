@@ -4,6 +4,7 @@ const client = new Discord.Client();
 module.exports = {
 	aliases: ['oval'],
 	minArgs: 0,
+	category: 'tricked',
 	maxArgs: -1,
 	syntaxError: '',
 	expectedArgs: '',

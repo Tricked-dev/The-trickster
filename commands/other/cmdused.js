@@ -1,22 +1,21 @@
-const messagedelete = require("../../outdated/messagedelete")
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const db = require('quick.db')
-
-module.exports = {
-	category: 'Other',
-	aliases: ['commandsused'],
-	minArgs: 0,
-	maxArgs: -1,
-	syntaxError: '',
-	expectedArgs: '',
-	description: 'commands used',
-	callback: (message) => {
+ const Discord = require("discord.js") 
+ const Enmap = require("enmap") 
+ const { MessageEmbed } = require('discord.js')  
+ const ms = require("parse-ms") 
+ module.exports = {
+  cooldown: '2s',
+  category: 'Other',
+  aliases: ['commandsused'],
+  minArgs: 0,
+  maxArgs: -1,
+  syntaxError: "",
+  expectedArgs: "", 
+  description: 'Shows the leaderboard of Points', 
+  callback: async (message, args, text, client) => {
         
-let command = db.get('commands')
+let commands = client.userProfiles.get(message.author.id, 'commands');
 
 
-
-       message.channel.send(command + ' commands have been used')
+       message.channel.send(`you used ${commands} commands's`)
     }
 }

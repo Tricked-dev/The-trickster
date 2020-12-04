@@ -2,18 +2,24 @@ const Discord = require('discord.js');
 const WOKCommands = require('wokcommands');
 const config = require('./config.json');
 const client = new Discord.Client();;
+const Enmap = require("enmap");
+require('events').EventEmitter.defaultMaxListeners = 25;
 
 client.on('ready', () => {
-	new WOKCommands(client, 'commands', 'features')
-		.setMongoPath(config.mongoPath)
-		.setSyntaxError('Incorrect syntax! Please use {PREFIX}{COMMAND} {ARGUMENTS}')
-        .setCategoryEmoji('Points', '🤑')
-        .setCategoryEmoji('Fun', '🎮')
-        .setCategoryEmoji('Moderation', '😎')
-        .setCategoryEmoji('Other', '😲')
-        .setCategoryEmoji('Hypixel Skyblock', '😲')
+    console.log('╔═══════════════════════════════════( WOKcommands )══════════════════════════════════╗')
+    new WOKCommands(client, 'commands', 'features')
+        .setMongoPath(config.mongoPath)
+        .setMaxListeners(20)
+		.setSyntaxError('Incorrect syntax! Please use {PREFIX}{COMMAND} {ARGUMENTS}').setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Other', '😲').setCategoryEmoji('Hypixel Skyblock', '😲')
     });
 
+
+client.userProfiles = new Enmap({
+    name: 'userProfiles',
+    fetchAll: true,
+    autoFetch: true,
+    cloneLevel: 'deep'
+});
 
 
 
@@ -47,7 +53,7 @@ client.on("message", async (message) => {
 
 
 statcord.on("post", status => {
-    if (!status) console.log("Trickedbot > status posted");
+    if (!status) return
     else console.error(status);
 });
 client.login(config.token);

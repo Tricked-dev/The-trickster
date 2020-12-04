@@ -1,30 +1,19 @@
-const db = require('quick.db')
-const Discord = require('discord.js')
-const ms = require("parse-ms");
-module.exports = {
+ const Discord = require("discord.js");
+ const Enmap = require("enmap");
+ const { MessageEmbed } = require('discord.js'); 
+ const ms = require("parse-ms");
+ module.exports = {
+  cooldown: '2s',
   category: 'Points',
-    aliases: [''],
-  minArgs: 1,
+  aliases: [''],
+  minArgs: 0,
   maxArgs: -1,
-  syntaxError: "please use ```!work <prostitute/constructor/programmer/scammer/monkey>```",
-  expectedArgs: "please use ```!work <prostitute/constructor/programmer/scammer/monkey>```", 
-  description: 'Work for points OwO', 
-  callback: async (message, args, text, client, prefix, instance) => {
+  syntaxError: "",
+  expectedArgs: "", 
+  description: 'Work as a people', 
+  callback: async (message, args, text, client) => {
     
     
-    let timeout = 1200000
-
-    let work = await db.fetch(`work_${message.author.id}`);
-
-    if (work !== null && timeout - (Date.now() - work) > 0) {
-        let time = ms(timeout - (Date.now() - work));
-              const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('points!')
-        .setDescription(`You have already worked\n\nyou can come back and work again in **${time.hours}h ${time.minutes}m ${time.seconds}s**!`) 
-        .setColor('#FF0000')
-        message.reply(Embed);
-        return
-    } else {
     var jobs = ["prostitute", "constructor", "programmer", "monkey", "scammer"];
     if(!jobs.includes(args[0])) {
         return message.channel.send(`thats not a job!`)
@@ -40,7 +29,8 @@ module.exports = {
         
     
         message.channel.send(embed)
-        db.add(`points_${message.author.id}`, amount)
+         let bal = await client.userProfiles.get(message.author.id, 'points')  
+client.userProfiles.set(message.author.id, bal + amount, 'points');
     } else if(args[0] == 'constructor') {
         let amount = Math.floor(Math.random() * 500) + 1; // 1-500 random number. whatever you'd like
 
@@ -51,7 +41,8 @@ module.exports = {
         
     
         message.channel.send(embed)
-        db.add(`points_${message.author.id}`, amount)
+         let bal = await client.userProfiles.get(message.author.id, 'points')  
+client.userProfiles.set(message.author.id, bal + amount, 'points');
     } else if(args[0] == 'programmer') {
         let amount = Math.floor(Math.random() * 500) + 1; // 1-500 random number. change to whatever you'd like
 
@@ -62,7 +53,8 @@ module.exports = {
         
     
         message.channel.send(embed)
-        db.add(`points_${message.author.id}`, amount)
+         let bal = await client.userProfiles.get(message.author.id, 'points')  
+client.userProfiles.set(message.author.id, bal + amount, 'points');
       
     
     } else if(args[0] == 'monkey') {
@@ -74,7 +66,8 @@ module.exports = {
         .setColor("RANDOM")
         message.channel.send(embed)
         message.channel.send('OO AA OO AA OO AA')
-        db.add(`points_${message.author.id}`, amount)
+         let bal = await client.userProfiles.get(message.author.id, 'points')  
+client.userProfiles.set(message.author.id, bal + amount, 'points');
     } else if(args[0] == 'scammer') {
         let amount = Math.floor(Math.random() * 500) + 1; // 1-500 random number. change to whatever you'd like
 
@@ -85,11 +78,11 @@ module.exports = {
         
     
         message.channel.send(embed)
-        db.add(`points_${message.author.id}`, amount)
+         let bal = await client.userProfiles.get(message.author.id, 'points')  
+client.userProfiles.set(message.author.id, bal + amount, 'points');
       
     
     }
-    db.set(`work_${message.author.id}`, Date.now())
 }
 
 
@@ -106,8 +99,9 @@ module.exports = {
     .setColor("RANDOM")
     
     message.channel.send(embed)
-    db.add(`points_${message.author.id}`, amount)
+     let bal = await client.userProfiles.get(message.author.id, 'points')  
+client.userProfiles.set(message.author.id, bal + amount, 'points');
     */
 
 
-}
+

@@ -1,37 +1,40 @@
- const Discord = require('discord.js');
-const client = new Discord.Client();
-const { MessageEmbed } = require('discord.js'); 
-const db = require('quick.db')
-module.exports = {
-  cooldown: '10s',
-    category: 'Points',
-    aliases: ['leaderboard', 'rich', 'lb', 'lb3', 'lb2rs'],
+ const Discord = require("discord.js");
+ const Enmap = require("enmap");
+ const { MessageEmbed } = require('discord.js'); 
+ const ms = require("parse-ms");
+const { sort } = require("mathjs");
+ module.exports = {
+  cooldown: '2s',
+  category: 'Points',
+  aliases: ['lb', 'leaderboard'],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'Shows the leaderboard of Points', 
-  callback: async (message, args, text, client, prefix, instance) => {
+  description: 'Show the leaderboard', 
+  callback: async (message, args, text, client) => {
  
-    let all = db.all().filter(d => d.ID.startsWith("points_")).sort((a, b) => b.data - a.data)
-    all = all.slice(0, 10)
-
-    
-    let content = "";
-    
-    all.forEach(a => {
-        
-        let who = message.guild.members.cache.get(a.ID.split("_")[1])
-        if (who) {
-            content += `${who.user.username} - ${a.data}\n`;
-        } 
-    })
-    let embed = new Discord.MessageEmbed()
-        .setTitle(`${message.guild.name}'s point leaderboard`)
-        .setDescription(`\`\`\`${content}\n\`\`\``)
-        .setColor('GREEN')
-        .setTimestamp()
-
-    message.channel.send(embed)
+const users = client.userProfiles.array();
+const sorted = users.sort((a, b) => ((1 + b.points) - (1 + a.points)));
+const top10 = sorted.splice(0, 10);
+console.log(top10)
+let num = 0
+let content = ""
+  for(const data of top10) {
+    try {
+      embed.addField(client.users.cache.get(data.sorted).tag, `${data.points} points`);
+    } catch {
+      num += 1
+       content += `${num}. points - ${data.points}\n`
+       console.log(data.sorted)
+    }
+  }
+  const embed = new Discord.MessageEmbed()
+    .setTitle("top 10 anonymous leaderboard")
+    .setDescription(`\`\`\`${content}\n\`\`\``)
+    .setColor(0x00AE86);
+  return message.channel.send({embed});
 }
-}
+  
+
+  }

@@ -1,19 +1,21 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const { MessageEmbed } = require('discord.js'); 
-const db = require('quick.db')
-module.exports = {
+ const Discord = require("discord.js");
+ const Enmap = require("enmap");
+ const { MessageEmbed } = require('discord.js'); 
+ const ms = require("parse-ms");
+ module.exports = {
+  cooldown: '2s',
   category: 'Points',
-  aliases: ['give', 'point'],
-  minArgs: 2,
+  aliases: ['give', 'send'],
+  minArgs: 0,
   maxArgs: -1,
-  syntaxError: "!share",
-  expectedArgs: "Please mention someone to share points to", 
-  description: 'Give points', 
-  callback: async (message, args, text, client, prefix, instance) => {
-    let user = message.mentions.members.first()  // looking whos the lucky person
-    let mamber = message.author
-    if(`${mamber.id}` === `${user.id}`) {
+  syntaxError: "",
+  expectedArgs: "", 
+  description: 'Feeling nice?', 
+  callback: async (message, args, text, client) => {
+      let lucky = message.mentions.members.first()
+      let author = message.author
+    let bal =  client.userProfiles.get(author.id, 'points'); 
+    if(`${lucky.id}` === `${author.id}`) {
         const Embed = new Discord.MessageEmbed() // talking
         .setTitle('points!')
         .setDescription(`**Sharing with yourself smh**`) 
@@ -21,7 +23,7 @@ module.exports = {
         message.reply(Embed);
         return
     }
-    if(!user) { // what happens if theres noone mentioned
+    if(!lucky) { // what happens if theres noone mentioned
    const Embed = new Discord.MessageEmbed() // talking
     .setColor('#03fc49')
         .setTitle('points!')
@@ -30,9 +32,9 @@ module.exports = {
         message.reply(Embed);
         return
 }
-let amount = args[1] // coin amount
- 
-if (amount > '99' ){ // checking if the bank doesng go below 0
+let amounter = args[1] // coin amount
+let amount = Number(amounter)
+if (amount < 99 ){ // checking if the bank doesng go below 0
     const Embed = new Discord.MessageEmbed()
     .setColor('#03fc49')
         .setTitle('points!')
@@ -50,10 +52,8 @@ if (isNaN(`${amount}`)) { // checking if its a amount of points
         message.reply(Embed);
         return
   }
-let bank = await db.fetch(`points_${message.author.id}`)  // opening bank
-if(!bank) {
-  await  db.add(`points_${message.author.id}`, `20`)
-}
+
+let bank = await client.userProfiles.get(author.id,'points');  // opening bank
 let check = (bank - amount) // comparing the numbers
 
  if (check < 0){ // checking if the bank doesng go below 0
@@ -63,21 +63,21 @@ let check = (bank - amount) // comparing the numbers
         .setDescription(`**You can not give more points than you have, you only have ${bank} points.**`)
         .setColor('BLUE')
         message.reply(Embed);
-        return } 
-await  db.add(`points_${user.id}`, `${amount}`) // adding to mentioned guy
-await  db.subtract(`points_${message.author.id}`, `${amount}`) // removing from user
-let news = await db.fetch(`points_${user.id}`)
+        return }
+    client.userProfiles.math(lucky.id, "+", amount, "points");
+    client.userProfiles.math(author.id, "-", amount, "points");
+let news = await client.userProfiles.get(lucky.id, 'points');
 const Embed = new Discord.MessageEmbed()
         .setColor('#03fc49')
         .setTitle('points!')
-        .setDescription(`**You gave ${user} ${amount} points and they now have ${news} points**`)
+        .setDescription(`**You gave ${lucky} ${amount} points and they now have ${news} points**`)
         .setColor('BLUE')
         message.reply(Embed);
         if (980 < amount) {
-       let quest = db.get(`${message.author.id}_quests`)
+       let quest =  client.userProfiles.get(author.id, 'quest'); 
     if(quest == 'share'){
-       db.set(`${message.author.id}_quests`, `1`) 
-    }
+       client.userProfiles.set(author.id, 1, 'quest');
+    } 
   }
   return 
   }

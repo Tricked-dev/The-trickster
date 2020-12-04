@@ -31,15 +31,14 @@ module.exports = (client) => {
 				type: type_list[index],
 			});
 		}, 10000);
-		const upchannel = client.channels.cache.get('765971179583832074');
-		const upembed = new Discord.MessageEmbed()
-			.setThumbnail(client.user.avatarURL())
-			.setTitle('Bot restart Notification')
-			.setDescription(
-				'Maybe some glitch or my owner restarted me I am back online'
-			);
-		upchannel.send(upembed);
-		console.log(`Trickedbot > Logged in as ${client.user.tag}!`);
+		console.log('╠═════════════════════════════════════( login ) ═════════════════════════════════════╣')
+		console.log(`║ Trickedbot > Logged in as ${client.user.tag}!                                      ║`);
+		console.log('╠════════════════════════════════════( Servers ) ════════════════════════════════════╣')
+		console.warn(`║ Trickedbot > Active in ${client.guilds.cache.size} servers!                                                 ║`)
+		client.guilds.cache.forEach((guild) => {
+        console.log(`║ Trickedbot > ${guild.name} member's ${guild.memberCount}`)
+    })
+		console.log('╚════════════════════════════════════════════════════════════════════════════════════╝	')
 	}
 	startup();
 };

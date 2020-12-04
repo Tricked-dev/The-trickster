@@ -1,16 +1,18 @@
 
-const Discord = require("discord.js");
-const db = require("quick.db");
-const ms = require("parse-ms");
-module.exports = {
-	category: 'Points',
-	aliases: ['sp'],
+ const Discord = require("discord.js");
+ const Enmap = require("enmap");
+ const { MessageEmbed } = require('discord.js'); 
+ const ms = require("parse-ms");
+ module.exports = {
+  cooldown: '2s',
+  category: 'Points',
+  aliases: [''],
   minArgs: 0,
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'get your hourly Points', 
-  callback: async (message, args, text, client, prefix, instance) => {
+  description: 'Shop!', 
+  callback: async (message, args, text, client) => {
  const Embeds = new Discord.MessageEmbed()
 			.setColor('#000000')
 			.setTitle('Shop')

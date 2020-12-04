@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
 	aliases: ['delmsg', 'msgdel'],
+	category: 'tricked',
 	minArgs: 1,
 	maxArgs: -1,
 	syntaxError: '',

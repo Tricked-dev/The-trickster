@@ -2,12 +2,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 module.exports = {
+	category: 'tricked',
 	aliases: [''],
 	minArgs: 0,
 	maxArgs: -1,
 	syntaxError: '',
 	expectedArgs: '',
-	description: '',
+	description: 'Makes the bot say something',
 	callback: (message, args, text, client, prefix, instance) => {
 		const input = args.join(' ');
 		if (message.author.id == 336465356304678913) {

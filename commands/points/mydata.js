@@ -15,7 +15,6 @@
   callback: async (message, args, text, client) => {
     const infos = client.userProfiles.get(message.author.id)
     let info = JSON.stringify(infos,null,'\t')
-    console.log(info)
     let name = message.author.username
 /* sourcebin.create([
     {

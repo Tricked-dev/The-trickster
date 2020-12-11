@@ -32,7 +32,6 @@ module.exports = {
                 
         Math.floor(Math.random() * (max - min) + min)
             );
-console.log(indexs)
     if(indexs == '2') {
           const Embed = new Discord.MessageEmbed()
         .setTitle('Points!')

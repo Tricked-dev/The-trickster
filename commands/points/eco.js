@@ -23,7 +23,7 @@
 
 
  let amounts = args[2];
-
+ let arger = args.slice(2).join(" ");
  let amount =  parseInt(amounts)
  console.log(amount)
  let member = message.mentions.members.first()
@@ -98,4 +98,25 @@
         .setFooter("Epicly made trickedbot")
         .setTimestamp()
         message.reply(Embed);
-  }}}
+  }
+if(args[0] == 'set'){
+        client.userProfiles.set(member.id, amount, 'points');
+        const Embed = new Discord.MessageEmbed()
+        .setColor('#03fc49')
+        .setTitle('points!')
+        .setDescription(`**set ${member}'s balance to ${amount}**`)
+        .setColor('BLUE')
+        message.reply(Embed);
+        return
+    } else if (args[0] == 'pp'){    
+        client.userProfiles.set(member.id, arger, 'pp');
+        const Embed = new Discord.MessageEmbed()
+        .setColor('#03fc49')
+        .setTitle('points!')
+        .setDescription(`**made his pp: '${arger}' and ${member}'s his pp is now ${arger}**`)
+        .setColor('BLUE')
+        message.reply(Embed);
+        
+        return
+}
+}}

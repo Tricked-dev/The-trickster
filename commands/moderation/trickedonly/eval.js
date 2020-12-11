@@ -25,14 +25,14 @@ module.exports = {
 		} catch (err) {
 			const Embed = new Discord.MessageEmbed()
 				.setFooter(`Time taken ${client.ws.ping}ms`)
-				.addField('Tested', `\`\`\`${args[0]}\`\`\``)
+				.addField('Tested', `\`\`\`${input}\`\`\``)
 				.addField('Failed Output', `\`\`\`${err}\`\`\``)
 			message.reply(Embed);
 		} finally {
 			const Embed = new Discord.MessageEmbed()
 				.setFooter(`Time taken ${client.ws.ping}ms`)
-				.addField('Tested', `\`\`\`${args[0]}\`\`\``)
-				.addField('Output', `\`\`\`${eval(input)}\`\`\``)
+				.addField('Tested', `\`\`\`js\n${input}\n\`\`\``)
+				.addField('Output', `\`\`\`js\n${eval(input)}\n\`\`\``)
 			message.reply(Embed);
 		}
 	},

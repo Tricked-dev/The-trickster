@@ -11,7 +11,7 @@
   maxArgs: -1,
   syntaxError: "",
   expectedArgs: "", 
-  description: 'Semds your balance or the mentioned users balance', 
+  description: 'Sends your balance or the mentioned users balance', 
   callback: async (message, args, text, client) => {
     const target = message.mentions.users.first() || message.author
         point = await client.userProfiles.get(target.id, 'points');

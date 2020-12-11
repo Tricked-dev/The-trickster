@@ -50,7 +50,6 @@ module.exports = {
       return null;
     } catch (err) {
       voiceChannel.leave();
-      console.log(err)
       return message.channel.send(
         `**Oh No, An Error Occurred: Try Again Later!**`
       );

@@ -6,11 +6,10 @@ const Enmap = require("enmap");
 require('events').EventEmitter.defaultMaxListeners = 25;
 
 client.on('ready', () => {
-    console.log('╔═══════════════════════════════════( WOKcommands )══════════════════════════════════╗')
+    console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
     new WOKCommands(client, 'commands', 'features')
         .setMongoPath(config.mongoPath)
-        .setMaxListeners(20)
-		.setSyntaxError('Incorrect syntax! Please use {PREFIX}{COMMAND} {ARGUMENTS}').setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Other', '😲').setCategoryEmoji('Hypixel Skyblock', '😲')
+		.setSyntaxError('Incorrect syntax! Please use {PREFIX}{COMMAND} {ARGUMENTS}').setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
     });
 
 
@@ -20,7 +19,12 @@ client.userProfiles = new Enmap({
     autoFetch: true,
     cloneLevel: 'deep'
 });
-
+client.guild = new Enmap({
+    name: 'guild',
+    fetchAll: true,
+    autoFetch: true,
+    cloneLevel: 'deep'
+});
 
 
 const Statcord = require("statcord.js");

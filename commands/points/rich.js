@@ -17,7 +17,6 @@ const { sort } = require("mathjs");
 const users = client.userProfiles.array();
 const sorted = users.sort((a, b) => ((1 + b.points) - (1 + a.points)));
 const top10 = sorted.splice(0, 10);
-console.log(top10)
 let num = 0
 let content = ""
   for(const data of top10) {
@@ -26,7 +25,6 @@ let content = ""
     } catch {
       num += 1
        content += `${num}. points - ${data.points}\n`
-       console.log(data.sorted)
     }
   }
   const embed = new Discord.MessageEmbed()

@@ -21,7 +21,6 @@
 
 
     let monthly = await client.userProfiles.get(target.id, 'monthly');
-    console.log(monthly)
     if (monthly !== null && timeout - (Date.now() - monthly) > 0) {
         let time = ms(timeout - (Date.now() - monthly));
         const Embed = new Discord.MessageEmbed() // talking

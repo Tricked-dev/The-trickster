@@ -19,7 +19,6 @@
 
 
     let daily = await client.userProfiles.get(target.id, 'daily');
-    console.log(daily)
     if (daily !== null && timeout - (Date.now() - daily) > 0) {
         let time = ms(timeout - (Date.now() - daily));
         const Embed = new Discord.MessageEmbed() // talking

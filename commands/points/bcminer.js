@@ -85,12 +85,10 @@ collector.on('collect', (m) => {
 })
 
 collector.on('end', (collected) =>{
-  console.log(`collected ${collected.size} messages`)
 
 let counter = 0
 collected.forEach(value => {
   let item = Number(value.content)
-  console.log(item)
   if(answer[counter++] == item){
     score += 1
   }

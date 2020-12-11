@@ -15,7 +15,6 @@
     
     
     let newrs = client.userProfiles.get(message.author.id, 'started') 
-    console.log(newrs + 'started')
     if (newrs !== 1) {
     message.channel.send(`points will now start flooding next time you do !claim`)
     client.userProfiles.set(message.author.id, Date.now(), 'claim') 
@@ -40,7 +39,6 @@
 
 
   let amount = await client.userProfiles.get(message.author.id, 'temp') 
-  console.log(amount + ' From temp')
   amounter = amount.toFixed(0)
   amun = Number(amounter)
     const Embed = new Discord.MessageEmbed()

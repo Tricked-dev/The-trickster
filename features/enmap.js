@@ -25,6 +25,12 @@ client.userProfiles.ensure(message.author.id, {
     totalActions: 0,
     warnings: [],
     kicks: []
- })}
+ })
+ 
+ client.guild.ensure(message.guild.id, {
+    id: message.guild.id,
+ }) 
+
+}
  )
 }

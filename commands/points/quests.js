@@ -55,7 +55,6 @@ let mins = Math.ceil(1);
             );
             
 
-console.log(index)
 
 if(index == '1'){
         await client.userProfiles.set(member.id, 'rob', 'quest');
@@ -90,9 +89,6 @@ if(index == '1'){
 				Math.floor(Math.random() * (maxs - mins) + mins)
             );
             
-
-console.log(index)
-
 if(index == '1'){
         await client.userProfiles.set(member.id, 'rob', 'quest'); 
              const Embed = new Discord.MessageEmbed() // talking

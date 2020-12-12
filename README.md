@@ -1,48 +1,13 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/SkyBlockDev/The-trickster"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/SkyBlockDev/The-trickster">View Demo</a>
-    ·
-    <a href="https://github.com/SkyBlockDev/The-trickster/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/SkyBlockDev/The-trickster/issues">Request Feature</a>
-  </p>
-</p>
-
+<h1 align="center">Awesome README Templates</h1>
+<p align="center"><i>A collection of awesome readme templates to display on your github profile.</i></p>
+<div align="center">
+  <a href="https://github.com/SkyBlockDev/The-trickster/stargazers"><img src="https://img.shields.io/github/stars/SkyBlockDev/The-trickster" alt="Stars Badge"/></a>
+<a href="https://github.com/SkyBlockDev/The-trickster/network/members"><img src="https://img.shields.io/github/forks/SkyBlockDev/The-trickster" alt="Forks Badge"/></a>
+<a href="https://github.com/SkyBlockDev/The-trickster/pulls"><img src="https://img.shields.io/github/issues-pr/SkyBlockDev/The-trickster" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/SkyBlockDev/The-trickster/issues"><img src="https://img.shields.io/github/issues/SkyBlockDev/The-trickster" alt="Issues Badge"/></a>
+<a href="https://github.com/SkyBlockDev/The-trickster/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/SkyBlockDev/The-trickster?color=2b9348"></a>
+<a href="https://github.com/SkyBlockDev/The-trickster/blob/master/LICENSE"><img src="https://img.shields.io/github/license/SkyBlockDev/The-trickster?color=2b9348" alt="License Badge"/></a>
+</div>
+<br>
+<p align="center"><i>Loved the project? Please visit our <a href="https://awesome-github-readme-profile.netlify.app">Website</a></i></p>
+<br>

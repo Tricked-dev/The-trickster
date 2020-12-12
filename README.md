@@ -8,6 +8,7 @@
 <a href="https://github.com/SkyBlockDev/The-trickster/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/SkyBlockDev/The-trickster?color=2b9348"></a>
 <a href="https://github.com/SkyBlockDev/The-trickster/blob/master/LICENSE"><img src="https://img.shields.io/github/license/SkyBlockDev/The-trickster?color=2b9348" alt="License Badge"/></a>
 </div>
+<ss>
 # Commands:
 ## > Fun
 > cat
@@ -83,6 +84,7 @@
 > invite
 > level
 > ping
+  <ss>
 <br>
 <p align="center"><i>Loved the project? Please visit my <a href="https://discord.gg/TAp9Kt2">discord</a></i></p>
 <br>

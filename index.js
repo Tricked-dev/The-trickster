@@ -8,9 +8,9 @@ const prefix = '!'
 
 client.on('ready', () => {
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
-    new WOKCommands(client, 'commands', 'features')
+    new WOKCommands(client, 'commands', 'features', 'messages.json')
         .setMongoPath(config.mongoPath)
-		.setSyntaxError('Incorrect syntax! Please use {PREFIX}{COMMAND} {ARGUMENTS}').setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
+        .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
     });
 
 
@@ -37,6 +37,7 @@ client.on('message', message => {
     //it can be discord or Discord Or Just MessageEmbed If You Didnt Define Discord 
                 const ee = new Discord.MessageEmbed()
                 .setTitle(`I Was Pinged!`)
+                .setBotOwner(['336465356304678913'])
                 .setDescription(`My default Prefix Is **${prefix}**! To See My List Of Commands Run **${prefix}help**!`)
                 message.channel.send(ee)
             }

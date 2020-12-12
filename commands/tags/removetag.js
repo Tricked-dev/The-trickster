@@ -15,7 +15,8 @@
   callback: async (message, args, text, client) => {
     if (message.member.hasPermission('ADMINISTRATOR') || message.author.id == 336465356304678913 || message.member.hasPermission('MANAGE_MESSAGES')) {
             let name = args[0]
-    if(name == ['id', message.guild.id, 'guild', 'guildname']) {
+            bannednames = ['id', message.guild.id, 'guild', 'guildname', 'embed']
+    if(name.includes(bannednames)) {
         message.reply('sorry those are banned names')
         return
     } else if(!client.guild.get(message.guild.id, name)){
@@ -32,7 +33,7 @@
     } else {
         const Embed = new Discord.MessageEmbed()
             .setColor('#03fc49')
-            .setTitle(`Sorry, you don't have the permission: 'ADMINISTRATOR' to execute this command`);
+            .setTitle(`Sorry, you don't have the permission: 'ADMINISTRATOR/MANAGE_MESSAGES' to execute this command`);
         message.reply(Embed);
     }
 

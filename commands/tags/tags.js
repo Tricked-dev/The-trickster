@@ -13,10 +13,11 @@
   expectedArgs: "", 
   description: '', 
   callback: async (message, args, text, client) => {
+
+
       let tags  = await client.guild.get(message.guild.id)
-
-      let content = Object.keys(tags).toString().replace(/(\r\n|\n|\r|,)/gm, ", ");
-
+      let con = Object.keys(tags).toString().replace(/(\id,)/gm, "");
+      let content = con.replace(/(\r\n|\n|\r|,)/gm, ", ");
       
     const Embed = new Discord.MessageEmbed() 
     .setTitle('tags')

@@ -96,7 +96,3 @@ invite<br>
 level<br>
 ping<br>
 &lt;/ss&gt;<br>
-&lt;br&gt;<br>
-&lt;p align=“center”&gt;&lt;i&gt;Loved the project? Please visit my &lt;a href=&quot;<a href="https://discord.gg/TAp9Kt2">https://discord.gg/TAp9Kt2</a>&quot;&gt;discord&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;<br>
-&lt;br&gt;</p>
-</blockquote>

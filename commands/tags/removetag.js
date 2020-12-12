@@ -19,7 +19,7 @@
         message.reply('sorry those are banned names')
         return
     } else if(!client.guild.get(message.guild.id, name)){
-        message.reply('sorry that tag does not excist.')
+        message.reply('sorry that tag does not exist.')
         return
     }
     client.guild.delete(message.guild.id, name);
@@ -32,7 +32,7 @@
     } else {
         const Embed = new Discord.MessageEmbed()
             .setColor('#03fc49')
-            .setTitle(`Sorry, you dont have the permission: 'ADMINISTRATOR' to execute this command`);
+            .setTitle(`Sorry, you don't have the permission: 'ADMINISTRATOR' to execute this command`);
         message.reply(Embed);
     }
 

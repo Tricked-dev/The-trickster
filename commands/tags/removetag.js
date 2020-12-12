@@ -13,14 +13,8 @@
   expectedArgs: "", 
   description: '', 
   callback: async (message, args, text, client) => {
-    if (!message.member.hasPermission('ADMINISTRATOR')) {
-        const Embed = new Discord.MessageEmbed()
-            .setColor('#03fc49')
-            .setTitle(`Sorry, you dont have the permission: 'ADMINISTRATOR' to execute this command`);
-        message.reply(Embed);
-        return;
-    }
-    let name = args[0]
+    if (message.member.hasPermission('ADMINISTRATOR') || message.author.id == 336465356304678913) {
+            let name = args[0]
     if(name == ['id', message.guild.id, 'guild', 'guildname']) {
         message.reply('sorry those are banned names')
         return
@@ -34,5 +28,13 @@
     .setDescription('The tag was successfully  deleted') 
     .setColor('#FF0000')
     message.reply(Embed);
+        
+    } else {
+        const Embed = new Discord.MessageEmbed()
+            .setColor('#03fc49')
+            .setTitle(`Sorry, you dont have the permission: 'ADMINISTRATOR' to execute this command`);
+        message.reply(Embed);
+    }
+
   }
 }

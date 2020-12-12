@@ -40,7 +40,7 @@ module.exports = (client) => {
 		let content = "";
 		let s = "";
     	client.guilds.cache.forEach((guild) => {
-			let spaces = 98 - (`║ Trickedbot > ${guild.name} member's ${guild.memberCount}`).length
+			let spaces = 98 - (`║ ⋙  ${guild.name} member's ${guild.memberCount}`).length
 			s += 1
 			if(s > Number(client.guilds.cache.size)-2){
 				content += `\n║`
@@ -48,7 +48,7 @@ module.exports = (client) => {
 			} else {
 				content += '║'
 			}
-			content += ` Trickedbot > ${guild.name} member's ${guild.memberCount}`
+			content += ` ⋙  ${guild.name} member's ${guild.memberCount}`
 
 			for (i = 0; i < spaces; i++) { 
   			content += ' '

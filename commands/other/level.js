@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
  const Enmap = require("enmap");
   const canvacord = require("canvacord");
-   lev = require('../levelchard.json')
+   lev = require('../../levelchard.json')
 module.exports = {
 	category: 'Other',
 	aliases: ['lvl'],

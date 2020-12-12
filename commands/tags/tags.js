@@ -15,11 +15,10 @@
   callback: async (message, args, text, client) => {
       let tags  = await client.guild.get(message.guild.id)
 
-      let content = Object.keys(tags).toString().replace(/(\r\n|\n|\r)/gm, "");
+      let content = Object.keys(tags).toString().replace(/(\r\n|\n|\r|,)/gm, ", ");
 
       
-      const Embed = new Discord.MessageEmbed() 
-
+    const Embed = new Discord.MessageEmbed() 
     .setTitle('tags')
     .setDescription(content) 
     .setColor('#FF0000')

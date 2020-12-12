@@ -84,7 +84,7 @@
 > invite
 > level
 > ping
-  <ss>
+  </ss>
 <br>
 <p align="center"><i>Loved the project? Please visit my <a href="https://discord.gg/TAp9Kt2">discord</a></i></p>
 <br>

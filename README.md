@@ -64,7 +64,7 @@
 </blockquote>
 <h2 class="code-line" data-line-start=48 data-line-end=49 ><a id="_points_48"></a>&gt; points</h2>
 <blockquote>
-<p class="has-line-data" data-line-start="49" data-line-end="65"><strong>bal</strong>&gt;check your balance<br>
+<p class="has-line-data" data-line-start="49" data-line-end="65"><strong>bal</strong> &gt; check your balance<br>
 <strong>bcminer</strong> &gt; start mining some bitcoin<br>
 <strong>buy</strong> &gt; buy something from !shop<br>
 <strong>claim</strong> &gt; claim your free points<br>

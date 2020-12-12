@@ -59,16 +59,16 @@
 <strong>slowmode</strong> &gt; sets the slowmode in seconds<br>
 <strong>sudo</strong> &gt; make the bot say what you want in a embed<br>
 <strong>type</strong> &gt; makes the bot start typing<br>
-<strong>unmute</strong>&gt;unmute someone<br>
-<strong>vc</strong>&gt;put the bot in the vc</p>
+<strong>unmute</strong> &gt; unmute someone<br>
+<strong>vc</strong> &gt; put the bot in the vc</p>
 </blockquote>
 <h2 class="code-line" data-line-start=48 data-line-end=49 ><a id="_points_48"></a>&gt; points</h2>
 <blockquote>
 <p class="has-line-data" data-line-start="49" data-line-end="65"><strong>bal</strong>&gt;check your balance<br>
-<strong>bcminer</strong>&gt;start mining some bitcoin<br>
-<strong>buy</strong>&gt;buy something from !shop<br>
-<strong>claim</strong>&gt;claim your free points<br>
-<strong>daily</strong>&gt;claim your daily<br>
+<strong>bcminer</strong> &gt; start mining some bitcoin<br>
+<strong>buy</strong> &gt; buy something from !shop<br>
+<strong>claim</strong> &gt; claim your free points<br>
+<strong>daily</strong> &gt; claim your daily<br>
 <strong>gamble</strong> &gt; game some points<br>
 <strong>hourly</strong> &gt; claim your hourly points<br>
 <strong>inventory</strong> &gt; check your inventory<br>

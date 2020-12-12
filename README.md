@@ -1,90 +1,102 @@
-<h1 align="center">The Trickster</h1>
-<p align="center"><i>A usefull all in one bot</i></p>
-<div align="center">
-  <a href="https://github.com/SkyBlockDev/The-trickster/stargazers"><img src="https://img.shields.io/github/stars/SkyBlockDev/The-trickster" alt="Stars Badge"/></a>
-<a href="https://github.com/SkyBlockDev/The-trickster/network/members"><img src="https://img.shields.io/github/forks/SkyBlockDev/The-trickster" alt="Forks Badge"/></a>
-<a href="https://github.com/SkyBlockDev/The-trickster/pulls"><img src="https://img.shields.io/github/issues-pr/SkyBlockDev/The-trickster" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/SkyBlockDev/The-trickster/issues"><img src="https://img.shields.io/github/issues/SkyBlockDev/The-trickster" alt="Issues Badge"/></a>
-<a href="https://github.com/SkyBlockDev/The-trickster/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/SkyBlockDev/The-trickster?color=2b9348"></a>
-<a href="https://github.com/SkyBlockDev/The-trickster/blob/master/LICENSE"><img src="https://img.shields.io/github/license/SkyBlockDev/The-trickster?color=2b9348" alt="License Badge"/></a>
-</div>
-<ss>
-# Commands:
-## > Fun
-> cat
-> cool
-> dog
-> bully
-> facepalm
-> gay 
-> hitler
-> hug
-> invert
-> jail
-> jokeoverhead
-> kill
-> kiss
-> meme
-> search
-> hitass
-> triggered
-> wanted
-> 8ball
-> pp
-> coinflip
-> fakegamble
-> fortnite
-> iq
-> uwu
-## > imformation
-> avatar
-> info
-> perms
-> rolemap
-> server
-> uptime
-> userinfo
-## > moderation
-> ban
-> clear
-> kick
-> mute
-> nick
-> nickreset 
-> slowmode
-> sudo 
-> type
-> unmute
-> vc
-## > points
-> bal
-> bcminer
-> buy
-> claim
-> daily
-> eco
-> gamble
-> hourly
-> inventory
-> monthly
-> quests
-> rich
-> rob
-> share
-> shop
-> stab 
-> work
-## > tags
-> addtag
-> deletetag
-> tag
-> tags
-## > other
-> mydata
-> invite
-> level
-> ping
-  </ss>
-<br>
-<p align="center"><i>Loved the project? Please visit my <a href="https://discord.gg/TAp9Kt2">discord</a></i></p>
-<br>
+<p class="has-line-data" data-line-start="0" data-line-end="11">&lt;h1 align=“center”&gt;The Trickster&lt;/h1&gt;<br>
+&lt;p align=“center”&gt;&lt;i&gt;A usefull all in one bot&lt;/i&gt;&lt;/p&gt;<br>
+&lt;div align=“center”&gt;<br>
+&lt;a href=&quot;<a href="https://github.com/SkyBlockDev/The-trickster/stargazers">https://github.com/SkyBlockDev/The-trickster/stargazers</a>“&gt;&lt;img src=”<a href="https://img.shields.io/github/stars/SkyBlockDev/The-trickster">https://img.shields.io/github/stars/SkyBlockDev/The-trickster</a>&quot; alt=“Stars Badge”/&gt;&lt;/a&gt;<br>
+&lt;a href=&quot;<a href="https://github.com/SkyBlockDev/The-trickster/network/members">https://github.com/SkyBlockDev/The-trickster/network/members</a>“&gt;&lt;img src=”<a href="https://img.shields.io/github/forks/SkyBlockDev/The-trickster">https://img.shields.io/github/forks/SkyBlockDev/The-trickster</a>&quot; alt=“Forks Badge”/&gt;&lt;/a&gt;<br>
+&lt;a href=&quot;<a href="https://github.com/SkyBlockDev/The-trickster/pulls">https://github.com/SkyBlockDev/The-trickster/pulls</a>“&gt;&lt;img src=”<a href="https://img.shields.io/github/issues-pr/SkyBlockDev/The-trickster">https://img.shields.io/github/issues-pr/SkyBlockDev/The-trickster</a>&quot; alt=“Pull Requests Badge”/&gt;&lt;/a&gt;<br>
+&lt;a href=&quot;<a href="https://github.com/SkyBlockDev/The-trickster/issues">https://github.com/SkyBlockDev/The-trickster/issues</a>“&gt;&lt;img src=”<a href="https://img.shields.io/github/issues/SkyBlockDev/The-trickster">https://img.shields.io/github/issues/SkyBlockDev/The-trickster</a>&quot; alt=“Issues Badge”/&gt;&lt;/a&gt;<br>
+&lt;a href=&quot;<a href="https://github.com/SkyBlockDev/The-trickster/graphs/contributors">https://github.com/SkyBlockDev/The-trickster/graphs/contributors</a>“&gt;&lt;img alt=“GitHub contributors” src=”<a href="https://img.shields.io/github/contributors/SkyBlockDev/The-trickster?color=2b9348">https://img.shields.io/github/contributors/SkyBlockDev/The-trickster?color=2b9348</a>“&gt;&lt;/a&gt;<br>
+&lt;a href=”<a href="https://github.com/SkyBlockDev/The-trickster/blob/master/LICENSE">https://github.com/SkyBlockDev/The-trickster/blob/master/LICENSE</a>“&gt;&lt;img src=”<a href="https://img.shields.io/github/license/SkyBlockDev/The-trickster?color=2b9348">https://img.shields.io/github/license/SkyBlockDev/The-trickster?color=2b9348</a>&quot; alt=“License Badge”/&gt;&lt;/a&gt;<br>
+&lt;/div&gt;<br>
+&lt;ss&gt;</p>
+<h1 class="code-line" data-line-start=11 data-line-end=12 ><a id="Commands_11"></a>Commands:</h1>
+<h2 class="code-line" data-line-start=12 data-line-end=13 ><a id="_Fun_12"></a>&gt; Fun</h2>
+<blockquote>
+<p class="has-line-data" data-line-start="13" data-line-end="38">cat<br>
+cool<br>
+dog<br>
+bully<br>
+facepalm<br>
+gay<br>
+hitler<br>
+hug<br>
+invert<br>
+jail<br>
+jokeoverhead<br>
+kill<br>
+kiss<br>
+meme<br>
+search<br>
+hitass<br>
+triggered<br>
+wanted<br>
+8ball<br>
+pp<br>
+coinflip<br>
+fakegamble<br>
+fortnite<br>
+iq<br>
+uwu</p>
+</blockquote>
+<h2 class="code-line" data-line-start=38 data-line-end=39 ><a id="_imformation_38"></a>&gt; imformation</h2>
+<blockquote>
+<p class="has-line-data" data-line-start="39" data-line-end="46">avatar<br>
+info<br>
+perms<br>
+rolemap<br>
+server<br>
+uptime<br>
+userinfo</p>
+</blockquote>
+<h2 class="code-line" data-line-start=46 data-line-end=47 ><a id="_moderation_46"></a>&gt; moderation</h2>
+<blockquote>
+<p class="has-line-data" data-line-start="47" data-line-end="58">ban<br>
+clear<br>
+kick<br>
+mute<br>
+nick<br>
+nickreset<br>
+slowmode<br>
+sudo<br>
+type<br>
+unmute<br>
+vc</p>
+</blockquote>
+<h2 class="code-line" data-line-start=58 data-line-end=59 ><a id="_points_58"></a>&gt; points</h2>
+<blockquote>
+<p class="has-line-data" data-line-start="59" data-line-end="76">bal<br>
+bcminer<br>
+buy<br>
+claim<br>
+daily<br>
+eco<br>
+gamble<br>
+hourly<br>
+inventory<br>
+monthly<br>
+quests<br>
+rich<br>
+rob<br>
+share<br>
+shop<br>
+stab<br>
+work</p>
+</blockquote>
+<h2 class="code-line" data-line-start=76 data-line-end=77 ><a id="_tags_76"></a>&gt; tags</h2>
+<blockquote>
+<p class="has-line-data" data-line-start="77" data-line-end="81">addtag<br>
+deletetag<br>
+tag<br>
+tags</p>
+</blockquote>
+<h2 class="code-line" data-line-start=81 data-line-end=82 ><a id="_other_81"></a>&gt; other</h2>
+<blockquote>
+<p class="has-line-data" data-line-start="82" data-line-end="90">mydata<br>
+invite<br>
+level<br>
+ping<br>
+&lt;/ss&gt;<br>
+&lt;br&gt;<br>
+&lt;p align=“center”&gt;&lt;i&gt;Loved the project? Please visit my &lt;a href=&quot;<a href="https://discord.gg/TAp9Kt2">https://discord.gg/TAp9Kt2</a>&quot;&gt;discord&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;<br>
+&lt;br&gt;</p>
+</blockquote>

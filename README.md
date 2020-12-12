@@ -8,7 +8,6 @@
 <a href="https://github.com/SkyBlockDev/The-trickster/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/SkyBlockDev/The-trickster?color=2b9348"></a>
 <a href="https://github.com/SkyBlockDev/The-trickster/blob/master/LICENSE"><img src="https://img.shields.io/github/license/SkyBlockDev/The-trickster?color=2b9348" alt="License Badge"/></a>
 </div>
-&lt;ss&gt;</p>
 <h1 class="code-line" data-line-start=11 data-line-end=12 ><a id="Commands_11"></a>Commands:</h1>
 <h2 class="code-line" data-line-start=12 data-line-end=13 ><a id="_Fun_12"></a>&gt; Fun</h2>
 <blockquote>

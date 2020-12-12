@@ -37,7 +37,7 @@ fortnite<br>
 iq<br>
 uwu</p>
 </blockquote>
-<h2 class="code-line" data-line-start=38 data-line-end=39 ><a id="_imformation_38"></a>&gt; imformation</h2>
+<h2 class="code-line" data-line-start=38 data-line-end=39 ><a id="_information_38"></a>&gt; information</h2>
 <blockquote>
 <p class="has-line-data" data-line-start="39" data-line-end="46">avatar<br>
 info<br>

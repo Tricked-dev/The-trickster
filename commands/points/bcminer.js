@@ -99,7 +99,7 @@ if(score == 0) {
   message.reply('You didnt get a single answer right betterluck next time')
   return
 }
-message.reply(` you got a whopping ${score} answers right i'll give you ${amount} points for that`)
+message.reply(`you got a whopping ${score} answers right i'll give you ${amount} points for that`)
 client.userProfiles.math(message.author.id, '+', amount, 'points');
 })
 

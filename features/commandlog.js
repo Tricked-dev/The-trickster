@@ -19,7 +19,7 @@ module.exports = async (client,command) => {
 		  content += ' '
 		}
 		content += '║\n'
-		let aces = 99 - (`║ command: ${message.content} `).length
+		let aces = 99 - (`║ command: ${message.content}`).length
 		content += `║ Command: ${message.content.replace('!', '')}`
 		for (i = 0; i < aces; i++) { 
 		  content += ' '

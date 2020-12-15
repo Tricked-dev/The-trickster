@@ -3,8 +3,10 @@ module.exports = async (client,command) => {
 
 
 	client.on('message', async (message) => {
+		if(message.guild === null) return
 		let	content = '';
 		if (!message.content.startsWith('!') || message.author.bot) return;
+		console.log('╠═( Command used )════════════════════════════════════════════════════════════════════════════════╣')
 		used = await client.userProfiles.get(message.author.id, 'commands');
 		client.userProfiles.set(message.author.id, used + 1, 'commands');
 		let spaces = 99 - (`║ server: ${message.guild} `).length
@@ -26,7 +28,6 @@ module.exports = async (client,command) => {
 		}
 		content += '║'
 		console.log(content)
-		console.log('╠═( Command used )════════════════════════════════════════════════════════════════════════════════╣')
 		});
 		
 			

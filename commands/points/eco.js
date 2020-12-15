@@ -25,7 +25,6 @@
  let amounts = args[2];
  let arger = args.slice(2).join(" ");
  let amount =  parseInt(amounts)
- console.log(amount)
  let member = message.mentions.members.first()
  let bal = await client.userProfiles.get(member.id, 'points')  
 

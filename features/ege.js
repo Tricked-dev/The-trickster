@@ -1,5 +1,6 @@
 module.exports = (client) => {
 client.on('message', message => { // <------------- command handler
+    if(message.guild === null) return
     if(!message.guild.id == 701833606280118282) {
         return
     }

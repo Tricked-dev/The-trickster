@@ -29,7 +29,7 @@
  let bal = await client.userProfiles.get(member.id, 'points')  
 
 
- if(args[0] == 'set'){
+if(args[0] == 'set'){
         client.userProfiles.set(member.id, amount, 'points');
         const Embed = new Discord.MessageEmbed()
         .setColor('#03fc49')
@@ -57,8 +57,7 @@
         message.reply(Embed);
         
         return
-
-    } else if (args[0] == 'add'){
+} else if (args[0] == 'add'){
       if (isNaN(`${amount}`)) { // checking if number
     const Embed = new Discord.MessageEmbed()
         .setColor('#03fc49')
@@ -97,8 +96,7 @@
         .setFooter("Epicly made trickedbot")
         .setTimestamp()
         message.reply(Embed);
-  }
-if(args[0] == 'set'){
+} else if(args[0] == 'set'){
         client.userProfiles.set(member.id, amount, 'points');
         const Embed = new Discord.MessageEmbed()
         .setColor('#03fc49')
@@ -107,7 +105,7 @@ if(args[0] == 'set'){
         .setColor('BLUE')
         message.reply(Embed);
         return
-    } else if (args[0] == 'pp'){    
+} else if (args[0] == 'pp'){    
         client.userProfiles.set(member.id, arger, 'pp');
         const Embed = new Discord.MessageEmbed()
         .setColor('#03fc49')
@@ -115,7 +113,33 @@ if(args[0] == 'set'){
         .setDescription(`**made his pp: '${arger}' and ${member}'s his pp is now ${arger}**`)
         .setColor('BLUE')
         message.reply(Embed);
-        
         return
-}
+} else if (args[0] == 'iq'){    
+        client.userProfiles.set(member.id, arger, 'iq');
+        const Embed = new Discord.MessageEmbed()
+        .setColor('#03fc49')
+        .setTitle('points!')
+        .setDescription(`**made his pp: '${arger}' and ${member}'s his pp is now ${arger}**`)
+        .setColor('BLUE')
+        message.reply(Embed);
+        return
+} else if (args[0] == 'gayrate'){    
+        client.userProfiles.set(member.id, arger, 'gayrate');
+        const Embed = new Discord.MessageEmbed()
+        .setColor('#03fc49')
+        .setTitle('points!')
+        .setDescription(`**made his pp: '${arger}' and ${member}'s his pp is now ${arger}**`)
+        .setColor('BLUE')
+        message.reply(Embed);
+        return
+} else if (args[0] == 'gamerrate'){    
+        client.userProfiles.set(member.id, arger, 'gamerrate');
+        const Embed = new Discord.MessageEmbed()
+        .setColor('#03fc49')
+        .setTitle('points!')
+        .setDescription(`**made his pp: '${arger}' and ${member}'s his pp is now ${arger}**`)
+        .setColor('BLUE')
+        message.reply(Embed);
+        return
+      }
 }}

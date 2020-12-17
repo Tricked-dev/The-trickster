@@ -11,6 +11,8 @@ client.userProfiles.ensure(message.author.id, {
     messages: 0,
     level: 0,
     iq: 0,
+    gamerrate: 0,
+    gayrate: 0,
     gamble: 0,
     items: [],
     claim: 0,

@@ -10,8 +10,7 @@ client.on('ready', () => {
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
     new WOKCommands(client, 'commands', 'features', 'messages.json')
         .setMongoPath(config.mongoPath)
-        .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
-    });
+        .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')});
 
 client.userProfiles = new Enmap({
     name: 'userProfiles',
@@ -26,7 +25,6 @@ client.guild = new Enmap({
     cloneLevel: 'deep'
 });
 
-
 client.on('message', message => {
             if(message.content == `<@!${client.user.id}>`) {
                 const ee = new Discord.MessageEmbed()
@@ -38,7 +36,6 @@ client.on('message', message => {
 
 const statcord = new Statcord.Client({client,key: config.keys,postCpuStatistics: false,postMemStatistics: false,postNetworkStatistics: false,});
 client.on("ready", async () => {statcord.autopost();});
-
 
 client.on("message", async (message) => {if (message.author.bot) return;if (message.channel.type !== "text") return;if (!message.content.startsWith(prefix)) return;let command = message.content.split(" ")[0].toLowerCase().substr(prefix.length);statcord.postCommand(command, message.author.id);});
 

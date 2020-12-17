@@ -212,7 +212,7 @@ csx/
 # Microsoft Azure Emulator
 ecf/
 rcf/
-
+*./build/
 # Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
@@ -221,7 +221,8 @@ _pkginfo.txt
 *.appx
 *.appxbundle
 *.appxupload
-
+Build/
+build/
 # Visual Studio cache files
 # files ending in .cache can be ignored
 *.[Cc]ache

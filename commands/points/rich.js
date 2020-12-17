@@ -2,7 +2,6 @@
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
-const { sort } = require("mathjs");
  module.exports = {
   cooldown: '2s',
   category: 'Points',

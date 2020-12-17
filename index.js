@@ -13,7 +13,6 @@ client.on('ready', () => {
         .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
     });
 
-
 client.userProfiles = new Enmap({
     name: 'userProfiles',
     fetchAll: true,
@@ -29,15 +28,9 @@ client.guild = new Enmap({
 
 
 client.on('message', message => {
-    //unless you defined it alr
-    
-    //again it can be bot.user.id or client.user.id
-            if(message.content === `<@!${client.user.id}>`) {
-    
-    //it can be discord or Discord Or Just MessageEmbed If You Didnt Define Discord 
+            if(message.content == `<@!${client.user.id}>`) {
                 const ee = new Discord.MessageEmbed()
                 .setTitle(`I Was Pinged!`)
-                .setBotOwner(['336465356304678913'])
                 .setDescription(`My default Prefix Is **${prefix}**! To See My List Of Commands Run **${prefix}help**!`)
                 message.channel.send(ee)
             }
@@ -48,5 +41,5 @@ client.on("ready", async () => {statcord.autopost();});
 
 
 client.on("message", async (message) => {if (message.author.bot) return;if (message.channel.type !== "text") return;if (!message.content.startsWith(prefix)) return;let command = message.content.split(" ")[0].toLowerCase().substr(prefix.length);statcord.postCommand(command, message.author.id);});
-statcord.on("post", status => {if (!status) return; else console.error(status);});
+
 client.login(config.token);

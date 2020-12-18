@@ -17,13 +17,13 @@ client.userProfiles = new Enmap({
     fetchAll: true,
     autoFetch: true,
     cloneLevel: 'deep'
-});
+                                });
 client.guild = new Enmap({
     name: 'guild',
     fetchAll: true,
     autoFetch: true,
     cloneLevel: 'deep'
-});
+                        });
 
 client.on('message', message => {
             if(message.content == `<@!${client.user.id}>`) {

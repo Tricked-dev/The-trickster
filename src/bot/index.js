@@ -19,6 +19,7 @@ client.on('ready', () => {
             }
             //does nothing since code code is already executed
         )
+        
     });
 
 client.userProfiles = new Enmap({

@@ -5,12 +5,21 @@ const client = new Discord.Client();;
 const Enmap = require("enmap");
 const Statcord = require("statcord.js");
 const prefix = '!'
+const { exec } = require("child_process");
 
 client.on('ready', () => {
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
     new WOKCommands(client, 'commands', 'features', 'messages.json')
         .setMongoPath(config.mongoPath)
-        .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')});
+        .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
+        // begin of tkinter screen :kekw:
+        exec('python3 main.py', async (error, stdout, stderr) => {
+            if (error) {console.log(`error: ${error.message}`);return;}
+            if (stderr) {console.log(`stderr: ${stderr}`);return;}
+            }
+            //does nothing since code code is already executed
+        )
+    });
 
 client.userProfiles = new Enmap({
     name: 'userProfiles',

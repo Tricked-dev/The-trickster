@@ -12,8 +12,8 @@ client.on('ready', () => {
     new WOKCommands(client, 'commands', 'features', 'messages.json')
         .setMongoPath(config.mongoPath)
         .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
-        // begin of tkinter screen :kekw:
-        exec('python3 main.py', async (error, stdout, stderr) => {
+        // Notifaction
+        exec('python3 index.py', async (error, stdout, stderr) => {
             if (error) {console.log(`error: ${error.message}`);return;}
             if (stderr) {console.log(`stderr: ${stderr}`);return;}
             }

@@ -13,8 +13,7 @@ class App():
         self.last_notification = Notify.Notification.new('The-Trickster ready open dashboard?')
         self.last_notification.add_action('clicked', 'Open dashboard', 
                                           self.notification_callback, None)
-                                          
-                                          
+        
         self.last_notification.show()
         GLib.timeout_add_seconds(4294967295, self.check)
 

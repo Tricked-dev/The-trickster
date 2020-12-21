@@ -36,3 +36,9 @@ client.userProfiles.ensure(message.author.id, {
 }
  )
 }
+
+module.exports.config = {
+  displayName: 'enmap', // Can be changed any time
+  dbName: 'enmap', // Should be unique and NEVER be changed once set
+  loadDBFirst: true,
+}

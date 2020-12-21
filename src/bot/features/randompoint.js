@@ -52,4 +52,9 @@ point()
 
 
 )}
+module.exports.config = {
+  displayName: 'randompoint', // Can be changed any time
+  dbName: 'randompoint', // Should be unique and NEVER be changed once set
+  loadDBFirst: true,
+}
 

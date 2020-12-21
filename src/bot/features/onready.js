@@ -60,3 +60,8 @@ module.exports = (client) => {
 	}
 	startup(); // ╚ ╝
 };
+module.exports.config = {
+  displayName: 'onready', // Can be changed any time
+  dbName: 'onready', // Should be unique and NEVER be changed once set
+  loadDBFirst: true,
+}

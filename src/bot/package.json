@@ -24,7 +24,6 @@
     "node-fetch": "^2.6.1",
     "parse-ms": "^2.1.0",
     "sourcebin_js": "0.0.3-ignore",
-    "statcord.js": "^3.1.4",
-    "wokcommands": "^1.1.5"
+    "wokcommands": "1.1.3"
   }
 }

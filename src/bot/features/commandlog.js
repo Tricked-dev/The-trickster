@@ -32,3 +32,8 @@ module.exports = async (client,command) => {
 		
 			
 };
+module.exports.config = {
+  displayName: 'cmdlog', // Can be changed any time
+  dbName: 'cmdlog', // Should be unique and NEVER be changed once set
+  loadDBFirst: true,
+}

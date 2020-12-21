@@ -27,3 +27,8 @@ module.exports = (client) => {
     }  
   })
   }
+  module.exports.config = {
+  displayName: 'dm', // Can be changed any time
+  dbName: 'dm', // Should be unique and NEVER be changed once set
+  loadDBFirst: true,
+}

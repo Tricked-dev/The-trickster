@@ -26,3 +26,8 @@ message.react('786270603061493770')
     }
 }
 )}
+module.exports.config = {
+  displayName: 'ege', // Can be changed any time
+  dbName: 'ege', // Should be unique and NEVER be changed once set
+  loadDBFirst: true,
+}

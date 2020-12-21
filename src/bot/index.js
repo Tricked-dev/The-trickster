@@ -3,7 +3,6 @@ const WOKCommands = require('wokcommands');
 const config = require('./files/config.json');
 const client = new Discord.Client();;
 const Enmap = require("enmap");
-const Statcord = require("statcord.js");
 const prefix = '!'
 const { exec } = require("child_process");
 
@@ -12,14 +11,14 @@ client.on('ready', () => {
     new WOKCommands(client, 'commands', 'features', 'messages.json')
         .setMongoPath(config.mongoPath)
         .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
-        // Notifaction
+        /*
         exec('cd scripts && python3 index.py', async (error, stdout, stderr) => {
             if (error) {console.log(`error: ${error.message}`);return;}
             if (stderr) {console.log(`stderr: ${stderr}`);return;}
             }
             //does nothing since code code is already executed
         )
-        
+        */
     });
 
 client.userProfiles = new Enmap({

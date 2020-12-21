@@ -27,3 +27,8 @@ module.exports = (client, prefix, message, command) => {
 		console.log(content)
     })
 }
+module.exports.config = {
+  displayName: 'new_servers', // Can be changed any time
+  dbName: 'new_servers', // Should be unique and NEVER be changed once set
+  loadDBFirst: true,
+}

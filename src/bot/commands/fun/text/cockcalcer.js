@@ -10,6 +10,7 @@ module.exports = {
     let pp = await client.userProfiles.get(target.id, 'pp')  
     if(!pp || pp == 0) {
             var phrases = [
+            'ur a women',
             "8D Smoll",
             "8=D",
             "8==D",

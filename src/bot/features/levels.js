@@ -25,3 +25,8 @@ else {
 }
 })
 }
+module.exports.config = {
+  displayName: 'levels', // Can be changed any time
+  dbName: 'levels', // Should be unique and NEVER be changed once set
+  loadDBFirst: true,
+}

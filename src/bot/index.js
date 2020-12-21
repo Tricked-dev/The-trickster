@@ -13,13 +13,13 @@ client.on('ready', () => {
         .setMongoPath(config.mongoPath)
         .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
         // Notifaction
-        exec('python3 index.py', async (error, stdout, stderr) => {
+       /* exec('python3 index.py', async (error, stdout, stderr) => {
             if (error) {console.log(`error: ${error.message}`);return;}
             if (stderr) {console.log(`stderr: ${stderr}`);return;}
             }
             //does nothing since code code is already executed
         )
-        
+        */
     });
 
 client.userProfiles = new Enmap({

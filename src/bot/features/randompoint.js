@@ -2,7 +2,6 @@
  const client = new Discord.Client();
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
- const ms = require("parse-ms");
 module.exports = (client) => {
 client.userProfiles = new Enmap({
     name: 'userProfiles'

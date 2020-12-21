@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Enmap = require("enmap");
-lev = require('../levelchard.json')
+lev = require('../files/levelchard.json')
 module.exports = async (client, prefix, message, command) => {
     client.on("message", async message => {
 let messages = await client.userProfiles.get(message.author.id, 'messages');

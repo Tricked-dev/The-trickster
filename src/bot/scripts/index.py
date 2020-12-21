@@ -24,7 +24,10 @@ class App:
         GLib.timeout_add_seconds(4294967295, self.check)
 
     def notification_callback(self, notification, action_name, data):
-        os.system("python3 processes.py >> stats.txt")
+        os.system("python3 processes.py > stats.txt")
+        webbrowser(
+            "file:///home/tricked/Documents/javascript/trickedbot/src/bot/scripts/index.html"
+        )
         exit()
 
 

@@ -25,8 +25,9 @@ class App:
 
     def notification_callback(self, notification, action_name, data):
         os.system("python3 processes.py > stats.txt")
-        webbrowser(
-            "file:///home/tricked/Documents/javascript/trickedbot/src/bot/scripts/index.html"
+        webbrowser.open(
+            "file://"
+            + "/home/tricked/Documents/javascript/trickedbot/src/bot/scripts/index.html"
         )
         exit()
 

@@ -1,24 +1,7 @@
     ..:.:.                tricked@tricked-manjaro
    ..:.:.:.:.             OS: Manjaro 20.2 Nibia
   ..:.:.:.:.:.:.          Kernel: x86_64 Linux 5.9.11-3-MANJARO
- ..:.:.:.:.:.:.:.:.       Uptime: 1h 47m
-   .:.::;.::::..:.:.:.    Packages: 1265
-      .:.:.::.::.::.;;/   Shell: python3
-         .:.::.::://///   Resolution: 1920x1080
-            ..;;///////   DE: GNOME 3.38.2
-            ///////////   WM: Mutter
-         //////////////   WM Theme: Matcha-dark-sea
-      /////////////////   GTK Theme: Matcha-dark-sea [GTK2/3]
-   ///////////////////    Icon Theme: Papirus-Dark-Maia
- //////////////////       Font: Noto Sans 11
-  //////////////          Disk: 49G / 101G (51%)
-   //////////             CPU: Intel Core i5-6400 @ 4x 3.3GHz [30.0°C]
-    //////                GPU: GeForce GTX 1050
-     //                   RAM: 5303MiB / 7922MiB
-    ..:.:.                tricked@tricked-manjaro
-   ..:.:.:.:.             OS: Manjaro 20.2 Nibia
-  ..:.:.:.:.:.:.          Kernel: x86_64 Linux 5.9.11-3-MANJARO
- ..:.:.:.:.:.:.:.:.       Uptime: 1h 51m
+ ..:.:.:.:.:.:.:.:.       Uptime: 2h 3m
    .:.::;.::::..:.:.:.    Packages: 1266
       .:.:.::.::.::.;;/   Shell: python3
          .:.::.::://///   Resolution: 1920x1080
@@ -29,6 +12,6 @@
    ///////////////////    Icon Theme: Papirus-Dark-Maia
  //////////////////       Font: Noto Sans 11
   //////////////          Disk: 72G / 149G (51%)
-   //////////             CPU: Intel Core i5-6400 @ 4x 3.3GHz [31.0°C]
+   //////////             CPU: Intel Core i5-6400 @ 4x 3.3GHz [34.0°C]
     //////                GPU: GeForce GTX 1050
-     //                   RAM: 3175MiB / 7922MiB
+     //                   RAM: 3892MiB / 7922MiB

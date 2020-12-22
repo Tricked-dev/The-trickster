@@ -92,5 +92,4 @@
 <blockquote>
 <p class="has-line-data" data-line-start="71" data-line-end="79"><strong>mydata</strong> &gt; check your data<br>
 <strong>invite</strong> &gt; invite the bot UwU<br>
-<strong>level</strong> &gt; shows your level<br>
 <strong>ping</strong> &gt; check the latency<br>

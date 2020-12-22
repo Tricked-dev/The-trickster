@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const { forEach } = require('wokcommands/permissions');
 const client = new Discord.Client();
+const { exec } = require("child_process");
+
 module.exports = (client) => {
 	client.user.setPresence({ activity: { name: '' }, status: 'offline' })
 	async function startup() {
@@ -56,8 +58,15 @@ module.exports = (client) => {
 						content += '║'
     })
 		console.log(content)
-		console.log('╠═════════════════════════════════════════════════════════════════════════════════════════════════╣')
+		console.log('╠═( Screenfetch )═════════════════════════════════════════════════════════════════════════════════╣')
 	}
+	exec('screenfetch -A Logos', async (error, stdout, stderr) => {
+            if (error) {console.log(`error: ${error.message}`);return;}
+            if (stderr) {console.log(`stderr: ${stderr}`);return;}
+			console.log(stdout)
+			console.log('╠═════════════════════════════════════════════════════════════════════════════════════════════════╣')
+            }
+		)
 	startup(); // ╚ ╝
 };
 module.exports.config = {

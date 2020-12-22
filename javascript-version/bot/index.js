@@ -6,7 +6,7 @@ const Enmap = require("enmap");
 const prefix = '!'
 const { exec } = require("child_process");
 
-client.on('ready', () => {
+client.on('ready', async () => {
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
     new WOKCommands(client, 'commands', 'features', 'messages.json')
         .setMongoPath(config.mongoPath)

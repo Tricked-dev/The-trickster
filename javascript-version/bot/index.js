@@ -8,7 +8,7 @@ const { exec } = require("child_process");
 
 client.on('ready', async () => {
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
-    new WOKCommands(client, 'commands', 'features', 'messages.json')
+    new WOKCommands(client, 'commands', 'features')
         .setMongoPath(config.mongoPath)
         .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
         /*

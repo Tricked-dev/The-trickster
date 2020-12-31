@@ -13,7 +13,7 @@ client.on('ready', async () => {
     const showStartupWarnings = true
     const messagesPath = ''
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
-    new WOKCommands(client, 'commands', 'features')
+    new WOKCommands(client, 'commands', 'events')
 
         .setMongoPath(config.mongoPath)
         .setDefaultPrefix('!')

@@ -6,7 +6,7 @@ module.exports = {
   aliases: ['doggy', 'doggo', 'pet'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'send a doggo pic :dark_sunglasses:', 
    callback: (message, args, text, client, prefix, instance) => {

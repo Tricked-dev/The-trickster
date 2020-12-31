@@ -6,7 +6,7 @@ module.exports = {
     aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Gamble your Points away', 
   callback: async (message, args, text, client, prefix, instance) => {

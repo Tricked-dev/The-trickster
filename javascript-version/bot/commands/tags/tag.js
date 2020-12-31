@@ -6,12 +6,11 @@
  module.exports = {
   cooldown: '2s',
   category: 'tags',
+  description: "shows a tag",
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
   expectedArgs: "", 
-  description: '', 
   callback: async (message, args, text, client) => {
     if(!client.guild.get(message.guild.id, args[0]) || args[0] == 'id'){
       message.reply('tag not found, you can create on by typing !addtag/!createtag')

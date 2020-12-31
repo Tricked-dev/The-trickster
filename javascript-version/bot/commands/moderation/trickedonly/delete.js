@@ -7,7 +7,7 @@ module.exports = {
 	category: 'tricked',
 	minArgs: 1,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description:
 		'Trickedonly command until i find a way to make anyone with perms and me able to use it <3',

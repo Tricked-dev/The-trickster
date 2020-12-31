@@ -8,7 +8,7 @@
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: '5% discount robs', 
   callback: async (message, args, text, client) => {

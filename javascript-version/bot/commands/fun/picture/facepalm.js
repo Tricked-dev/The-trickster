@@ -8,7 +8,6 @@ module.exports = {
 	aliases: ['fp'],
 	minArgs: 1,
 	maxArgs: -1,
-	syntaxError: 'please mention someone',
 	expectedArgs: 'please mention someone',
 	description: 'SMH MY HEAD',
 	callback: (message, args, text, client, prefix, instance) => {

@@ -8,7 +8,6 @@ module.exports = {
   aliases: ['silence'],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "please mention someone to mute",
   expectedArgs: "pelase mention someone to mute", 
   description: 'mute someone', 
    callback: (message, args, text, client, prefix, instance) => {

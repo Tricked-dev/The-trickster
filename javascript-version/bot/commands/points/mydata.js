@@ -9,7 +9,7 @@
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Send all your Enmap data in a dm', 
   callback: async (message, args, text, client) => {

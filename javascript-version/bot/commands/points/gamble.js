@@ -8,7 +8,7 @@
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Gamble your life savings like every man would', 
   callback: async (message, args, text, client) => {

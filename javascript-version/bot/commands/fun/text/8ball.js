@@ -8,7 +8,6 @@ module.exports = {
   minArgs: 1,
   maxArgs: -1,
   permissions: 'MANAGE_NICKNAMES',
-  syntaxError: "!8ball <qustion> /s",
   expectedArgs: "<question>", 
   description: 'Ask maybe he will know',
 

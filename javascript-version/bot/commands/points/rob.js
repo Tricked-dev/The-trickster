@@ -8,7 +8,7 @@
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Your points, now mine', 
   callback: async (message, args, text, client) => {

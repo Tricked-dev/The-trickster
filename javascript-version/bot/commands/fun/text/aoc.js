@@ -6,7 +6,7 @@ module.exports = {
   aliases: ['ageofconsent'],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "idk?", 
   description: 'idk?', 
    callback: (message, args, text, client, prefix, instance) => {

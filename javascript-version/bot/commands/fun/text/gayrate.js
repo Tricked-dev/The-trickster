@@ -8,7 +8,7 @@ module.exports = {
  aliases: [''],
  minArgs: 0,
  maxArgs: -1,
- syntaxError: "",
+
  expectedArgs: "", 
  description: 'Shows your real gayrate', 
  callback: async (message, args, text, client) => {

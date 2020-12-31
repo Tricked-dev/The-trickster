@@ -9,7 +9,7 @@
   aliases: ['bank', 'balance'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Sends your balance or the mentioned users balance', 
   callback: async (message, args, text, client) => {

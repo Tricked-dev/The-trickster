@@ -6,7 +6,6 @@ module.exports = {
 	aliases: ['typeon', 'typeoff'],
 	minArgs: 1,
 	maxArgs: -1,
-	syntaxError: '<on> <off>',
 	expectedArgs: '<on> <off>',
 	description: 'Make the bot start typing :eyes:',
 	callback: (message, args, text, client, prefix, instance) => {

@@ -7,7 +7,6 @@ module.exports = {
   aliases: [''],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "please mention someone",
   expectedArgs: "please mention someone", 
   description: 'kiss sum1 (gea)', 
    callback: (message, args, text, client, prefix, instance) => {

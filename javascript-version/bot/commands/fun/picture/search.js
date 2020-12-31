@@ -7,7 +7,6 @@ module.exports = {
 	aliases: ['giphy'],
 	minArgs: 1,
 	maxArgs: -1,
-	syntaxError: 'please enter a search term',
 	expectedArgs: 'please enter a search term',
 	description: 'searhes giphy',
 	callback: (message, args, text, client, prefix, instance) => {

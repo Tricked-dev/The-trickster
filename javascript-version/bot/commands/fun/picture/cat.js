@@ -7,7 +7,7 @@ module.exports = {
   aliases: ['kitty'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'get a cat', 
   callback: (message, args, text, client, prefix, instance) => {

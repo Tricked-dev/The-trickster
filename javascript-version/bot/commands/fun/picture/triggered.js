@@ -8,7 +8,6 @@ module.exports = {
   aliases: [''],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "please mention somoene to trigger",
   expectedArgs: "please mention someone to trigger", 
   description: 'triggered LMAO', 
    callback: (message, args, text, client, prefix, instance) => {

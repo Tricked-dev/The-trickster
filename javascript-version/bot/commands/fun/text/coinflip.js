@@ -6,7 +6,6 @@ module.exports = {
   aliases: ['cf'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "please mention somoene to trigger",
   expectedArgs: "please mention someone to trigger", 
   description: 'flip the coins', 
 callback: (message, args, text, client, prefix, instance) => {

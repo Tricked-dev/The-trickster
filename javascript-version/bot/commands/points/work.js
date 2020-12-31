@@ -8,7 +8,7 @@
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Work as a people', 
   callback: async (message, args, text, client) => {

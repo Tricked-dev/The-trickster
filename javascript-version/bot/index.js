@@ -1,16 +1,25 @@
 const Discord = require('discord.js');
 const WOKCommands = require('wokcommands');
 const config = require('./files/config.json');
-const client = new Discord.Client();;
+
+const client = new Discord.Client({
+  partials: ['MESSAGE', 'REACTION'],
+})
+
 const Enmap = require("enmap");
-const prefix = '!'
 const { exec } = require("child_process");
 
 client.on('ready', async () => {
+    const showStartupWarnings = true
+    const messagesPath = ''
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
     new WOKCommands(client, 'commands', 'features')
+
         .setMongoPath(config.mongoPath)
+        .setDefaultPrefix('!')
         .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
+        .setColor(0xff0000)
+        
         /*
         exec('cd scripts && python3 index.py', async (error, stdout, stderr) => {
             if (error) {console.log(`error: ${error.message}`);return;}

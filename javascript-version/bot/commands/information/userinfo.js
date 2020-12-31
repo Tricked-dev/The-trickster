@@ -6,7 +6,6 @@ module.exports = {
 	aliases: [`user`],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: ``,
 	expectedArgs: ``,
     description: `Gives some info about the user`,
     	callback: (message, args, text, client, prefix, instance) => {

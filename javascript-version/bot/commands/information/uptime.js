@@ -6,7 +6,7 @@ module.exports = {
 	aliases: ['up'],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'Show uptime of the bot!',
 	callback: (message, args, text, client, prefix, instance) => {

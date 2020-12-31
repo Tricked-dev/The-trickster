@@ -7,7 +7,7 @@ module.exports = {
 	aliases: ['serverinfo'],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'serverinfo',
 	callback: (message, args, text, client, prefix, instance) => {

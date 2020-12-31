@@ -6,7 +6,7 @@ module.exports = {
   aliases: ['fn'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Not cool!', 
    callback: (message, args, text, client, prefix, instance) => {

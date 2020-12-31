@@ -9,8 +9,6 @@ module.exports = {
 	aliases: ['neko', 'w', 'waifu'],
 	minArgs: 1,
 	maxArgs: -1,
-	syntaxError:
-		'Please select what you want: `neko kitsuma hug pat waifu cry slap punch`',
 	expectedArgs: '',
 	description: 'Send a weeb pic ( use at own risk)',
 	callback: async (message, args, text, client, prefix, instance) => {

@@ -8,7 +8,7 @@
   aliases: ['quest', 'challange'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Do some quests (not properly tested)', 
   callback: async (message, args, text, client) => {

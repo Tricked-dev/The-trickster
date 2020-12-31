@@ -6,7 +6,6 @@ module.exports = {
   aliases: [''],
   minArgs: 2,
   maxArgs: -1,
-  syntaxError: "please use it the following way <mention person you want to ban> <reason>",
   expectedArgs: "please use it the following way <mention person you want to ban> <reason>", 
   description: 'ban someone cuz why the f not', 
    callback: (message, args, text, client, prefix, instance) => {

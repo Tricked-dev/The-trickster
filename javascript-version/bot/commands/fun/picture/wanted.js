@@ -8,7 +8,6 @@ module.exports = {
 	aliases: ['bounty'],
 	minArgs: 1,
 	maxArgs: -1,
-	syntaxError: 'please mention someone',
 	expectedArgs: 'please mention someone',
 	description: 'Wanted people smh my head.',
 	callback: (message, args, text, client, prefix, instance) => {

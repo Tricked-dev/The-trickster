@@ -3,7 +3,7 @@
       aliases: ['owofhy'],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "idk?", 
   description: 'idk?', 
    callback: (message, args, client, prefix, instance) => {

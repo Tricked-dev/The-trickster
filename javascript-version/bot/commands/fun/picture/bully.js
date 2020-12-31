@@ -6,7 +6,6 @@ module.exports = {
   aliases: ['hurt'],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "Please mention somoene to bully",
   expectedArgs: "", 
   description: 'bully someone',  
   callback: (message, args, text, client, prefix, instance) => {

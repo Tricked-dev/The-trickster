@@ -6,7 +6,7 @@ module.exports = {
 	minArgs: 0,
 	category: 'tricked',
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'eval tricked only command /shrug',
 	callback: (message, args, text, client, prefix, instance) => {

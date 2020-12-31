@@ -7,7 +7,6 @@ module.exports = {
 	aliases: ['joke', 'reddit'],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
 	expectedArgs: '',
 	description: 'searches for a meme',
 	callback: (message, args, text, client, prefix, instance) => {

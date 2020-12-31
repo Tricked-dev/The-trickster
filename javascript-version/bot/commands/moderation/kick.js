@@ -7,7 +7,6 @@ module.exports = {
   aliases: [''],
   minArgs: 2,
   maxArgs: -1,
-  syntaxError: "please use <mention> <reason>",
   expectedArgs: "please use <mention> <reason>", 
   description: 'kick a guy (poor lad)', 
    callback: (message, args, text, client, prefix, instance) => {

@@ -7,7 +7,7 @@ module.exports = {
   aliases: ['sa'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'ahh yes my fav meme!', 
    callback: (message, args, text, client, prefix, instance) => {

@@ -8,7 +8,7 @@
   category: 'tricked',
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Tricked only commands', 
   callback: async (message, args, text, client) => {

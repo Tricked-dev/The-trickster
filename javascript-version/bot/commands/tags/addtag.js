@@ -10,7 +10,6 @@
   aliases: ['createtag'],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "Please add a input",
   expectedArgs: "Please add a input", 
   description: 'add a tag', 
   callback: async (message, args, text, client) => {

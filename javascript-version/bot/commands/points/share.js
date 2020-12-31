@@ -8,7 +8,7 @@
   aliases: ['give', 'send'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Feeling nice?', 
   callback: async (message, args, text, client) => {

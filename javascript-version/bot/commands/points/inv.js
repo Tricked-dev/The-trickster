@@ -8,7 +8,7 @@
   aliases: ['inventory'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Do you got dagger?', 
   callback: async (message, args, text, client) => {

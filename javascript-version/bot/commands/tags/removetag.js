@@ -6,12 +6,11 @@
  module.exports = {
   cooldown: '2s',
   category: 'tags',
+  description: "remove a tag",
   aliases: ['deltag', 'deletetag'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
   expectedArgs: "", 
-  description: '', 
   callback: async (message, args, text, client) => {
     if (message.member.hasPermission('ADMINISTRATOR') || message.author.id == 336465356304678913 || message.member.hasPermission('MANAGE_MESSAGES')) {
             let name = args[0]

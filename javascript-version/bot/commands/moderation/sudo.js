@@ -6,7 +6,7 @@ module.exports = {
 	aliases: ['say'],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'make the bot say sum in embed',
 	callback: (message, args, text, client, prefix, instance) => {

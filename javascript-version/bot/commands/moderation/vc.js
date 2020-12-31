@@ -6,7 +6,7 @@ module.exports = {
 	aliases: ['join', 'joinvc'],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'Makes the bot join a vc',
 	callback: (message, args, text, client, prefix, instance) => {

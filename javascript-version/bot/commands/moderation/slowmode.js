@@ -6,7 +6,6 @@ module.exports = {
 	aliases: [''],
 	minArgs: 1,
 	maxArgs: -1,
-	syntaxError: 'plase enter a time in minutes',
 	expectedArgs: 'please enter a time in minutes',
 	description: 'changes slowmode on a channel',
 	callback: (message, args, text, client, prefix, instance) => {

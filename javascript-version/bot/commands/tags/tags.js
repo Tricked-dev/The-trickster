@@ -6,12 +6,11 @@
  module.exports = {
   cooldown: '2s',
   category: 'tags',
+  description: "sends all tags",
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
   expectedArgs: "", 
-  description: '', 
   callback: async (message, args, text, client) => {
 
 

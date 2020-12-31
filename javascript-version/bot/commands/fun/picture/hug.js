@@ -7,7 +7,7 @@ module.exports = {
   aliases: ['huggy'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'hug sum1',  
   callback: (message, args, text, client, prefix, instance) => {

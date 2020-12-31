@@ -6,7 +6,7 @@ module.exports = {
 	aliases: ['add'],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'invite trickedbot to your server',
 	callback: (message) => {

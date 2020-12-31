@@ -9,7 +9,7 @@
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'Daily OwO?', 
   callback: async (message, args, text, client) => {

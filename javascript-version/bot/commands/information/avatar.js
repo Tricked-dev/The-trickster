@@ -6,7 +6,7 @@ module.exports = {
 	aliases: ['av'],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'steal sum1 avatar',
 	callback: (message, args, text, client, prefix, instance) => {

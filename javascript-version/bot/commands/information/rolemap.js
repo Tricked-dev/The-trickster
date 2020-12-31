@@ -6,7 +6,7 @@ module.exports = {
 	aliases: ['rm'],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'Shows all roles on the server!',
 	callback: (message) => {

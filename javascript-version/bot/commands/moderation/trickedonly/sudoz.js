@@ -6,7 +6,7 @@ module.exports = {
 	aliases: [''],
 	minArgs: 0,
 	maxArgs: -1,
-	syntaxError: '',
+	
 	expectedArgs: '',
 	description: 'Makes the bot say something',
 	callback: (message, args, text, client, prefix, instance) => {

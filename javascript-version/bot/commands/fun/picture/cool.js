@@ -8,7 +8,7 @@ module.exports = {
   aliases: ['eyebleach'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "",
+
   expectedArgs: "", 
   description: 'get some pet pics', 
    callback: async (message, args, text, client, prefix, instance) => {

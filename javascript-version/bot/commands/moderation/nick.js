@@ -6,7 +6,6 @@ module.exports = {
   aliases: ['nic'],
   minArgs: 0,
   maxArgs: -1,
-  syntaxError: "please mention someone and then add the nick",
   expectedArgs: "please mention someone and then add the nick", 
   description: 'change someones nick', 
    callback: (message, args, text, client, prefix, instance) => {

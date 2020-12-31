@@ -8,7 +8,6 @@ module.exports = {
   aliases: ['snipe', 'murder'],
   minArgs: 1,
   maxArgs: -1,
-  syntaxError: "Please mention someone to kill",
   expectedArgs: "", 
   description: 'Shoot someone', 
    callback: (message, args, text, client, prefix, instance) => {

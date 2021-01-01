@@ -1,79 +1,66 @@
-**rolemap** > shows all roles in a server  
-47 **server** > serverinfo  
-48 **uptime** > shows the uptime of the bot  
-49 **userinfo** > get some “usefull” info about someone50 51
+<h1 align="center">The Trickster</h1>
 
-## <a id="_moderation_36"></a>> moderation
+<p align="center"><i>A usefull all in one bot</i></p>
 
-52
+<div align="center">
 
-> 53
-> 
-> **ban** > ban someone  
-> 54 **clear** > clear some chat history  
-> 55 **kick** > kick someone  
-> 56 **mute** > mute someone ( wont create a muted role )  
-> 57 **nick** > nick someone  
-> 58 **nickreset** > reset a nick of someone  
-> 59 **slowmode** > sets the slowmode in seconds  
-> 60 **sudo** > make the bot say what you want in a embed  
-> 61 **type** > makes the bot start typing  
-> 62 **unmute** > unmute someone  
-> 63 **vc** > put the bot in the vc
-> 
-> 64
+  <a href="https://github.com/SkyBlockDev/The-trickster/stargazers"><img src="https://img.shields.io/github/stars/SkyBlockDev/The-trickster" alt="Stars Badge"/></a>
 
-65
+<a href="https://github.com/SkyBlockDev/The-trickster/network/members"><img src="https://img.shields.io/github/forks/SkyBlockDev/The-trickster" alt="Forks Badge"/></a>
 
-## <a id="_points_48"></a>> points
+<a href="https://github.com/SkyBlockDev/The-trickster/pulls"><img src="https://img.shields.io/github/issues-pr/SkyBlockDev/The-trickster" alt="Pull Requests Badge"/></a>
 
-66
+<a href="https://github.com/SkyBlockDev/The-trickster/issues"><img src="https://img.shields.io/github/issues/SkyBlockDev/The-trickster" alt="Issues Badge"/></a>
 
-> 67
-> 
-> **bal** > check your balance  
-> 68 **bcminer** > start mining some bitcoin  
-> 69 **buy** > buy something from !shop  
-> 70 **claim** > claim your free points  
-> 71 **daily** > claim your daily  
-> 72 **gamble** > game some points  
-> 73 **hourly** > claim your hourly points  
-> 74 **inventory** > check your inventory  
-> 75 **monthly** > your monthly dose of points  
-> 76 **quests** > quests give 1k per  
-> 77 **rich** > see the richests members  
-> 78 **rob** > rob someone  
-> 79 **share** > share your points (give also works)  
-> 80 **shop** > check the shop  
-> 81 **stab** > stab someone for some points requires having a dagger !shop  
-> 82 **work** > work as a monkey
-> 
-> 83
+<a href="https://github.com/SkyBlockDev/The-trickster/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/SkyBlockDev/The-trickster?color=2b9348"></a>
 
-84
+<a href="https://github.com/SkyBlockDev/The-trickster/blob/master/LICENSE"><img src="https://img.shields.io/github/license/SkyBlockDev/The-trickster?color=2b9348" alt="License Badge"/></a>
 
-## <a id="_tags_65"></a>> tags
+</div>
 
-85
+<p class="has-line-data" data-line-start="0" data-line-end="1"><a href="https://discord.com/oauth2/authorize?client_id=748985087420399717&amp;scope=bot&amp;permissions=67120320">Click to invite the bot</a></p>
 
-> 86
-> 
-> **addtag** > create a tag  
-> 87 **deletetag** > delete a tag  
-> 88 **tag** > shows a tag  
-> 89 **tags** > shows all available tags
-> 
-> 90
+<h1 class="code-line" data-line-start=1 data-line-end=2 ><a id="Commands_1"></a>Commands:</h1>
 
-91
+<h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="_Fun_2"></a>&gt; Fun</h2>
 
-## <a id="_other_70"></a>> other
+<blockquote>
 
-92
+<p class="has-line-data" data-line-start="3" data-line-end="28"><strong>cat</strong> &gt; Send a cat image<br>
 
-> 93
-> 
-> **mydata** > check your data  
-> 94 **invite** > invite the bot UwU  
-> 95 **ping** > check the latency  
-> 96 
+<strong>cool</strong> &gt; sends a reddit thing<br>
+
+<strong>dog</strong> &gt; sends a dog<br>
+
+<strong>bully</strong> &gt; bully someone<br>
+
+<strong>gay</strong> &gt; make some colored<br>
+
+<strong>hug</strong> &gt; hug someone<br>
+
+<strong>kill</strong> &gt; yeah<br>
+
+<strong>kiss</strong> &gt; kiss someone !kiss @mention<br>
+
+<strong>meme</strong> &gt; searches the redddit for a meme<br>
+
+<strong>search</strong> &gt; search anything on giphy<br>
+
+<strong>shitass</strong> &gt; hey shitass<br>
+
+<strong>8ball</strong> &gt; he knows the answers<br>
+
+<strong>pp</strong> &gt; shows your pp size (stays)<br>
+
+<strong>coinflip</strong> &gt; flip the coin head or tails?<br>
+
+<strong>fakegamble</strong> &gt; gamble any amount<br>
+
+<strong>fortnite</strong> &gt; bad<br>
+
+<strong>iq</strong> &gt; shows you iq (stays)<br>
+
+<strong>uwu</strong> &gt; uwufy some text</p>
+
+</blockquote>
+

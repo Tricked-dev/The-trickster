@@ -20,47 +20,58 @@
 
 <p class="has-line-data" data-line-start="0" data-line-end="1"><a href="https://discord.com/oauth2/authorize?client_id=748985087420399717&amp;scope=bot&amp;permissions=67120320">Click to invite the bot</a></p>
 
-<h1 class="code-line" data-line-start=1 data-line-end=2 ><a id="Commands_1"></a>Commands:</h1>
-
-<h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="_Fun_2"></a>&gt; Fun</h2>
-
-<blockquote>
-
-<p class="has-line-data" data-line-start="3" data-line-end="28"><strong>cat</strong> &gt; Send a cat image<br>
-
-<strong>cool</strong> &gt; sends a reddit thing<br>
-
-<strong>dog</strong> &gt; sends a dog<br>
-
-<strong>bully</strong> &gt; bully someone<br>
-
-<strong>gay</strong> &gt; make some colored<br>
-
-<strong>hug</strong> &gt; hug someone<br>
-
-<strong>kill</strong> &gt; yeah<br>
-
-<strong>kiss</strong> &gt; kiss someone !kiss @mention<br>
-
-<strong>meme</strong> &gt; searches the redddit for a meme<br>
-
-<strong>search</strong> &gt; search anything on giphy<br>
-
-<strong>shitass</strong> &gt; hey shitass<br>
-
-<strong>8ball</strong> &gt; he knows the answers<br>
-
-<strong>pp</strong> &gt; shows your pp size (stays)<br>
-
-<strong>coinflip</strong> &gt; flip the coin head or tails?<br>
-
-<strong>fakegamble</strong> &gt; gamble any amount<br>
-
-<strong>fortnite</strong> &gt; bad<br>
-
-<strong>iq</strong> &gt; shows you iq (stays)<br>
-
-<strong>uwu</strong> &gt; uwufy some text</p>
-
-</blockquote>
+<h1 id="all-the-commands-this-bot-has">all the commands this bot has</h1>
+<h3 id="fun">fun</h3>
+<p><strong>8ball &gt; 8ball
+bully &gt; bully someone
+cat &gt; search for cats
+pp &gt; find your pp size
+coinflip &gt; coinflip
+cool &gt; coinflip
+dog &gt; find a dog
+fgamble &gt; fake gamble no coins are spend or lost
+fornite &gt; eww
+gamerrate &gt; find your gamerrate
+gayrate &gt; find your gayrate
+hug &gt; hug someone
+iq &gt; get your iq
+kill &gt; kill someone
+kiss &gt; kiss someone
+meme &gt; find a meme
+search &gt; search something
+uwu &gt; uwufy some text</strong></p>
+<h3 id="information">information</h3>
+<p><strong>avatar &gt; get someone&#39;s avatar
+info &gt; get some bot info 
+perms &gt; find someone&#39;s perms
+rolemap &gt; all the roles
+server &gt; serverinfo commands
+uptime &gt; uptime
+userinfo &gt; userinfo</strong></p>
+<h3 id="moderation">moderation</h3>
+<p><strong>ban &gt; ban
+kick &gt; kick
+mute &gt; mute
+nick &gt; nick
+nickreset &gt; nickreset
+slowmode &gt; slowmode in seconds
+sudo &gt; make the bot say something
+type &gt; make the bot start typing
+unmute &gt; unmute
+vc &gt; make the bot join the vc</strong></p>
+<h3 id="points">points</h3>
+<p><strong>rob &gt; rob someone
+bal &gt; your balance
+work &gt; work
+gamble &gt; gamble
+share &gt; share your points</strong></p>
+<h3 id="tags">tags</h3>
+<p>**addtag &gt; addtag
+removetag &gt; removetag
+tag &gt; show a tag
+tags &gt; show all tags</p>
+<h3 id="other">other</h3>
+<p><strong>invite &gt; invite the bot
+ping &gt; ping
+poll &gt; start a poll</strong></p>
 

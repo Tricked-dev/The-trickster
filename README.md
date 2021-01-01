@@ -66,10 +66,10 @@ work &gt; work
 gamble &gt; gamble
 share &gt; share your points</strong></p>
 <h3 id="tags">tags</h3>
-<p>**addtag &gt; addtag
+<p><strong>addtag &gt; addtag
 removetag &gt; removetag
 tag &gt; show a tag
-tags &gt; show all tags</p>
+tags &gt; show all tags</strong></p>
 <h3 id="other">other</h3>
 <p><strong>invite &gt; invite the bot
 ping &gt; ping

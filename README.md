@@ -52,7 +52,7 @@ share > share your points**
 **addtag > addtag\
 removetag > removetag\
 tag > show a tag\
-tags > show all tags
+tags > show all tags**
 ### other
 **invite > invite the bot\
 ping > ping\

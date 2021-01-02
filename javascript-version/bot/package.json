@@ -6,7 +6,7 @@
   "scripts": {
     "forever": "forever index.js -w",
     "nodemon": "nodemon",
-    "pm2"    : "pm2 start index.js"
+    "pm2": "pm2 start index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "enmap": "^5.8.2",
+    "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "parse-ms": "^2.1.0",
     "sourcebin_js": "0.0.3-ignore",

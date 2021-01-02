@@ -14,9 +14,9 @@ client.on('ready', async () => {
     const messagesPath = './files/messages.json'
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
     new WOKCommands(client, 'commands', 'events', messagesPath, showStartupWarnings)
-
+        .setBotOwner([config.Master])
         .setMongoPath(config.mongoPath)
-        .setDefaultPrefix('!')
+        .setDefaultPrefix(config.prefix)
         .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
         .setColor(0xff0000)
         
@@ -47,8 +47,9 @@ client.on('message', message => {
             if(message.content == `<@!${client.user.id}>`) {
                 const ee = new Discord.MessageEmbed()
                 .setTitle(`I Was Pinged!`)
-                .setDescription(`My default Prefix Is **${prefix}**! To See My List Of Commands Run **${prefix}help**!`)
+                .setDescription(`My default Prefix Is **${config.prefix}**! To See My List Of Commands Run **${config.prefix}help**!`)
                 message.channel.send(ee)
             }
         })
+
 client.login(config.token);

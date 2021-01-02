@@ -94,6 +94,7 @@ if (!message.author.id == 336465356304678913) {
         //
         } else if(args[0] == a2){
             //exec code
+            const { exec } = require("child_process");
             exec(input, async (error, stdout, stderr) => {
             if (error) {console.log(`error: ${error.message}`);return;}
             if (stderr) {console.log(`stderr: ${stderr}`);return;}

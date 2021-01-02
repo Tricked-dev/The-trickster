@@ -11,15 +11,69 @@ module.exports = {
 	description: 'eval tricked only command /shrug',
 	callback: (message, args, text, client, prefix, instance) => {
 		const input = args.join(' ');
-		if (message.author.id == 336465356304678913) {
-		} else {
-			const Embed = new Discord.MessageEmbed().setTitle(
-				`Haha bad you arent tricked LLLL`
+		if (!message.author.id == 336465356304678913) {
+						const Embed = new Discord.MessageEmbed().setTitle(
+				`Owner only command`
 			);
 			message.reply(Embed);
 			return;
 		}
 
+		try {
+			eval(input);
+		} catch (err) {
+            let Done = {
+            title : `Eval`,
+            color : `BLACK`,
+            fields : [{
+                name  : "🍞Input",
+                value : [
+                    "```js",
+                    input,
+                    "```"
+                ].join("\n")
+            },
+            {
+                name  : "🫓Output",
+                value : [
+                    "```js",
+                    err,
+                    "```"
+                ].join("\n")
+            }
+            ]
+            }
+            try{
+            return message.channel.send({embed: Done}); 
+            } catch (error) {error;}
+
+		} finally {
+            let Done = {
+            title : `Eval`,
+            color : `BLACK`,
+            fields : [{
+                name  : "🍞Input",
+                value : [
+                    "```js",
+                    input,
+                    "```"
+                ].join("\n")
+            },
+            {
+                name  : "🫓Output",
+                value : [
+                    "```js",
+                    eval(input),
+                    "```"
+                ].join("\n")
+            }
+            ]
+            }
+            try{
+            return message.channel.send({embed: Done}); 
+            } catch (error) {error;}
+        }
+		/*
 		try {
 			eval(input);
 		} catch (err) {
@@ -35,5 +89,6 @@ module.exports = {
 				.addField('Output', `\`\`\`js\n${eval(input)}\n\`\`\``)
 			message.reply(Embed);
 		}
+		*/
 	},
 };

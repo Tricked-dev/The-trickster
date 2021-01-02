@@ -25,7 +25,7 @@ module.exports = {
 				{
 					name: 'Bot info',
 					value:
-						'Node version `12.19.00`\nDiscord js version `12.5.1`\nCommand handler: `WOKcommandhandler`\nOS: `manjaro (arch linux distribution)` \nPrefix: `'+ prefix + '`\nHelp command `' + prefix + 'help`\nOwner <@336465356304678913>\n Memory used: `' + arr2[3] + '`',
+						'Node version `12.20.00`\nDiscord js version `12.5.1`\nCommand handler: `WOKcommandhandler`\nOS: `Ubuntu Server` \nPrefix: `'+ prefix + '`\nHelp command `' + prefix + 'help`\nOwner <@336465356304678913>\n Memory used: `' + arr2[3] + '`',
 					inline: false,
 				},
 				{// Trickedbot > Active in ${client.guilds.cache.size} servers! Trickedbot > ${client.users.cache.size} People, thats alot║\n║ Trickedbot > ${client.channels.cache.size} different channels, thats alot ║`)

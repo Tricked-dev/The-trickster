@@ -54,3 +54,4 @@ tags > show all tags**
 **invite > invite the bot\
 ping > ping\
 poll > start a poll**
+[invite](https://discord.com/oauth2/authorize?client_id=748985087420399717&scope=bot&permissions=67120320)

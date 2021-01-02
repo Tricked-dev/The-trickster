@@ -10,6 +10,7 @@ const Enmap = require("enmap");
 const { exec } = require("child_process");
 
 client.on('ready', async () => {
+    console.clear();
     const showStartupWarnings = true
     const messagesPath = './files/messages.json'
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')

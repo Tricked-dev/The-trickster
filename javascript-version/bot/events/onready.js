@@ -1,37 +1,35 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+const config = require('../files/config.json')
 module.exports = (client) => {
-	client.user.setPresence({ activity: { name: '' }, status: 'offline' })
+	    const { status, games, interval } = config.presence;
+
+        // —— Set default presence
+        games instanceof Array && games.length > 0 &&
+            client.user.setPresence({
+                status,
+                activity: {
+                    name: games[0].name ? games[0].name : null,
+                    type: games[0].type ? games[0].type : null,
+                    url : games[0].url  ? games[0].url  : null
+                }
+            });
+
+		games instanceof Array && games.length > 1 &&
+		
+            setInterval(() => {
+
+				const index = Math.floor(Math.random() * (games.length));
+				
+                client.user.setActivity(games[index].name, {
+                    type: games[index].type,
+                    url : games[index].url || "https://www.twitch.tv/"
+                });
+            }, ((typeof interval === "number" && interval) || 30) * 1000);
+
+
+
 	async function startup() {
-		const activities_list = [
-			'With My Self',
-			'Ur Messages',
-			`${client.guilds.cache.size} Servers`,
-			'Music',
-			'to your commands',
-			'Fartnite',
-			'bot Things',
-			'anime',
-		];
-		const type_list = [
-			'PLAYING',
-			'WATCHING',
-			'WATCHING',
-			'LISTENING',
-			'LISTENING',
-			'PLAYING',
-			'PLAYING',
-			'WATCHING',
-		];
-		setInterval(() => {
-			const index = Math.floor(
-				Math.random() * (activities_list.length - 1) + 1
-			);
-			client.user.setActivity(activities_list[index], {
-				type: type_list[index],
-			});
-		}, 10000);
 		console.log('╠═( login )═══════════════════════════════════════════════════════════════════════════════════════╣')
 		console.log(`║ Trickedbot > Logged in as ${client.user.tag}!                                                   ║`);
 		console.log("╠═( Amount's )════════════════════════════════════════════════════════════════════════════════════╣")

@@ -11,9 +11,9 @@ const { exec } = require("child_process");
 
 client.on('ready', async () => {
     const showStartupWarnings = true
-    const messagesPath = ''
+    const messagesPath = './files/messages.json'
     console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
-    new WOKCommands(client, 'commands', 'events')
+    new WOKCommands(client, 'commands', 'events', messagesPath, showStartupWarnings)
 
         .setMongoPath(config.mongoPath)
         .setDefaultPrefix('!')

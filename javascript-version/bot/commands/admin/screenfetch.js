@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const Discord = require("discord.js")
 module.exports = {
 	aliases: ['neofetch'],
-	category: 'tricked',
+	category: 'hidden',
 	minArgs: 0,
 	maxArgs: -1,
 	

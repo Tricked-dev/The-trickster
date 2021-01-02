@@ -1,6 +1,3 @@
-# Trickedbot
-**trickedbot is a bot made by me to learn more about javascript and discordjs its full of usefull commands to play around with.**
-**its currently hosted on a raspberry pi so i it will prob be online 24/7**
 ## list of all the command's this bot currently has to offer
 
 
@@ -30,8 +27,8 @@ perms > find someone's perms\
 rolemap > all the roles\
 server > serverinfo commands\
 uptime > uptime\
-userinfo > userinfo**\
-### moderation\
+userinfo > userinfo**
+### moderation
 **ban > ban\
 kick > kick\
 mute > mute\

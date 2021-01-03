@@ -21,6 +21,7 @@ if (!message.author.id == 336465356304678913) {
     } catch (error) {error;}
 			return;
         }
+        // Time taken ${client.ws.ping}ms
         // add some reminders
         const a1 = 'eval'
         const a2 = "exec"
@@ -43,6 +44,10 @@ if (!message.author.id == 336465356304678913) {
             let Done = {
             title : `Eval`,
             color : `BLACK`,
+            footer: {
+		        text: `Time taken: ${Date.now() - time}ms`,
+		        icon_url: '',
+	        },
             fields : [{
                 name  : "🍞Input",
                 value : [
@@ -69,6 +74,10 @@ if (!message.author.id == 336465356304678913) {
             let Done = {
             title : `Eval`,
             color : `BLACK`,
+            footer: {
+		        text: `Time taken: ${Date.now() - time}ms`,
+		        icon_url: '',
+	        },
             fields : [{
                 name  : "🍞Input",
                 value : [
@@ -102,6 +111,10 @@ if (!message.author.id == 336465356304678913) {
                     let Done = {
             title : `Eval`,
             color : `BLACK`,
+            footer: {
+		        text: `Time taken: ${Date.now() - time}ms`,
+		        icon_url: '',
+	        },
             fields : [{
                 name  : "🍞Input",
                 value : [

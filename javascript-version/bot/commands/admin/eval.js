@@ -25,6 +25,10 @@ module.exports = {
             let Done = {
             title : `Eval`,
             color : `BLACK`,
+            footer: {
+		        text: `Time taken: ${Date.now() - time}ms`,
+		        icon_url: '',
+	        },
             fields : [{
                 name  : "🍞Input",
                 value : [
@@ -51,6 +55,10 @@ module.exports = {
             let Done = {
             title : `Eval`,
             color : `BLACK`,
+            footer: {
+		        text: `Time taken: ${Date.now() - time}ms`,
+		        icon_url: '',
+	        },
             fields : [{
                 name  : "🍞Input",
                 value : [

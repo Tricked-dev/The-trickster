@@ -28,7 +28,7 @@ let content = ""
   }
   const embed = new Discord.MessageEmbed()
     .setTitle("top 10 anonymous leaderboard")
-    .setDescription(`\`\`\`${content}\n\`\`\``)
+    .setDescription(`\`\`\`js\n${content}\n\`\`\``)
     .setColor(0x00AE86);
   return message.channel.send({embed});
 }

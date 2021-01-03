@@ -17,8 +17,13 @@ if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("sorr
         const dataEmbed = {
     title : input,
     description :`Vote with 👍 or 👎`,
-    color : `GREEN`
+    color : `GREEN`,
+    footer: {
+		text: `requested by ${message.author.tag}`,
+		icon_url: '',
+	},
     }
+
     try{
        message.channel.send({embed: dataEmbed})
             .then(function (message) {

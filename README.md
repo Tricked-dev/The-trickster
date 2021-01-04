@@ -40,11 +40,11 @@ type > make the bot start typing\
 unmute > unmute\
 vc > make the bot join the vc**
 ### points
-**bal>check your balance\
-bcminer>start mining some bitcoin\
-buy>buy something from !shop\
-claim>claim your free points\
-daily>claim your daily\
+**bal > check your balance\
+bcminer > start mining some bitcoin\
+buy > buy something from !shop\
+claim > claim your free points\
+daily > claim your daily\
 gamble > game some points\
 hourly > claim your hourly points\
 inventory > check your inventory\

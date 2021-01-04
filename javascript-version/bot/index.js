@@ -2,10 +2,11 @@ const Discord = require('discord.js');
 const WOKCommands = require('wokcommands');
 const config = require('./files/config.json');
 
-const client = new Discord.Client
+const client = new Discord.Client({
+  partials: ['MESSAGE', 'REACTION'],
+})
 
 const Enmap = require("enmap");
-const { exec } = require("child_process");
 
 client.on('ready', async () => {
     console.clear();
@@ -71,15 +72,6 @@ client.on('ready', async () => {
         hidden: true
       }
     ])
-        
-        /*
-        exec('cd scripts && python3 index.py', async (error, stdout, stderr) => {
-            if (error) {console.log(`error: ${error.message}`);return;}
-            if (stderr) {console.log(`stderr: ${stderr}`);return;}
-            }
-            //does nothing since code code is already executed
-        )
-        */
     });
 
 client.userProfiles = new Enmap({

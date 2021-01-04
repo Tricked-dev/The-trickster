@@ -10,7 +10,7 @@ module.exports = {
 
   expectedArgs: "", 
   description: 'ahh yes my fav meme!', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
     
 message.channel.send('https://tenor.com/view/heyshitass-shitass-heyshitasswannaseemespeedbridge-assshit-speedbridge-gif-18947662')
 

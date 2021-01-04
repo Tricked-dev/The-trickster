@@ -12,7 +12,7 @@
 
   expectedArgs: "", 
   description: 'Send all your Enmap data in a dm', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     const infos = client.userProfiles.get(message.author.id)
     let info = JSON.stringify(infos,null,'\t')
     let name = message.author.username

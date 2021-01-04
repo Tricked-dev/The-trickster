@@ -5,7 +5,7 @@ module.exports = {
     description: 'penis size',
     aliases: ['pe', 'pp'],
     cooldown: '3s',
-    callback: async (message, args, text, client, prefix, instance) => {
+    callback: async ({message, args, text, client, prefix, instance}) => {
     let target = message.mentions.users.first() || message.mentions.users.last() || message.author
     let pp = await client.userProfiles.get(target.id, 'pp')  
     if(!pp || pp == 0) {

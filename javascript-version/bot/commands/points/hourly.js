@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Free points', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
   let amount = 100
   let member = message.author 
   let bal = client.userProfiles.get(member.id, 'points'); 

@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new DiscordJS.Client({
+  partials: ['MESSAGE', 'REACTION'],
+})
 const fetch = require('node-fetch');
 
 module.exports = {
@@ -7,11 +9,9 @@ module.exports = {
 	category: 'hidden',
 	minArgs: 1,
 	maxArgs: -1,
-	
 	expectedArgs: '',
-	description:
-		'Trickedonly command until i find a way to make anyone with perms and me able to use it <3',
-	callback: (message, args, text, client, prefix, instance) => {
+	description:'message? gone',
+	callback: ({message, args, text, client, prefix, instance}) => {
 		async function dels() {
 			if (message.author.id == 336465356304678913) {
 				let id = args[0];

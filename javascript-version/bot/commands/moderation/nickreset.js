@@ -2,7 +2,7 @@ module.exports = {
   category: 'Moderation',  
   commands: ['reset', 'r'],
     description: 'Resets the nickname for a user.',
-    callback: (message, args) => {
+    callback: ({message, args}) => {
       if (message.member.hasPermission("MANAGE_NICKNAMES") || message.author.id == 336465356304678913) {
       let target = message.author
       

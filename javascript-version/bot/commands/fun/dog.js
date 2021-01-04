@@ -9,7 +9,7 @@ module.exports = {
 
   expectedArgs: "", 
   description: 'send a doggo pic :dark_sunglasses:', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
     
 async function doggy() {
       const response = await fetch(`https://dog.ceo/api/breeds/image/random`);

@@ -8,7 +8,7 @@ module.exports = {
 	maxArgs: -1,
 	expectedArgs: 'please enter a time in minutes',
 	description: 'changes slowmode on a channel',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		if (message.member.hasPermission('MANAGE_CHANNELS')|| message.author.id == 336465356304678913) {
 if (!args[0]) return message.channel.send('please include a number');
 		let time = args[0];

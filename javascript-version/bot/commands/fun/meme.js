@@ -9,7 +9,7 @@ module.exports = {
 	maxArgs: -1,
 	expectedArgs: '',
 	description: 'searches for a meme',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		async function meme() {
 			const random = new Random();
 			let data = await random.getMeme();

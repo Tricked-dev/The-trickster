@@ -5,11 +5,9 @@ module.exports = {
 	category: 'hidden',
 	minArgs: 0,
 	maxArgs: -1,
-	
 	expectedArgs: '',
-	description:
-		'Trickedonly command until i find a way to make anyone with perms and me able to use it <3',
-	callback: (message, args, text, client, prefix, instance) => {
+	description:'fetch my screen',
+	callback: ({message, args, text, client, prefix, instance}) => {
 			if (message.author.id == 336465356304678913) {
 exec('screenfetch -w -p -t -N -n', async (error, stdout, stderr) => {
     if (error) {

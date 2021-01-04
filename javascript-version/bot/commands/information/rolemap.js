@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'Shows all roles on the server!',
-	callback: (message) => {
+	callback: ({message}) => {
 		let rolemap = message.guild.roles.cache
 			.sort((a, b) => b.position - a.position)
 			.map((r) => r)

@@ -2,24 +2,75 @@ const Discord = require('discord.js');
 const WOKCommands = require('wokcommands');
 const config = require('./files/config.json');
 
-const client = new Discord.Client({
-  partials: ['MESSAGE', 'REACTION'],
-})
+const client = new Discord.Client
 
 const Enmap = require("enmap");
 const { exec } = require("child_process");
 
 client.on('ready', async () => {
     console.clear();
+    console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
     const showStartupWarnings = true
     const messagesPath = './files/messages.json'
-    console.log('╔═( Commands )════════════════════════════════════════════════════════════════════════════════════╗')
-    new WOKCommands(client, 'commands', 'events', messagesPath, showStartupWarnings)
-        .setBotOwner([config.Master])
-        .setMongoPath(config.mongoPath)
-        .setDefaultPrefix(config.prefix)
-        .setCategoryEmoji('Points', '🤑').setCategoryEmoji('Fun', '🎮').setCategoryEmoji('Moderation', '😎').setCategoryEmoji('Info', '📔').setCategoryEmoji('Other', '😲')
-        .setColor(0xff0000)
+
+
+  const dbOptions = {
+    keepAlive: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  }
+
+    
+     new WOKCommands(client, {
+    commandsDir: 'commands',
+    featureDir: 'events',
+    messagesPath,
+    testServers: [config.TestServer],
+    showWarns: true,
+    dbOptions
+  })
+    .setMongoPath(config.mongoPath)
+    .setDefaultPrefix(config.prefix)
+    .setBotOwner([config.Master])
+    .setColor(0xff0000)
+     
+    .setCategorySettings([
+      {
+        name: 'Fun',
+        emoji: '🎮'
+      },
+      {
+        name: 'Info',
+        emoji: '📪'
+      },
+      {
+        name: 'Other',
+        emoji: '🔮'
+      },
+      {
+        name: 'tags',
+        emoji: '📰'
+      },
+      {
+        name: 'Moderation',
+        emoji: '🔨'
+      },
+      {
+        name: 'Points',
+        emoji: '💸'
+      },
+      {
+        name: 'hidden',
+        emoji: '💀',
+        hidden: true
+      },
+      {
+        name: 'Configuration',
+        emoji: '🚧',
+        hidden: true
+      }
+    ])
         
         /*
         exec('cd scripts && python3 index.py', async (error, stdout, stderr) => {

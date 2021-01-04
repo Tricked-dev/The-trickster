@@ -12,7 +12,7 @@
 
   expectedArgs: "", 
   description: 'Sends your balance or the mentioned users balance', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     const target = message.mentions.users.first() || message.author
         point = await client.userProfiles.get(target.id, 'points');
         const embed = new Discord.MessageEmbed()

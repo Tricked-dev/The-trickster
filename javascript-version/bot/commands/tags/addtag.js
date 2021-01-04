@@ -12,7 +12,7 @@
   maxArgs: -1,
   expectedArgs: "Please add a input", 
   description: 'add a tag', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     if (message.member.hasPermission('ADMINISTRATOR') || message.author.id == 336465356304678913 || message.member.hasPermission('MANAGE_MESSAGES')) {
     let key = Object.keys(client.guild.get(message.guild.id))
     bannednames = ['id', message.guild.id, 'guild', 'guildname', 'embed']

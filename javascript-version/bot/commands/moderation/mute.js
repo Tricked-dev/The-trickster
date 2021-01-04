@@ -10,7 +10,7 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "pelase mention someone to mute", 
   description: 'mute someone', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
     
 if (message.member.hasPermission("MANAGE_ROLES") || message.author.id == 336465356304678913) {
        let member = message.mentions.members.first()

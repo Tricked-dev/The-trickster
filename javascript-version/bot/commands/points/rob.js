@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Your points, now mine', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
 
   let timeout = 300000 // 24 hours in milliseconds, change if you'd like.
     let attack = message.mentions.members.first()

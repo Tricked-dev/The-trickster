@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'invite trickedbot to your server',
-	callback: (message, args) => {
+	callback: ({message, args}) => {
 if (!message.author.id == 336465356304678913) {
 			         const adminOnly = {
             title : `Oops!`,
@@ -44,10 +44,6 @@ if (!message.author.id == 336465356304678913) {
             let Done = {
             title : `Eval`,
             color : `BLACK`,
-            footer: {
-		        text: `Time taken: ${Date.now() - time}ms`,
-		        icon_url: '',
-	        },
             fields : [{
                 name  : "🍞Input",
                 value : [
@@ -74,10 +70,6 @@ if (!message.author.id == 336465356304678913) {
             let Done = {
             title : `Eval`,
             color : `BLACK`,
-            footer: {
-		        text: `Time taken: ${Date.now() - time}ms`,
-		        icon_url: '',
-	        },
             fields : [{
                 name  : "🍞Input",
                 value : [
@@ -105,16 +97,16 @@ if (!message.author.id == 336465356304678913) {
             //exec code
             const { exec } = require("child_process");
             exec(input, async (error, stdout, stderr) => {
-            if (error) {console.log(`error: ${error.message}`);return;}
-            if (stderr) {console.log(`stderr: ${stderr}`);return;}
+            let output = ''
+            if (error)   output = error
+            if (stderr)  output = stderr
+            if (stdout)  output = stdout
             
+
+
                     let Done = {
             title : `Eval`,
             color : `BLACK`,
-            footer: {
-		        text: `Time taken: ${Date.now() - time}ms`,
-		        icon_url: '',
-	        },
             fields : [{
                 name  : "🍞Input",
                 value : [
@@ -127,7 +119,7 @@ if (!message.author.id == 336465356304678913) {
                 name  : "🫓Output",
                 value : [
                     "```bash",
-                    stdout,
+                    output,
                     "```"
                 ].join("\n")
             }

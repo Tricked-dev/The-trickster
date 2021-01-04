@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'check yur connection',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		async function ping() {
 			message.channel.send('Pinging...').then((m) => {
 				// The math thingy to calculate the user's ping

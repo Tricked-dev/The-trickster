@@ -9,7 +9,7 @@ module.exports = {
 
   expectedArgs: "idk?", 
   description: 'idk?', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
     
 let COUNTRY = args.slice(0).join(' ');
 message.react('769650250365272115')

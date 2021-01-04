@@ -12,7 +12,7 @@
 
   expectedArgs: "", 
   description: 'Shop!', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
  const Embeds = new Discord.MessageEmbed()
 			.setColor('#000000')
 			.setTitle('Shop')

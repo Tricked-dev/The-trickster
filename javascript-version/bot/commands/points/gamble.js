@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Gamble your life savings like every man would', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     let amounts = args[0]
     let amount = Number(amounts)
     let member = message.author

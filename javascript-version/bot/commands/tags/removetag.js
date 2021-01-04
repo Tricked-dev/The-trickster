@@ -11,7 +11,7 @@
   minArgs: 0,
   maxArgs: -1,
   expectedArgs: "", 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     if (message.member.hasPermission('ADMINISTRATOR') || message.author.id == 336465356304678913 || message.member.hasPermission('MANAGE_MESSAGES')) {
             let name = args[0]
             bannednames = ['id', message.guild.id, 'guild', 'guildname', 'embed']

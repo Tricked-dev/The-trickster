@@ -11,7 +11,7 @@ module.exports = {
 
   expectedArgs: "", 
   description: 'get some pet pics', 
-   callback: async (message, args, text, client, prefix, instance) => {
+   callback: async ({message, args, text, client, prefix, instance}) => {
     
 
 

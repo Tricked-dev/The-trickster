@@ -8,7 +8,7 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "please mention someone to trigger", 
   description: 'flip the coins', 
-callback: (message, args, text, client, prefix, instance) => {
+callback: ({message, args, text, client, prefix, instance}) => {
   const coin = [
     `nothing`,      
     `heads`,

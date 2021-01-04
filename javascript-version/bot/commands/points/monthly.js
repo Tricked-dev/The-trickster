@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'everyone loves free points dont they', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
   let timeout = 2592000000
   let amounts = 5000
 

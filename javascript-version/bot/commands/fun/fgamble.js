@@ -9,7 +9,7 @@ module.exports = {
 
   expectedArgs: "", 
   description: 'Gamble your Points away', 
-  callback: async (message, args, text, client, prefix, instance) => {
+  callback: async ({message, args, text, client, prefix, instance}) => {
     let amount = args[0]
 
     let mamber = message.author

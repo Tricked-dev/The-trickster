@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'check yur connection',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		message.author.send('List of all my commands https://skyblockdev.github.io/The-trickster/')
 	},
 };

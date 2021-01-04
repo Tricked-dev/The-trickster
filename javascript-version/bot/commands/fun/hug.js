@@ -10,7 +10,7 @@ module.exports = {
 
   expectedArgs: "", 
   description: 'hug sum1',  
-  callback: (message, args, text, client, prefix, instance) => {
+  callback: ({message, args, text, client, prefix, instance}) => {
     
  if (message.mentions.members.size == 1) {
       async function gift() {

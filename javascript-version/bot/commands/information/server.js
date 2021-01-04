@@ -10,7 +10,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'serverinfo',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		let yes = args[0];
 		let embed = new Discord.MessageEmbed()
 			.setColor('RANDOM')

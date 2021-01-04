@@ -8,7 +8,7 @@ module.exports = {
 	maxArgs: -1,
 	expectedArgs: '',
 	description: 'pollem',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("sorry you cannot use this you need the permission manage messages for this command")
         message.delete()
         const input = args.slice(0).join(' ');

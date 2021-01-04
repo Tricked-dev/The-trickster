@@ -11,7 +11,7 @@
   minArgs: 0,
   maxArgs: -1,
   expectedArgs: "", 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     if(!client.guild.get(message.guild.id, args[0]) || args[0] == 'id'){
       message.reply('tag not found, you can create on by typing !addtag/!createtag')
     }

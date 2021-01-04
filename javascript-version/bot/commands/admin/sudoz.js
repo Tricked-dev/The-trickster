@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'Makes the bot say something',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		const input = args.join(' ');
 		if (message.author.id == 336465356304678913) {
 			message.delete();

@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'L',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		if (message.member.hasPermission("MANAGE_MESSAGES") || message.author.id == 336465356304678913) {
 		
 			let num = args[0];

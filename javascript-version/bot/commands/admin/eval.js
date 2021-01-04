@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+const ms = require("parse-ms");
 module.exports = {
 	aliases: ['oval'],
 	minArgs: 0,
@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'eval tricked only command /shrug',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		const input = args.join(' ');
 		if (!message.author.id == 336465356304678913) {
 						const Embed = new Discord.MessageEmbed().setTitle(
@@ -25,10 +25,6 @@ module.exports = {
             let Done = {
             title : `Eval`,
             color : `BLACK`,
-            footer: {
-		        text: `Time taken: ${Date.now() - time}ms`,
-		        icon_url: '',
-	        },
             fields : [{
                 name  : "🍞Input",
                 value : [
@@ -55,10 +51,6 @@ module.exports = {
             let Done = {
             title : `Eval`,
             color : `BLACK`,
-            footer: {
-		        text: `Time taken: ${Date.now() - time}ms`,
-		        icon_url: '',
-	        },
             fields : [{
                 name  : "🍞Input",
                 value : [

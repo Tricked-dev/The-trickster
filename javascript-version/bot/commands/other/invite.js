@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'invite trickedbot to your server',
-	callback: (message) => {
+	callback: ({message}) => {
 		const Embed = new Discord.MessageEmbed()
 			.setColor(0x00ae86)
 			.setTimestamp()

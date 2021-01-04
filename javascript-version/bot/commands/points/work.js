@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Work as a people', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     
     
     var jobs = ["prostitute", "constructor", "programmer", "monkey", "scammer"];

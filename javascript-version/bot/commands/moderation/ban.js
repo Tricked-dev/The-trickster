@@ -8,7 +8,7 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "please use it the following way <mention person you want to ban> <reason>", 
   description: 'ban someone cuz why the f not', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
     
 if (message.member.hasPermission("BAN_MEMBERS") || message.author.id == 336465356304678913) {
       let member = message.mentions.members.first() || message.guild.members.get(args[0]);

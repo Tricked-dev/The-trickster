@@ -8,7 +8,7 @@ module.exports = {
 	maxArgs: -1,
 	expectedArgs: 'please mention someone',
 	description: 'mute sum1',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		if (!message.member.hasPermission('MANAGE_ROLES')) {
 			const Embed = new Discord.MessageEmbed()
 				.setColor('#03fc49')

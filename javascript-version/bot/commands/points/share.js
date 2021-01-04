@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Feeling nice?', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
       let lucky = message.mentions.members.first()
       let author = message.author
     let bal =  client.userProfiles.get(author.id, 'points'); 

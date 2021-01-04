@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Do some quests (not properly tested)', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     const member = message.author
 
 

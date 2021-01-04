@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'Makes the bot join a vc',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		async function vc() {
 			if (message.member.voice.channel) {
 				const connection = await message.member.voice.channel.join();

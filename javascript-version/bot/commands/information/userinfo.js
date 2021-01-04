@@ -8,7 +8,7 @@ module.exports = {
 	maxArgs: -1,
 	expectedArgs: ``,
     description: `Gives some info about the user`,
-    	callback: (message, args, text, client, prefix, instance) => {
+    	callback: ({message, args, text, client, prefix, instance}) => {
 
 
 const flags = {

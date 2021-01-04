@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Buy a item from the shop', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
 let item =  args.slice(0).join(' ').toLowerCase()
 let bank =  client.userProfiles.get(message.author.id, 'points');
 

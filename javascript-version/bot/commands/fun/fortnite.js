@@ -9,7 +9,7 @@ module.exports = {
 
   expectedArgs: "", 
   description: 'Not cool!', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
 message.channel.send(`Fortnite is cringe i'm taking way 500 coins from you.`)    
 
 

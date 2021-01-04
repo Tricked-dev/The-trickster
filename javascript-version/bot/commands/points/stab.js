@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: '5% discount robs', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
 
         let goalitem = 'Dagger'
     let item = client.userProfiles.get(message.author.id, "items")

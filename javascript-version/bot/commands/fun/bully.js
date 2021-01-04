@@ -8,7 +8,7 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "", 
   description: 'bully someone',  
-  callback: (message, args, text, client, prefix, instance) => {
+  callback: ({message, args, text, client, prefix, instance}) => {
     
 
 message.delete();

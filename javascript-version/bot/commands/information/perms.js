@@ -8,7 +8,7 @@ module.exports = {
 	maxArgs: -1,
 	expectedArgs: 'please mention someone',
 	description: 'check perms of someone',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		let member = message.mentions.members.first();
 		let roleinfo = member.permissions.toArray();
 

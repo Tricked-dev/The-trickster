@@ -9,7 +9,7 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "please mention someone", 
   description: 'kiss sum1 (gea)', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
     
 
 if (message.mentions.members.size == 1) {

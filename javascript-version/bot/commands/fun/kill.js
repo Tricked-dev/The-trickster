@@ -10,7 +10,7 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "", 
   description: 'Shoot someone', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
     
 if (message.mentions.members.size == 1) {
       async function snipe() {

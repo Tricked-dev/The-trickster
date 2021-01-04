@@ -11,7 +11,7 @@ module.exports = {
 
  expectedArgs: "", 
  description: 'Shows your real gayrate', 
- callback: async (message, args, text, client) => {
+ callback: async ({message, args, text, client}) => {
        let target = message.mentions.members.first() || message.author
         let gayrate = await client.userProfiles.get(target.id, 'gayrate')  
        if(!gayrate || gayrate == 0){

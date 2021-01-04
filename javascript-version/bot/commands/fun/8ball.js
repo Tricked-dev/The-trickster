@@ -12,7 +12,7 @@ module.exports = {
   description: 'Ask maybe he will know',
 
 
-  callback: (message, args, text, client, prefix, instance) => {
+  callback: ({message, args, text, client, prefix, instance}) => {
     
 if (!args[0]) return message.reply({embed: {
         color: `#FF0000`,

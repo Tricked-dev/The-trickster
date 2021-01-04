@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Show the leaderboard', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
  
 const users = client.userProfiles.array();
 const sorted = users.sort((a, b) => ((1 + b.points) - (1 + a.points)));

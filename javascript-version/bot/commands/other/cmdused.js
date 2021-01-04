@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Shows the leaderboard of Points', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
         
 let commands = client.userProfiles.get(message.author.id, 'commands');
 

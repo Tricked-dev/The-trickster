@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Get your free su8m of money', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     
     
     let newrs = client.userProfiles.get(message.author.id, 'started') 

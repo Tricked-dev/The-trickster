@@ -10,7 +10,7 @@ module.exports = {
 
   expectedArgs: "", 
   description: 'get a cat', 
-  callback: (message, args, text, client, prefix, instance) => {
+  callback: ({message, args, text, client, prefix, instance}) => {
     
  async function cats() {
       const response = await fetch(`https://aws.random.cat/meow`);

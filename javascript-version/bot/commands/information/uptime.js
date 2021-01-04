@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'Show uptime of the bot!',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		let uptime = ``;
 		let totalSeconds = client.uptime / 1000;
 		let week = Math.floor(totalSeconds / 604800);

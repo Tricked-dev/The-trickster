@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Tricked only commands', 
-  callback: async (message, args, text, client) => {
+  callback: async ({essage, args, text, client}) => {
    if (message.author.id != 336465356304678913) {
          const Embed = new Discord.MessageEmbed() // talking
         .setTitle('points!')

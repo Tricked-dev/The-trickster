@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Do you got dagger?', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
     let member = message.mentions.members.first() || message.author
     let item = client.userProfiles.get(member.id, 'items');
     //sort

@@ -9,7 +9,7 @@ module.exports = {
 	maxArgs: -1,
 	expectedArgs: 'please enter a search term',
 	description: 'searhes giphy',
-	callback: (message, args, text, client, prefix, instance) => {
+	callback: ({message, args, text, client, prefix, instance}) => {
 		let name = args[0];
 		async function gif() {
 			const response = await fetch(

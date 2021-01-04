@@ -11,7 +11,7 @@
   minArgs: 0,
   maxArgs: -1,
   expectedArgs: "", 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
 
 
       let tags  = await client.guild.get(message.guild.id)

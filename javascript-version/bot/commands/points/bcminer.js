@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Quick maths', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
 if(message.author.bot) return;
 
 

@@ -11,7 +11,7 @@
 
   expectedArgs: "", 
   description: 'Shows your real iq', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
         let target = message.mentions.members.first() || message.author
          let iq = await client.userProfiles.get(target.id, 'iq')  
         if(!iq || iq == 0){

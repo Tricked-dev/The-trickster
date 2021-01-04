@@ -6,7 +6,7 @@
 
   expectedArgs: "idk?", 
   description: 'idk?', 
-   callback: (message, args, client, prefix, instance) => {
+   callback: ({message, args, client, prefix, instance}) => {
     const faces = [`(・'ω'・)`, ';;w;;', 'owo', 'UwU', '>w<', '^w^', '0w0', '*w*']
     function Owoify(str) {
       return str

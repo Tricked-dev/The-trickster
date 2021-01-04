@@ -7,7 +7,7 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "please mention someone and then add the nick", 
   description: 'change someones nick', 
-   callback: (message, args, text, client, prefix, instance) => {
+   callback: ({message, args, text, client, prefix, instance}) => {
 	const guild = client.guilds.cache.size
 	let people = client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)
 	const arr = [1, 2, 3, 4, 5, 6, 9, 7, 8, 9, 10];

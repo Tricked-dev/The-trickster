@@ -12,7 +12,7 @@
 
   expectedArgs: "", 
   description: 'Daily OwO?', 
-  callback: async (message, args, text, client) => {
+  callback: async ({message, args, text, client}) => {
   let timeout = 86400000 // 24 hours in milliseconds, change if you'd like.
   let amounts = 500
     const target = message.author

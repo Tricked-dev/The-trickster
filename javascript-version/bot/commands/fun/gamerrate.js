@@ -11,7 +11,7 @@ module.exports = {
 
  expectedArgs: "", 
  description: 'Shows your real gamerrate', 
- callback: async (message, args, text, client) => {
+ callback: async ({message, args, text, client}) => {
        let target = message.mentions.members.first() || message.author
         let gamerrate = await client.userProfiles.get(target.id, 'gamerrate')  
        if(!gamerrate || gamerrate == 0){

@@ -40,11 +40,22 @@ type > make the bot start typing\
 unmute > unmute\
 vc > make the bot join the vc**
 ### points
-**rob > rob someone\
-bal > your balance\
-work > work\
-gamble > gamble\
-share > share your points**
+**bal>check your balance\
+bcminer>start mining some bitcoin\
+buy>buy something from !shop\
+claim>claim your free points\
+daily>claim your daily\
+gamble > game some points\
+hourly > claim your hourly points\
+inventory > check your inventory\
+monthly > your monthly dose of points\
+quests > quests give 1k per\
+rich > see the richests members\
+rob > rob someone\
+share > share your points (give also works)\
+shop > check the shop\
+stab > stab someone for some points requires having a dagger !shop\
+work > work as a monkey**
 ### tags
 **addtag > addtag\
 removetag > removetag\

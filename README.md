@@ -3,7 +3,10 @@ The trickster is a bot made by me to learn javascript/djs and coding overall\
 fully made in visual studio code\
 my goal is to keep the bot online for a s long as possible
 
+invite link to the bot can be found [here](https://discord.com/oauth2/authorize?client_id=748985087420399717&scope=bot&permissions=67120320)
+
 my other project cant be found [here](https://skyblockdev.github.io/YetAnotherSkyblockBot/)
+
 
 
 ## list of all the command's this bot currently has to offer

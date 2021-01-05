@@ -5,6 +5,8 @@ my goal is to keep the bot online for a s long as possible
 
 invite link to the bot can be found [here](https://discord.com/oauth2/authorize?client_id=748985087420399717&scope=bot&permissions=67120320)
 
+for any support feel free to join [this](https://discord.gg/TAp9Kt2) server and ask questions (ik its dead but dw)
+
 my other project cant be found [here](https://skyblockdev.github.io/YetAnotherSkyblockBot/)
 
 

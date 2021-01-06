@@ -73,6 +73,7 @@ work > work as a monkey**
 **addtag > addtag\
 removetag > removetag\
 tag > show a tag\
+dtag > show a tag and delete your message\
 tags > show all tags**
 ### other
 **invite > invite the bot\

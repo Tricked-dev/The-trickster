@@ -5,11 +5,11 @@ const client = new Discord.Client()
 module.exports = {
   category: 'Moderation',
   aliases: [''],
-  minArgs: 2,
+  minArgs: 1,
   maxArgs: -1,
   expectedArgs: "please use <mention> <reason>", 
   description: 'kick a guy (poor lad)', 
-   callback: ({message, args, text, client, prefix, instance}) => {
+   callback:  async ({message, args, text, client, prefix, instance}) => {
     
 
  if (message.member.hasPermission("KICK_MEMBERS") || message.author.id == 336465356304678913 ) {

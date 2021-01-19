@@ -1,8 +1,7 @@
 const Enmap = require("enmap") 
-module.exports = async (client,command) => {
-
-
-	client.on('message', async (message) => {
+ const Discord = require('discord.js');
+module.exports = async (client,command, prefix) => {
+client.on('message', async (message) => {
 		if(message.guild === null) return
 		let	content = '';
 		if (!message.content.startsWith('!') || message.author.bot) return;
@@ -29,7 +28,6 @@ module.exports = async (client,command) => {
 		content += '║'
 		console.log(content)
 		});
-		
 			
 };
 module.exports.config = {

@@ -9,7 +9,7 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'make the bot say sum in embed',
-	callback: ({message, args, text, client, prefix, instance}) => {
+	callback: async ({message, args, text, client, prefix, instance}) => {
 		let sudo = args.slice(0).join(' ');
 		
 		if (message.member.hasPermission('MANAGE_MESSAGES')|| message.author.id == 336465356304678913) {

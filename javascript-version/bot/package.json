@@ -1,0 +1,37 @@
+{
+  "name": "trickedbot",
+  "version": "2.0.0",
+  "description": "bot",
+  "main": "index.js",
+  "scripts": {
+    "forever": "forever index.js -w",
+    "nodemon": "nodemon",
+    "pm2": "pm2 start index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkyBlockDev/The-trickster.git"
+  },
+  "keywords": [],
+  "author": "tricked#3777",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SkyBlockDev/The-trickster/issues"
+  },
+  "homepage": "https://github.com/SkyBlockDev/The-trickster#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "discord.js": "^12.5.1",
+    "enmap": "^5.8.2",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.2.7",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "node-opus": "^0.3.3",
+    "parse-ms": "^2.1.0",
+    "snekfetch": "^4.0.4",
+    "sourcebin_js": "0.0.3-ignore",
+    "wokcommands": "^1.2.1",
+    "ytdl-core": "^4.4.3"
+  }
+}

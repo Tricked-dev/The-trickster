@@ -9,20 +9,20 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'L',
-	callback: ({message, args, text, client, prefix, instance}) => {
+	callback: async ({message, args, text, client, prefix, instance}) => {
 		if (message.member.hasPermission("MANAGE_MESSAGES") || message.author.id == 336465356304678913) {
 		
 			let num = args[0];
 		let deleteCount = parseInt(args[0], 10) + 1;
 		if (!deleteCount || deleteCount < 2 || deleteCount > 100)
 			return message.reply(
-				'Please provide a number between 2 and 100 for the number of messages to delete'
+				'Please provide a number between 2 and 99 for the number of messages to delete'
 			);
 		async function purge() {
 			const fetched = await message.channel.messages.fetch({
 				limit: deleteCount,
 			});
-			message.channel
+			await message.channel
 				.bulkDelete(fetched)
 				.catch((error) =>
 					message.reply(`Couldn't delete messages because of: ${error}`)

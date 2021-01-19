@@ -2,6 +2,7 @@
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
+ const { no, add, sub } = require("../../utils/util.js");
  module.exports = {
   cooldown: '2s',
   category: 'Points',
@@ -100,7 +101,7 @@ if(score == 0) {
   return
 }
 message.reply(`you got a whopping ${score} answers right i'll give you ${amount} points for that`)
-client.userProfiles.math(message.author.id, '+', amount, 'points');
+add(message.author.id, amount)
 })
 
 

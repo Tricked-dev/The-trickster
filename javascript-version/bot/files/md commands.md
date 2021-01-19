@@ -1,3 +1,6 @@
+### Trickedbot is a bot with a great economy many moderation commands fun commands and much more to go and try out with 0 features behind a paywall
+** please note for the moderation commands to work you are going to have to give it those permissions**
+
 # all the commands this bot has
 ### fun
 **8ball > 8ball
@@ -47,7 +50,7 @@ share > share your points**
 **addtag > addtag
 removetag > removetag
 tag > show a tag
-tags > show all tags
+tags > show all tags**
 ### other
 **invite > invite the bot
 ping > ping

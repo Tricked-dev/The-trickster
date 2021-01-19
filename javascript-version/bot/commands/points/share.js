@@ -2,6 +2,7 @@
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
+ const { no } = require("../../utils/util.js");
  module.exports = {
   cooldown: '2s',
   category: 'Points',
@@ -16,40 +17,21 @@
       let author = message.author
     let bal =  client.userProfiles.get(author.id, 'points'); 
     if(`${lucky.id}` === `${author.id}`) {
-        const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('points!')
-        .setDescription(`**Sharing with yourself smh**`) 
-        .setColor('BLUE')
-        message.reply(Embed);
+no(message, "Sorry you cant share with yourself lel")
         return
     }
     if(!lucky) { // what happens if theres noone mentioned
-   const Embed = new Discord.MessageEmbed() // talking
-    .setColor('#03fc49')
-        .setTitle('points!')
-        .setDescription(`**This is not a user!**`) 
-        .setColor('BLUE')
-        message.reply(Embed);
+no(message, "Thats not a user");
         return
 }
 let amounter = args[1] // coin amount
 let amount = Number(amounter)
 if (amount < 99 ){ // checking if the bank doesng go below 0
-    const Embed = new Discord.MessageEmbed()
-    .setColor('#03fc49')
-        .setTitle('points!')
-        .setDescription(`**Cant share less than 100points for reasons**`)
-        .setColor('BLUE')
-        message.reply(Embed);
+    no(message, "You cant share less than 100 points");
         return } 
 
 if (isNaN(`${amount}`)) { // checking if its a amount of points
-    const Embed = new Discord.MessageEmbed()
-    .setColor('#03fc49')
-        .setTitle('points!')
-        .setDescription(`**Thats not a number!**`)
-        .setColor('BLUE')
-        message.reply(Embed);
+    no(message, "Thats not a number");
         return
   }
 
@@ -57,12 +39,7 @@ let bank = await client.userProfiles.get(author.id,'points');  // opening bank
 let check = (bank - amount) // comparing the numbers
 
  if (check < 0){ // checking if the bank doesng go below 0
-    const Embed = new Discord.MessageEmbed()
-    .setColor('#03fc49')
-        .setTitle('points!')
-        .setDescription(`**You can not give more points than you have, you only have ${bank} points.**`)
-        .setColor('BLUE')
-        message.reply(Embed);
+    no(message, `You cant give more points than you have you only have ${bank} points.`);;
         return }
     client.userProfiles.math(lucky.id, "+", amount, "points");
     client.userProfiles.math(author.id, "-", amount, "points");

@@ -8,7 +8,7 @@ module.exports = {
 	maxArgs: -1,
 	expectedArgs: 'please mention someone',
 	description: 'mute sum1',
-	callback: ({message, args, text, client, prefix, instance}) => {
+	callback: async ({message, args, text, client, prefix, instance}) => {
 		if (!message.member.hasPermission('MANAGE_ROLES')) {
 			const Embed = new Discord.MessageEmbed()
 				.setColor('#03fc49')
@@ -18,7 +18,7 @@ module.exports = {
 		}
 
 		let member = message.mentions.members.first();
-		let role = message.guild.roles.cache.find((role) => role.name === 'muted');
+		let role = message.guild.roles.cache.find((role) => role.name === 'muted') .catch(error => message.reply(`Sorry ${message.author} I couldn't unmute because of : ${error}`));
 		if (!role) {
 			const Embed = new Discord.MessageEmbed()
 				.setColor('#03fc49')

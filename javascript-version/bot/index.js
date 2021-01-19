@@ -95,5 +95,5 @@ client.on('message', message => {
                 message.channel.send(ee)
             }
         })
-
+module.exports = { client }
 client.login(config.token);

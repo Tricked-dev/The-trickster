@@ -2,8 +2,9 @@
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
+ const { no, add, sub } = require("../../utils/util.js");
  module.exports = {
-  cooldown: '2s',
+  cooldown: '5m',
   category: 'Points',
   aliases: [''],
   minArgs: 0,
@@ -34,20 +35,15 @@
     let num = (targetuser * 0.20)
     let author = await client.userProfiles.get(member.id, 'points'); // fetch authors balance
     if(`${targetuser}` === `${author}`) {
-        const Embed = new Discord.MessageEmbed() // talking
-        .setTitle('points!')
-        .setDescription(`**Robbing yourself pathetic**`) 
-        .setColor('BLUE')
-        message.reply(Embed);
-        return
+      return no(message, "You cant rob yourself")
     }
 
     if (author < num) { // if the authors balance is less than 250, return this.
-        return message.channel.send(`:x: You need atleast ${num.toFixed(0)}$ to rob that user`)
+      return no(message, `You need atleast ${num.toFixed(0)}$ to rob that user`)
     }
 
     if (targetuser < 50) { // if mentioned user has 0 or less, it will return this.
-        return message.channel.send(`:x: ${attack.user.username} does not have anything to rob.`)
+      return no(message, `${attack.user.username} does not have anything to rob.`)
     }
 
     const coin = [
@@ -61,9 +57,9 @@
             );
     if(index == '2') {
         message.channel.send(`Your robbery failed and instead you lost ${num.toFixed(0)} point good job!`)
-        client.userProfiles.math(attack.id,  '-', num, 'points');
-        client.userProfiles.math(member.id,  '+', num, 'points');
-        client.userProfiles.set(attack.id, Data.now(), 'rob');
+        sub(message.author,id, num)
+        add(attack.id, num)
+        client.userProfiles.set(attack.id, Date.now(), 'rob');
         return;
     }
     let cn = (`${targetuser}` / '3')
@@ -81,8 +77,8 @@
     }
 
 
-    client.userProfiles.math(member.id, '+', random, 'points');
-    client.userProfiles.math(attack.id, '-', random, 'points');
+    add(message.authod.id, random)
+    sub(attack.id, random)
     client.userProfiles.set(member.id, Data.now(), 'rob');
 
 }

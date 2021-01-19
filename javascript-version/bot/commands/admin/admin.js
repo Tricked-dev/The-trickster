@@ -1,7 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
 const Enmap = require("enmap");
 const ms = require("parse-ms");
+const { exec } = require('child_process');
+const { no, commafy } = require("../../utils/util.js");
+const { eval } = require("../../subcommands/eval.js");
 module.exports = {
 	category: 'hidden',
 	aliases: ['a'],
@@ -10,8 +12,10 @@ module.exports = {
 	
 	expectedArgs: '',
 	description: 'abooze',
-	callback: async ({message, args}) => {
-    if (!message.author.id == 336465356304678913) {
+	callback: async ({message, args, client}) => {
+
+    
+        if (!message.author.id == 336465356304678913) {
     const adminOnly = {
             title : `Oops!`,
             description :`Only tricked can use this command`,
@@ -32,74 +36,15 @@ module.exports = {
         const a6 = "sudo"
         //
         // add client
-        const client = this.client;
         //
         //add a standart input
-        const input = args.slice(1).join(' ');
+        let input = args.slice(1).join(' ');
         //
         if(args[0] == a1) {
         //eval code
-
-
-
-		try {
-			eval(input);
-		} catch (err) {
-            let Done = {
-            title : `Eval`,
-            color : `BLACK`,
-            fields : [{
-                name  : "🍞Input",
-                value : [
-                    "```js",
-                    input,
-                    "```"
-                ].join("\n")
-            },
-            {
-                name  : "🫓Output",
-                value : [
-                    "```js",
-                    err,
-                    "```"
-                ].join("\n")
-            }
-            ]
-            }
-            try{
-            return message.channel.send({embed: Done}); 
-            } catch (error) {error;}
-
-		} finally {
-            let Done = {
-            title : `Eval`,
-            color : `BLACK`,
-            fields : [{
-                name  : "🍞Input",
-                value : [
-                    "```js",
-                    input,
-                    "```"
-                ].join("\n")
-            },
-            {
-                name  : "🫓Output",
-                value : [
-                    "```js",
-                    eval(input),
-                    "```"
-                ].join("\n")
-            }
-            ]
-            }
-            try{
-            return message.channel.send({embed: Done}); 
-            } catch (error) {error;}
-        }
-        //
+        eval(message, input, client)
         } else if(args[0] == a2){
             //exec code
-            const { exec } = require("child_process");
             exec(input, async (error, stdout, stderr) => {
             let output = ''
             if (error)   output = error
@@ -109,7 +54,7 @@ module.exports = {
 
 
                     let Done = {
-            title : `Eval`,
+            title : `Exec`,
             color : `BLACK`,
             fields : [{
                 name  : "🍞Input",
@@ -161,36 +106,32 @@ module.exports = {
                 if (stderr) {
                     return   message.reply(`stderr: ${stderr}`);
                 } else {
-                        let Embed = new Discord.MessageEmbed()
+                let Embed = new Discord.MessageEmbed()
                 .setTitle('Screenfetch')
                 .setTimestamp()
                 .setColor('RED')
                 .setDescription(stdout)
-                let newEmbed = new Discord.MessageEmbed()
-                .setTitle('Screenfetch')
-                .setTimestamp()
-                .setColor('BLUE')
-                .setDescription(stdout)
-                let newEmbeds = new Discord.MessageEmbed()
-                .setTitle('Screenfetch')
-                .setTimestamp()
-                .setColor('PURPLE')
-                .setDescription(stdout)
-                let newEmbedss = new Discord.MessageEmbed()
-                .setTitle('Screenfetch')
-                .setTimestamp()
-                .setColor('GREEN')
-                .setDescription(stdout)
                 var Msg = await message.channel.send(Embed); // sends message
                 setTimeout(function (){
-                    Msg.edit(newEmbed)
+                    Embed.setColor('GREEN')
+                    Msg.edit(Embed)
             }, 1000)
                 setTimeout(function (){
-                    Msg.edit(newEmbeds)
+                    Embed.setColor('PURPLE')
+                    Msg.edit(Embed)
             }, 2000)
                 setTimeout(function (){
-                    Msg.edit(newEmbedss)
+                    Embed.setColor('ORANGE')
+                    Msg.edit(Embed)
             }, 3000)
+                setTimeout(function (){
+                    Embed.setColor('PURPLE')
+                    Msg.edit(Embed)
+            }, 5000)
+                setTimeout(function (){
+                    Embed.setColor('RED')
+                    Msg.edit(Embed)
+            }, 6000)
 
             } 
                 })
@@ -200,5 +141,6 @@ module.exports = {
             message.delete();
 			message.channel.send(input);
         }
+        
     }
 }

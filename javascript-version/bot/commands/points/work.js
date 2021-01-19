@@ -3,7 +3,7 @@
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
  module.exports = {
-  cooldown: '2s',
+  cooldown: '15m',
   category: 'Points',
   aliases: [''],
   minArgs: 0,
@@ -14,9 +14,9 @@
   callback: async ({message, args, text, client}) => {
     
     
-    var jobs = ["prostitute", "constructor", "programmer", "monkey", "scammer"];
+    var jobs = ["prostitute", "constructor", "programmer", "monkey", "scammer", "pizza"];
     if(!jobs.includes(args[0])) {
-        return message.channel.send(`thats not a job!`)
+        return message.channel.send(`thats not a job!, valid job list here: constructor, programmer, monkey, scammer, pizza `)
     }
         if (args[0] == 'prostitute') {
 
@@ -82,6 +82,20 @@ client.userProfiles.set(message.author.id, bal + amount, 'points');
 client.userProfiles.set(message.author.id, bal + amount, 'points');
       
     
+    } else if(args[0] == "pizza") {
+       
+
+        let amount = Math.floor(Math.random() * 500) + 1; // 1-500 random number. whatever you'd like
+
+        let embed = new Discord.MessageEmbed()
+        .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL) 
+        .setDescription(`${message.author}, You delivered a broken pizza and earned ${amount}`)
+        .setColor("RANDOM")
+        
+    
+        message.channel.send(embed)
+         let bal = await client.userProfiles.get(message.author.id, 'points')  
+client.userProfiles.set(message.author.id, bal + amount, 'points');
     }
 }
 

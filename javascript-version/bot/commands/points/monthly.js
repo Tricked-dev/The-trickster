@@ -2,6 +2,7 @@
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
+ const { no, add, sub, presence,  servers, commafy} = require("../../utils/util.js");
  module.exports = {
   cooldown: '5s',
   category: 'Points',
@@ -44,7 +45,7 @@ point = await client.userProfiles.get(target.id, 'points');
     .setAuthor(`Monthly`, message.author.displayAvatarURL)
     .setColor("GREEN")
     .setDescription(`**Monthly Reward**`)
-    .addField(`Collected`, amount + '\n\n(5000 + 20% intrest)')
+    .addField(`Collected`, commafy(amount) + '\n\n(5000 + 20% intrest)')
     message.channel.send(embed)
     }
   }

@@ -2,6 +2,7 @@
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
+ const { no, add, sub } = require("../../utils/util.js");
  module.exports = {
   cooldown: '2s',
   category: 'Points',
@@ -15,9 +16,10 @@
 let item =  args.slice(0).join(' ').toLowerCase()
 let bank =  client.userProfiles.get(message.author.id, 'points');
 
+
     let array = ['dagger', 'begginer', 'ice cream', 'the investors gadget', 'trickedbots soul', 'commedy award']
     if(!array.includes(item)) {
-      message.reply('the shop is not selling that item')
+      no(message, "the shop is not selling that item")
       return
     }
 

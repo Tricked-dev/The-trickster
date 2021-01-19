@@ -18,7 +18,7 @@ module.exports = {
 			user = message.author;
 		}
 
-		let avatar = user.displayAvatarURL({ size: 4096, dynamic: true });
+		let avatar = user.displayAvatarURL({ size: 4096, dynamic: true })
 		const embed = new Discord.MessageEmbed()
 			.setTitle(`${user.username}'s avatar`)
 			.setImage(avatar)

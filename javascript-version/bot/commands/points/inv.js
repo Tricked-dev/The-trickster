@@ -20,7 +20,6 @@
         .setTitle(member.username + "'s inventory")
         .setDescription(item)
         .setColor('#FF0000')
-        .setImage('https://cdn.discordapp.com/attachments/616315208251605005/616319462349602816/Tw.gif')
         message.reply(Embed);
 
   }

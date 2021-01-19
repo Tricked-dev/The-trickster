@@ -10,6 +10,15 @@ module.exports = {
 	expectedArgs: '',
 	description: 'check yur connection',
 	callback: ({message, args, text, client, prefix, instance}) => {
-		message.author.send('List of all my commands https://skyblockdev.github.io/The-trickster/')
+		const Embed = new Discord.MessageEmbed()
+			.setColor(0x00ae86)
+			.setTimestamp()
+			.setTitle(`List of all my commands can be found here`)
+			.setURL(
+				`https://skyblockdev.github.io/The-trickster/`
+			);
+		
+		message.author.send(Embed)
+		message.reply("You have got mail!")
 	},
 };

@@ -2,7 +2,8 @@
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
- module.exports = {
+ const { no, add, sub } = require("../../utils/util.js");
+  module.exports = {
   cooldown: '1h',
   category: 'Points',
   aliases: [''],
@@ -13,9 +14,7 @@
   description: 'Free points', 
   callback: async ({message, args, text, client}) => {
   let amount = 100
-  let member = message.author 
-  let bal = client.userProfiles.get(member.id, 'points'); 
-  client.userProfiles.set(member.id, bal + amount, 'points'); 
+  add(message.author.id, amount)
 
     let embed = new Discord.MessageEmbed()
     .setAuthor(`hourly`, message.author.displayAvatarURL)

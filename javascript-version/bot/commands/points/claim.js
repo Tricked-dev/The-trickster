@@ -2,6 +2,8 @@
  const Enmap = require("enmap") 
  const { MessageEmbed } = require('discord.js')  
  const ms = require("parse-ms") 
+ const { get } = require("snekfetch");
+ const { no, add, sub } = require("../../utils/util.js");
  module.exports = {
   cooldown: '2s',
   category: 'Points',
@@ -22,7 +24,8 @@
     return
     }
     let news = client.userProfiles.get(message.author.id, 'claim') 
-    let bank = client.userProfiles.get(message.author.id, 'points') 
+    let bank = client.userProfiles.get(message.author.id, 'points')
+
     let now = Date.now()
     let points = (now - news)
     
@@ -47,8 +50,7 @@
         .setColor('GREEN')
     message.reply(Embed) 
 
-
-client.userProfiles.set(message.author.id, bank + amun, 'points') 
+add(message.author.id, amun)
 client.userProfiles.set(message.author.id, Date.now(), 'claim') 
   
 }

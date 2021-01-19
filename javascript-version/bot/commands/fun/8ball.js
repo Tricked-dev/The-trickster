@@ -7,7 +7,6 @@ module.exports = {
   aliases: ['ask', 'question', 'trickedbot'],
   minArgs: 1,
   maxArgs: -1,
-  permissions: 'MANAGE_NICKNAMES',
   expectedArgs: "<question>", 
   description: 'Ask maybe he will know',
 
@@ -77,7 +76,7 @@ if (!args[0]) return message.reply({embed: {
     .addField("Answer", replies[result])
     .setFooter(`8ball`);
 
-message.channel.send(ballembed)
+message.reply(ballembed)
 
 
   }

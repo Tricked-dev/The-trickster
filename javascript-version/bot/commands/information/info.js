@@ -36,7 +36,7 @@ module.exports = {
 				{
 					name: 'links: ',
 					value:
-						'https://discord.gg/TAp9Kt2\nhttps://www.youtube.com/channel/UC51x694Mps_rV6Kg2cKYZAQ?view_as=subscriber\nhttps://bots.discordlabs.org/bot/748985087420399717',
+						'https://top.gg/bot/748985087420399717',
 					inline: false,
 				}
 			);

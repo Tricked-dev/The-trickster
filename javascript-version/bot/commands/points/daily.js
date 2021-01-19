@@ -3,13 +3,13 @@
  const Enmap = require("enmap");
  const { MessageEmbed } = require('discord.js'); 
  const ms = require("parse-ms");
+ const { no, add, sub } = require("../../utils/util.js");
  module.exports = {
   cooldown: '2s',
   category: 'Points',
   aliases: [''],
   minArgs: 0,
   maxArgs: -1,
-
   expectedArgs: "", 
   description: 'Daily OwO?', 
   callback: async ({message, args, text, client}) => {
@@ -32,15 +32,15 @@
 
         
         point = await client.userProfiles.get(target.id, 'points');
+
         let points = parseInt(point)
         let banker = parseInt(points* 0.02)
         let amounter = parseInt(banker + amounts)
         let amount = amounter
-        let banks = parseInt(amount + points)
+        add(message.author.id, amount)
         
    
     client.userProfiles.set(target.id, Date.now(), 'daily');
-    client.userProfiles.set(target.id, banks,'points');
     let embed = new Discord.MessageEmbed()
     .setAuthor(`Daily`, message.author.displayAvatarURL)
     .setColor("GREEN")

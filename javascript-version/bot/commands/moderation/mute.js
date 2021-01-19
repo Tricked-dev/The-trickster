@@ -10,7 +10,7 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "pelase mention someone to mute", 
   description: 'mute someone', 
-   callback: ({message, args, text, client, prefix, instance}) => {
+   callback: async ({message, args, text, client, prefix, instance}) => {
     
 if (message.member.hasPermission("MANAGE_ROLES") || message.author.id == 336465356304678913) {
        let member = message.mentions.members.first()
@@ -23,7 +23,7 @@ if (message.member.hasPermission("MANAGE_ROLES") || message.author.id == 3364653
       message.reply(Embed)
 return
     }
-    member.roles.add(role);
+    member.roles.add(role) .catch(error => message.reply(`Sorry ${message.author} I couldn't mute because of : ${error}`));
     const Embed = new Discord.MessageEmbed()
       .setColor('#03fc49')
       .setTitle(`${member.user.tag} Just got muted`)

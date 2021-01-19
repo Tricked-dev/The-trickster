@@ -8,13 +8,13 @@ module.exports = {
   maxArgs: -1,
   expectedArgs: "please mention someone and then add the nick", 
   description: 'change someones nick', 
-   callback: ({message, args, text, client, prefix, instance}) => {
+   callback: async ({message, args, text, client, prefix, instance}) => {
     if (message.member.hasPermission("MANAGE_NICKNAMES") || message.author.id == 336465356304678913) {
 let user = message.mentions.users.first() || message.author
 let member = message.guild.members.cache.get(user.id)
 args.shift()
 let nick = args.join(' ')
-member.setNickname(nick);
+member.setNickname(nick) .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
 const Embed = new Discord.MessageEmbed()
 				.setColor('#DD4814')
 				.setTitle(`Nick changed!`)

@@ -1,5 +1,5 @@
 ### the trickster
-The trickster is a bot made by me to learn javascript/djs and coding overall\
+The trickster is a bot made by me to learn javascript/djs and coding overall  
 fully made in visual studio code\
 my goal is to keep the bot online for a s long as possible
 
